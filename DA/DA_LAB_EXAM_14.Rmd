@@ -1,0 +1,24 @@
+```{r}
+library(ggplot2)
+data(mtcars)
+#head(mtcars)
+dotchart(mtcars$mpg,labels=row.names(mtcars),cex=.7)
+
+hist(mtcars$mpg, xlab="Miles per gallon", breaks=12, col = c("blue", "red", "gray", "green")) 
+
+boxplot(mpg~am, data = mtcars, col = c("blue", "blue"), xlab = "Transmission", ylab = "Miles per Gallon", main = "MPG by Transmission Type")
+
+boxplot(mpg~cyl, data = mtcars, col = c("red"), xlab = "Cylinders", ylab = "Miles per Gallon", main = "MPG by Number of Cylinders")
+
+#THIS
+aggregate(mpg ~ am, data = mtcars, mean)
+
+aggregate(mpg ~ cyl, data = mtcars, mean)
+#==================================
+#OR
+fit <- lm(mpg~am, data = mtcars)
+summary(fit)
+
+fit <- lm(mpg~cyl, data = mtcars)
+summary(fit)
+```

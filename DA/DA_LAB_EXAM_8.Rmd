@@ -1,0 +1,19 @@
+```{r}
+Name <- c("Ashraf", "Bhavya", "Chetan", "Dhaku", "Eshwar", "Farheen", "Gangadhar", "Harsha")
+Gender <- as.factor(c("male", "female", "male", "female", "male", "female", "male", "male"))
+Gatescore <- c(95, 62, 78, 90, 79, 96, 63, 66)
+College <- c("msrit", "rv", "msrit", "pesu", "bmsu", "msrit", "rv", "msrit")
+City <- c("aaa", "aaa", "aab", "aac", "aad", "aab", "aac", "aaa")
+
+Student <- data.frame(Name, Gender, Gatescore, College, City)
+Student
+Avg <- with(Student, ave(Gatescore, College, FUN = function(x) mean(x)))
+Student <- data.frame(Student, Avg)
+
+Agg <- aggregate(Gatescore~College, Student, max)
+a <- (match(Agg$Gatescore, Student$Gatescore))
+Student
+Student$Name[a]
+Student$College[a]
+plot(Avg~College, data=Student)
+```

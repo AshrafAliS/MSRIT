@@ -1,0 +1,37 @@
+```{r}
+Student <- c("John Davis","Angela Williams","Bullwinkle Moose","David Jones","Janice Markhammer","Cheryl Cushing","Reuven Ytzrhak","Greg Knox","Joel England","Mary Rayburn")
+Maths <- c(502,600,412,358,495,512,410,625,573,522)
+Science <- c(95,99,80,82,75,85,80,95,89,86)
+English <- c(25,22,18,15,20,28,15,30,27,18)
+Data <- data.frame(Student, Maths, Science, English)
+Total <- Data$Maths + Data$Science + Data$English
+Data <- data.frame(Data, Total)
+NewData <-Data[order(Data$Total, decreasing = TRUE),]
+n1 <- nrow(NewData)
+da <- n1/5
+ggad <- c()
+for (i in 1:n1) {
+  if(i<=da){
+    ggad[i] <- c("A")
+  }
+  da1 <- da * 2
+  if(i+da<=da1){
+    ggad[i+da] <- c("B")
+  }
+  da2 <- da * 3
+  if(i+da1<=da2){
+    ggad[i+da1] <- c("C")
+  }
+  da3 <- da * 4
+  if(i+da2<=da3){
+    ggad[i+da2] <- c("D")
+  }
+  da2 <- da * 5
+  if(i+da3<=da4){
+    ggad[i+da3] <- c("E")
+  }
+}
+DataGrade <- data.frame(NewData, ggad)
+NewData <-Data[order(DataGrade$Student),]
+DataGrade
+```

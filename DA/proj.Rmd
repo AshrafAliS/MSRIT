@@ -1,0 +1,79 @@
+##Loading the data
+```{r}
+data<-read.csv("/home/ashrafalis/Downloads/heart.csv")
+data
+```
+
+##Looking at the data
+```{r}
+head(data)
+```
+```{r}
+str(data)
+```
+
+##Number of Rows and Columns
+```{r}
+nrow(data)
+ncol(data)
+n<-names(data)
+n[1]<-"age"
+names(data)<-n
+names(data)
+```
+
+##Visualizing the data
+###Looks like "1" Female has more cholestrol. 
+```{r}
+library(ggplot2)
+```
+##Sex vs Cholestrol
+```{r bar}
+#Aesthetic Mapping
+g<-ggplot(data=data)
+g+geom_bar(stat="identity",aes(x=as.factor(data$sex),y=data$chol,fill=data$sex))+xlab("Sex (0 for Male 1 for Female)")+ylab("cholestrol")+theme(legend.position = "none")
+```
+
+##Age Vs cholestrol
+```{r cholestrolVage}
+g<-ggplot(data=data)
+#data$sex
+g+geom_bar(stat="identity",aes(x=data$age,y=data$chol,fill=as.factor(data$sex)))+xlab("Age")+ylab("cholestrol")+labs(fill="Color Coding")
+```
+
+#Age Vs maximum heart rate achived
+```{r}
+g<-ggplot(data=data)
+g+geom_bar(stat="identity",aes(y=data$thalach,x=data$age))+xlab("Age")+ylab("Maximum heart rate avhived")
+```
+
+
+##Maximum heart rate achived vs age by gender.
+```{r}
+g<-ggplot(data=data)
+g<-g+geom_bar(stat="identity",aes(y=data$thalach,x=data$age,fill=as.factor(data$sex)))+xlab("Age")+ylab("Maximum heart rate achived")+theme(legend.position = "none")
+g+facet_grid(cols=vars(data$sex))
+```
+
+
+##Fasting blood sugar Vs Chest pain
+```{r}
+g<-ggplot(data=data)
+g+geom_bar(stat="identity",aes(y=data$fbs,x=data$cp))+xlab("Chest Pain")+ylab("Fasting Blood Sugar")
+```
+
+
+
+##Chest pain with age.
+```{r}
+g<-ggplot(data=data)
+g+geom_bar(stat="identity",aes(y=data$cp,x=data$age))+xlab("Age")+ylab("Chest Pain")
+```
+
+
+##Chest pain with age gender wise.
+```{r}
+g<-ggplot(data=data)
+g<-g+geom_bar(stat="identity",aes(y=data$cp,x=data$age,fill=as.factor(data$sex)))+xlab("Age")+ylab("Chest pain")+theme(legend.position = "none")
+g+facet_grid(cols=vars(data$sex))
+```

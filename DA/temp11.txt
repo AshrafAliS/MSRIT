@@ -1,0 +1,30 @@
+Record <- c(1,2,3,4,5,6,7,8,9,10)
+Age <- c(22,33,28,51,25,39,54,55,50,66)
+Marital <- as.factor(c("Single", "Married", "Other", "Other", "Single", "Single",
+"Single", "Married", "Married", "Married"))
+Income <- c(46156.98, 24188.10, 28787.34, 23886.72, 47281.44, 33994.90, 28716.50,
+49186.75, 46726.50, 36120.34)
+Risk <- c("Bad Loss", "Bad Loss", "Bad Loss", "Bad Loss", "Bad Loss", "Good Risk",
+"Good Risk", "Good Risk", "Good Risk", "Good Risk")
+Data <- data.frame(Record, Age, Marital, Income, Risk)
+#75% data to train
+random <- sample(1:nrow(Data), 0.75 * nrow(Data))
+nomalization <-function(x) { (x -min(x))/(max(x)-min(x)) }
+norm <- as.data.frame(lapply(Data[,c(1,2,4)], nomalization))
+summary(norm)
+train <- norm[random,]
+test <- norm[-random,]
+target_category <- Data[random,5]
+test_category <- Data[-random,5]
+library(class)
+pr <- knn(train,test,cl=target_category,k=3)
+tab <- table(pr,test_category)
+accuracy <- function(x){sum(diag(x)/(sum(rowSums(x)))) * 100}
+accuracy(tab)
+k=3
+km = kmeans(Data[,c(1,2,4)], k, iter.max=10, algorithm=c("Forgy"))
+dist = dist(Data[,c(1,2,4)])
+mds = cmdscale(dist)
+plot(mds, col=km$cluster, pch = 20, cex = 3)
+km1 = kmeans(mds, k, iter.max=1000, algorithm=c("Forgy"))
+points(km1$centers, col = 10, pch = 8, cex = 2)

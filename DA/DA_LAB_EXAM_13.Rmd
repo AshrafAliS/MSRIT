@@ -1,0 +1,21 @@
+```{r}
+library(ggplot2)
+data(iris)
+#set.seed(4000)
+k = 3
+km = kmeans(iris[1:4], k, iter.max=1000, algorithm=c("Forgy"))
+km
+dist = dist(iris[1:4])
+mds = cmdscale(dist)
+
+palette(c("#E41A1C", "#377EB8", "#4DAF4A", "#984EA3",  "#FF7F00", "#FFFF33", "#A65628", "#F781BF", "#999999", "#000000"))
+plot(mds, col=km$cluster, pch = 20, cex = 3)
+
+# plot centroids
+km1 = kmeans(mds, k, iter.max=1000, algorithm=c("Forgy"))
+points(km1$centers, col = 10, pch = 8, cex = 2)
+
+#optional
+barplot(t(km$centers), beside=TRUE, xlab="cluster", ylab="value")
+
+```
