@@ -1,0 +1,932 @@
+<!DOCTYPE html>
+<!-- saved from url=(0093)https://www.ibm.com/developerworks/library/ba-cleanse-process-visualize-data-set-1/index.html -->
+<html lang="en" style="" class="applicationcache geolocation history postmessage svg websockets localstorage sessionstorage websqldatabase webworkers hashchange pointerevents canvas audio canvastext video webgl cssgradients multiplebgs opacity rgba inlinesvg hsla supports svgclippaths smil no-touchevents fontface generatedcontent textshadow cssanimations backgroundsize borderimage borderradius boxshadow csscolumns csscolumns-width csscolumns-span csscolumns-fill csscolumns-gap csscolumns-rule csscolumns-rulecolor csscolumns-rulestyle csscolumns-rulewidth csscolumns-breakbefore csscolumns-breakafter csscolumns-breakinside flexbox flexboxlegacy cssreflections csstransforms csstransforms3d csstransitions indexeddb indexeddb-deletedatabase js ibm-v18 ibm-cxtype-4g no-hires win chrome chrome6 webkit webkit5 ibm-grid-xlarge"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	
+<meta name="viewport" content="width=device-width, initial-scale=1">      
+<link rel="icon" href="https://www.ibm.com/favicon.ico">
+<link rel="canonical" href="http://www.ibm.com/developerworks/library/ba-cleanse-process-visualize-data-set-1/index.html">
+<meta name="geo.country" content="ZZ">
+<meta name="dcterms.rights" content="© Copyright IBM Corporation 2017">
+<meta name="dcterms.date" content="2017-12-14">
+<meta name="description" content="Discover common problems associated with cleansing data for validation and processing, with solutions for dealing with them. You&#39;ll also find a custom tool to make the process of cleansing data and merging data sets for analysis.">	
+<meta name="keywords" content="data validation, machine learning, M. Tim Jones, messy data, data cleansing, ddddmca">
+<meta name="robots" content="index,follow">
+<title>Cleansing, processing, and visualizing a data set, Part 1: Working with messy data</title>
+    
+<script type="text/javascript" async="" charset="utf-8" id="utag_24_0" src="https://pixel.mathtag.com/event/js?event_type=conversion&amp;industry=technology&amp;page_name=www.ibm.com%2Fdeveloperworks%2Flibrary%2Fba-cleanse-process-visualize-data-set-1&amp;product_category=Analytics&amp;product_condition=PAGE%20CLICK&amp;product_color=Blank%20HREF&amp;site_language=en&amp;mt_id=1075168&amp;mt_adid=171815&amp;mt_excl=38907337288615154769187"></script><script type="text/javascript" async="" src="./Cleansing, processing, and visualizing a data set, Part 1_ Working with messy data_files/linkid.js.download"></script><script type="text/javascript" async="" charset="utf-8" id="utag_98" src="./Cleansing, processing, and visualizing a data set, Part 1_ Working with messy data_files/atrk.js.download"></script><script type="text/javascript" async="" charset="utf-8" id="utag_53" src="https://pixel.mathtag.com/event/js?mt_pp=1"></script><script type="text/javascript" async="" charset="utf-8" id="tealium_cormetrics2" src="./Cleansing, processing, and visualizing a data set, Part 1_ Working with messy data_files/eluminate.js.download"></script><script id="loadedViaBxAnalytics-HU3dbkAG5wE0F1IkRf9S1RexlAqo3jby" src="https://cdn.segment.com/analytics.js/v1/HU3dbkAG5wE0F1IkRf9S1RexlAqo3jby/analytics.min.js" type="text/javascript"></script><script async="" src="./Cleansing, processing, and visualizing a data set, Part 1_ Working with messy data_files/analytics.js.download"></script><script type="text/javascript" async="" charset="utf-8" id="dle_api_9afab5850e29db4207bfcbfb6eb133d759c69e8172f8ab676906726616b2f08d" src="./Cleansing, processing, and visualizing a data set, Part 1_ Working with messy data_files/p_9afab5850e29db4207bfcbfb6eb133d759c69e8172f8ab676906726616b2f08d.js.download"></script><script src="./Cleansing, processing, and visualizing a data set, Part 1_ Working with messy data_files/p_devwrks.js.download" type="application/javascript" async=""></script><script src="./Cleansing, processing, and visualizing a data set, Part 1_ Working with messy data_files/p_devwrks.js.download" type="application/javascript" async=""></script><script src="./Cleansing, processing, and visualizing a data set, Part 1_ Working with messy data_files/utag.js.download" type="text/javascript" async=""></script><script> 
+    digitalData = {
+        "page":{
+            "category":{
+                "primaryCategory":"SOFDCIMTZZ"
+            },
+            "pageInfo":{
+                "effectiveDate":"2017-12-14",
+                "language":"en",
+                "publishDate":"2017-12-14",
+                "publisher":"IBM Corporation",
+                "version":"v18",
+                "ibm":{ 
+                    "contentDelivery":"IBM developerWorks template",
+                    "contentProducer":"IBM developerWorks",
+                    "country":"ZZ",
+                    "owner":"developerWorks Content/Raleigh/IBM",
+                    "siteID":"DEVWRKS",
+                    "subject":"B7D000,SWB00",
+                    "type":"CT316",
+                    "topic":"Data management,Machine learning",
+                    "topicId":"1085,1187",
+                    "contentArea":"data",
+                    "contentAreaId":"18",
+                    "contentType":"article",
+                    "contentId":"1055276",
+                },
+                "keywords":"data validation, machine learning, M. Tim Jones, messy data, data cleansing, ddddmca",
+                "description":"Discover common problems associated with cleansing data for validation and processing, with solutions for dealing with them. You'll also find a custom tool to make the process of cleansing data and merging data sets for analysis."
+            }
+        }
+    };
+    window._analytics = {
+        "coremetrics": false,
+        "optimizely": false,
+        "googleAddServices": false,
+        "addRoll": false,
+        "intercom": false,
+        "fullStory": false,
+        "hotjar": false,
+        "tealeaf": false,
+        "nps": false,
+        "segment_key": 'HU3dbkAG5wE0F1IkRf9S1RexlAqo3jby'
+    };
+</script>
+	
+    <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@developerworks">
+<meta property="og:title" content="">
+<meta property="og:description" content="Discover common problems associated with cleansing data for validation and processing, with solutions for dealing with them.">
+<meta property="og:image" content="http://dw1.s81c.com/developerworks/i/twitterdw-topic-cloud2.png">
+<!-- Segment meta tag -->
+<meta name="segment" property="developerWorks (developerWorks)" producttitle="developerWorks" value="Data and Analytics English (developerWorks)">      
+<!-- SITE MON : START (DO NOT DELETE) -->
+<!-- developerWorks monitoring token -->
+<!-- SITE MON : END (DO NOT DELETE) -->
+
+<!-- HEADER_SCRIPTS_AND_CSS_INCLUDE -->
+<!-- <script src="//cdn.optimizely.com/js/5399420604.js"></script> -->
+<!-- BEGIN: Use this section to set page specific variables for the Page Tag -->
+<script language="JavaScript">var NTPT_PGEXTRA="ibmSkillLevel=3&ibmCmaId=1055276&ibmContentAreas=data";</script>
+<!--END -->
+<script src="./Cleansing, processing, and visualizing a data set, Part 1_ Working with messy data_files/ida_stats.js.download"></script>
+<link href="./Cleansing, processing, and visualizing a data set, Part 1_ Working with messy data_files/www.css" rel="stylesheet">
+<link href="./Cleansing, processing, and visualizing a data set, Part 1_ Working with messy data_files/syntaxhighlighter.css" rel="stylesheet">
+<script src="./Cleansing, processing, and visualizing a data set, Part 1_ Working with messy data_files/www.js.download"></script><style></style>
+<script src="./Cleansing, processing, and visualizing a data set, Part 1_ Working with messy data_files/syntaxhighlighter.js.download"></script>    
+<link href="./Cleansing, processing, and visualizing a data set, Part 1_ Working with messy data_files/tables.css" rel="stylesheet">
+<script src="./Cleansing, processing, and visualizing a data set, Part 1_ Working with messy data_files/tables.js.download"></script>   
+<!--  Masthead/footer  -->
+<link href="./Cleansing, processing, and visualizing a data set, Part 1_ Working with messy data_files/dw-mf-v18.css" rel="stylesheet">
+<!-- <link href="//dw1.s81c.com/developerworks/css/dw-mf/v18/alt-signedin-ux.css" rel="stylesheet" /> -->   
+<!--[if lt IE 9]>
+    <link href="//dw1.s81c.com/developerworks/css/dw-mf/v18/dw-mf-ie8fix.css?v=022216" rel="stylesheet" />
+<![endif]-->
+<link href="./Cleansing, processing, and visualizing a data set, Part 1_ Working with messy data_files/dw-article.css" rel="stylesheet">
+<script src="./Cleansing, processing, and visualizing a data set, Part 1_ Working with messy data_files/dw-auth-properties.js.download"></script>
+<script src="./Cleansing, processing, and visualizing a data set, Part 1_ Working with messy data_files/dw-auth.js.download"></script>
+<script src="./Cleansing, processing, and visualizing a data set, Part 1_ Working with messy data_files/dw-mf.js.download"></script>
+<script src="./Cleansing, processing, and visualizing a data set, Part 1_ Working with messy data_files/dw-include.js.download"></script>     
+<script src="./Cleansing, processing, and visualizing a data set, Part 1_ Working with messy data_files/dw-article.js.download"></script>
+<script src="./Cleansing, processing, and visualizing a data set, Part 1_ Working with messy data_files/dw-auto-links.js.download"></script>     
+<script src="./Cleansing, processing, and visualizing a data set, Part 1_ Working with messy data_files/tactic.js.download"></script>
+<script src="./Cleansing, processing, and visualizing a data set, Part 1_ Working with messy data_files/tacticbindlinks.js.download"></script>
+
+<!-- 
+<PageMap>
+    <DataObject type="document">
+        <Attribute name="topic">Data management,Machine learning</Attribute>
+        <Attribute name="topicId">1085,1187</Attribute>
+        <Attribute name="contentArea">data</Attribute>
+        <Attribute name="contentAreaId">18</Attribute>
+        <Attribute name="abstract">Discover common problems associated with cleansing data for validation
+            and processing, with solutions for dealing with them. You'll also find a
+            custom tool to make the process of cleansing data and merging data sets for
+            analysis. </Attribute>
+        <Attribute name="pub.date">2017-12-14</Attribute>
+        <Attribute name="contentType">article</Attribute>
+    </DataObject>
+</PageMap>
+-->        
+
+<script async="" src="./Cleansing, processing, and visualizing a data set, Part 1_ Working with messy data_files/hotjar-42920.js.download"></script><script type="text/javascript" async="" charset="utf-8" id="utag_ibm.web_53" src="./Cleansing, processing, and visualizing a data set, Part 1_ Working with messy data_files/utag.53.js.download"></script><script type="text/javascript" async="" charset="utf-8" id="utag_ibm.web_46" src="./Cleansing, processing, and visualizing a data set, Part 1_ Working with messy data_files/utag.46.js.download"></script><script type="text/javascript" async="" charset="utf-8" id="utag_ibm.web_98" src="./Cleansing, processing, and visualizing a data set, Part 1_ Working with messy data_files/utag.98.js.download"></script><style id="ibm-masthead-hidelinks">@media screen and (max-width: 585px) { .ibm-masthead-categories,#ibm-megamenu-sections{display:none} }@media screen and (max-width: 585px) { .ibm-mh-marketplace-link{display:none} }</style><script type="text/javascript" async="" charset="utf-8" id="LOTCC_10026" src="https://tags.crwdcntrl.net/c/10026/cc.js?ns=_cc10026"></script><script type="text/javascript" async="" charset="utf-8" id="utag_ibm.web_45" src="./Cleansing, processing, and visualizing a data set, Part 1_ Working with messy data_files/utag.45.js.download"></script><style type="text/css" class="jquery-comments-css">.jquery-comments ul.navigation li.active:after {background: #2793e6 !important;</style><style type="text/css" class="jquery-comments-css">.jquery-comments ul.navigation ul.dropdown li.active {background: #2793e6 !important;</style><style type="text/css" class="jquery-comments-css">.jquery-comments .highlight-background {background: #2793e6 !important;</style><style type="text/css" class="jquery-comments-css">.jquery-comments .highlight-font {color: #2793e6 !important;}</style><style type="text/css" class="jquery-comments-css">.jquery-comments .highlight-font-bold {color: #2793e6 !important;font-weight: bold;}</style><script language="javascript" type="text/javascript" src="./Cleansing, processing, and visualizing a data set, Part 1_ Working with messy data_files/50200000.js.download"></script><style id="ibm-sitenav-menu-hidelinks">@media screen and (max-width: 664px) { .ibm-sitenav-menu-list{display:none} } @media screen and (min-width: 665px) { .ibm-mobilemenu-sitenavmenu {display:none} }</style><script language="javascript" type="text/javascript" src="./Cleansing, processing, and visualizing a data set, Part 1_ Working with messy data_files/rules_50200000.js.download"></script><script language="javascript" type="text/javascript" src="./Cleansing, processing, and visualizing a data set, Part 1_ Working with messy data_files/dispatcher-v3.js.download"></script><script src="./Cleansing, processing, and visualizing a data set, Part 1_ Working with messy data_files/yahoo-min.js.download" type="text/javascript"></script><script src="./Cleansing, processing, and visualizing a data set, Part 1_ Working with messy data_files/cp-v3.js.download" type="text/javascript"></script><script src="./Cleansing, processing, and visualizing a data set, Part 1_ Working with messy data_files/json-min.js.download" type="text/javascript"></script><script async="" src="./Cleansing, processing, and visualizing a data set, Part 1_ Working with messy data_files/modules-fa7b914657f32d32df01f26b19e8f066.js.download"></script><style type="text/css">iframe#_hjRemoteVarsFrame {display: none !important; width: 1px !important; height: 1px !important; opacity: 0 !important; pointer-events: none !important;}</style><script type="text/javascript" async="" charset="utf-8" id="tealium_visitor_service_45main" src="./Cleansing, processing, and visualizing a data set, Part 1_ Working with messy data_files/015bcca209f60015c9eac187820a04066005505e0086e"></script><script type="text/javascript" async="" charset="utf-8" id="utag_ibm.web_24" src="./Cleansing, processing, and visualizing a data set, Part 1_ Working with messy data_files/utag.24.js.download"></script></head>
+<body id="ibm-com" class="ibm-type ibm-sitenav-menu ibm-sitenav-menu-sticky ibm-masthead-sticky ibm-masthead-sticky-showing">
+	
+<div id="ibm-top" class="ibm-landing-page dw-sitenav">
+
+<!-- MASTHEAD_BEGIN -->
+<div id="ibm-masthead" role="banner" aria-label="IBM" class="ibm-mhtype-minimal hastransition">
+    <div id="ibm-mast-options">
+        <ul role="toolbar" aria-labelledby="ibm-masthead">
+            <li id="ibm-geo" role="presentation"><a href="http://www.ibm.com/planetwide/select/selector.html" role="button" aria-label="United States selected - Choose a country">United States</a></li>
+        </ul>
+    </div>
+    <div id="ibm-universal-nav" class="">    
+  
+        <nav role="navigation" aria-label="IBM">
+            <div id="ibm-home"><a href="http://www.ibm.com/us/en/?lnk=m">IBM®</a></div>
+            <ul id="ibm-menu-links" role="toolbar" aria-label="Site map" class="ibm-hide">
+                <li><a href="http://www.ibm.com/sitemap/us/en/">Site map</a></li>
+            </ul><div class="ibm-masthead-rightside"><p class="ibm-mh-marketplace-link ibm-button-link ibm-fleft ibm-padding-bottom-0"><a class="ibm-btn-small ibm-btn-sec ibm-btn-blue-50" href="https://www.ibm.com/marketplace/?lnk=mp">Marketplace</a></p><div id="ibm-search-module" role="search" aria-labelledby="ibm-masthead" class="ibm-has-scope">
+            <div class="ibm-masthead-search-close"><p class="ibm-ind-link ibm-icononly ibm-padding-bottom-0"><a href="https://www.ibm.com/developerworks/library/ba-cleanse-process-visualize-data-set-1/index.html#" class="ibm-close-link ibm-nospacing">Close</a></p></div><form id="ibm-search-form" action="https://www.ibm.com/Search/" method="get" aria-labelledby="ibm-masthead">
+                <p>
+                    <label for="q">IBM</label>
+                    <input type="text" maxlength="100" value="" placeholder="Search" name="q" id="q" aria-label="Search developerWorks" autocomplete="off" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-owns="ibm-search-typeahead-container"><input name="lnk" type="hidden" value="mhsrch">
+                    <input type="hidden" value="18" name="v">
+                    <input type="hidden" value="utf" name="en">
+                    <input type="hidden" value="en" name="lang">
+                    <input type="hidden" value="us" name="cc">
+                    <input type="hidden" name="sn" value="dw">
+                    <input type="hidden" name="dws" value="dw">
+                    <input type="hidden" name="hpp" value="20">
+                    <span class="ibm-search-scope ibm-fadeout" aria-expanded="true"><input class="ibm-styled-checkbox" data-init="false" type="checkbox" name="sn" value="" id="ibm-mh-scopeoption"> <label for="ibm-mh-scopeoption">In Marketplace</label></span><button role="button" type="submit" id="ibm-search" class="ibm-search-link" value="Submit"><span class="ibm-access">Submit</span></button>
+                </p>
+            </form><form class="ibm-hide" id="ibm-default-scope-form" action="https://www.ibm.com/marketplace/search/us/en-us" method="get"><input name="terms" type="text"><input name="lnk" type="hidden" value="mhmpsrch"></form>
+        </div><div id="ibm-search-typeahead-container" aria-expanded="true" class="ibm-search-typeahead-container ibm-fadeout"></div><ul aria-label="Tools" role="menubar" class="ibm-masthead-iconsonly"><li role="presentation" class="ibm-masthead-item-signin"><button role="button" aria-haspopup="true" aria-owns="ibm-signin-minimenu-container" class="ibm-profile-link">My IBM dashboard</button><ul id="ibm-signin-minimenu-container" role="menu" aria-label="Profile" class="ibm-dropdown-menu">		<li class="ibm-dropdown-menu-primary" role="presentation" data-linktype="notifications"> 			<a class="" href="https://myibm.ibm.com/dashboard/?lnk=mmi" tabindex="0">My IBM</a> 		</li>		<li class="ibm-dropdown-menu-primary menu-heading" role="presentation">				<span tabindex="0">developerWorks</span>			</li>		<li class="ibm-dropdown-menu-primary ibm-signin-alt" role="presentation">			<a href="https://www.ibm.com/developerworks/dwwi/jsp/ssologin.jsp?d=https%3A%2F%2Fwww.ibm.com%2Fdeveloperworks%2Flibrary%2Fba-cleanse-process-visualize-data-set-1%2Findex.html&amp;lang=en&amp;a=dwmav" role="menuitem">Sign in</a>		</li>		<li class="ibm-dropdown-menu-primary dw-register-alt" role="presentation">			<a href="https://www.ibm.com/developerworks/dwwi/jsp/ssoregister.jsp?d=https%3A%2F%2Fwww.ibm.com%2Fdeveloperworks%2Flibrary%2Fba-cleanse-process-visualize-data-set-1%2Findex.html&amp;lang=en&amp;a=dwmav" role="menuitem">Register</a>		</li></ul></li><li role="presentation" class="ibm-masthead-item-menu"><button role="button" aria-haspopup="true" aria-owns="ibm-burger-menu-container" class="ibm-menu-link">Site navigation</button></li></ul></div> 
+        </nav>
+  
+        
+       
+    </div>
+</div><div class="ibm-mobilemenu ibm-hide" id="ibm-burger-menu-container" aria-labelledby="ibm-burgermenu-a11y" role="dialog" tabindex="0"><p class="ibm-hide" id="ibm-burgermenu-a11y">Site navigation</p><div class="ibm-mobilemenu-close"><p class="ibm-icononly ibm-fright ibm-ind-link ibm-nospacing"><a class="ibm-close-link" href="https://www.ibm.com/developerworks/library/ba-cleanse-process-visualize-data-set-1/index.html?lnk=hm#">Close</a></p></div><div class="ibm-mobilemenu-section ibm-mobilemenu-sitenavmenu"><ul role="menubar"><li class="ibm-mobile-section-heading ibm-mobile-sitename">
+        <a href="https://www.ibm.com/developerworks/?lnk=hm">
+            <img width="186" height="24" alt="developerWorks®" src="./Cleansing, processing, and visualizing a data set, Part 1_ Working with messy data_files/dw-mf-wordmark.svg">
+        </a>
+    </li>
+                            <li class="dw-navpage-learn ibm-haschildlist" role="presentation"><a href="https://www.ibm.com/developerworks/learn/?lnk=hm">Learn</a></li>
+                    
+                <li role="presentation" class="dw-navpage-develop ibm-haschildlist"><a href="https://www.ibm.com/developerworks/develop/?lnk=hm">Develop</a></li>
+ 
+            
+                <li role="presentation" class="dw-navpage-connect ibm-haschildlist"><a href="https://www.ibm.com/developerworks/connect/?lnk=hm">Connect</a></li> 
+            
+                <!-- dW featured -->
+                <!-- <li role="presentation" class="dw-navpage-devcenter"><strong>Subheading</strong></li> -->
+                <li role="presentation" class="dw-navpage-devcenter"><a role="menuitem" href="https://www.ibm.com/developerworks/learn/cognitive/?lnk=hm">Cognitive</a></li>
+                <li role="presentation" class="dw-navpage-devcenter"><a role="menuitem" href="https://www.ibm.com/developerworks/learn/cloud/?lnk=hm">Cloud</a></li>
+                <li role="presentation" class="dw-navpage-devcenter"><a role="menuitem" href="https://www.ibm.com/developerworks/learn/analytics/?lnk=hm">Data</a></li>
+                <li role="presentation" class="dw-navpage-devcenter"><a role="menuitem" href="https://www.ibm.com/developerworks/learn/iot/?lnk=hm">Internet of Things</a></li>
+                <li role="presentation" class="dw-navpage-devcenter"><a role="menuitem" href="https://www.ibm.com/developerworks/learn/java/?lnk=hm">Java</a></li>
+                <li role="presentation" class="dw-navpage-devcenter"><a role="menuitem" href="https://www.ibm.com/developerworks/learn/?lnk=hm">All topics</a></li>    
+        </ul></div><div class="ibm-mobilemenu-section"><ul class="ibm-mobilemenu-mhlinks" aria-label="Discover IBM"><li><a href="https://www.ibm.com/marketplace/?lnk=hmmp">Marketplace</a></li><li><div data-widget="showhide" data-type="panel" class="ibm-show-hide ibm-widget-processed"><h2><a href="javascript:void();">Products</a></h2><div class="ibm-container-body" style="display: none;"><ul><li><a href="http://www.ibm.com/products/?lnk=hmmpr"><span>Products</span></a></li><li><a href="http://www.ibm.com/analytics/us/en/?lnk=hmmpr_bua&amp;lnk2=learn"><span>Analytics</span></a></li><li><a href="https://www.ibm.com/blockchain/?lnk=hmmpr_bubk&amp;lnk2=learn"><span>Blockchain</span></a></li><li><a href="http://www.ibm.com/cloud-computing/?lnk=hmmpr_bucl"><span>Cloud</span></a></li><li><a href="https://www.ibm.com/social-business/us-en/?lnk=hmmpr_buso"><span>Collaboration Solutions</span></a></li><li><a href="http://www.ibm.com/industries/?lnk=hmmpr_ind&amp;lnk2=learn"><span>Industry solutions</span></a></li><li><a href="http://www.ibm.com/internet-of-things/?lnk=hmmpr_iot&amp;lnk2=learn"><span>Internet of Things</span></a></li><li><a href="http://www.ibm.com/it-infrastructure/us-en/?lnk=hmmpr_buit&amp;lnk2=learn"><span>IT infrastructure</span></a></li><li><a href="http://www.ibm.com/mobile/?lnk=hmmpr_bumf&amp;lnk2=learn"><span>Mobile</span></a></li><li><a href="http://www.ibm.com/security/?lnk=hmmpr_buse&amp;lnk2=learn"><span>Security</span></a></li><li><a href="http://www.ibm.com/smarterplanet/us/en/ibmwatson/?lnk=hmmpr_buwa&amp;lnk2=learn"><span>Watson</span></a></li><li><a href="http://www.ibm.com/commerce/us-en/?lnk=hmmpr_bucom&amp;lnk2=learn"><span>Watson Customer Engagement</span></a></li><li><a href="http://www.ibm.com/watson/health/?lnk=hmmpr_buwh"><span>Watson Health</span></a></li></ul></div></div></li><li><div data-widget="showhide" data-type="panel" class="ibm-show-hide ibm-widget-processed"><h2><a href="javascript:void();">Services</a></h2><div class="ibm-container-body" style="display: none;"><ul><li><a href="https://www-935.ibm.com/services/index.html?lnk=hmmse_ts"><span>Services</span></a></li><li><a href="http://www.ibm.com/financing?lnk=hmmse_fin&amp;lnk2=learn"><span>Financing</span></a></li><li><a href="http://www.ibm.com/industries/?lnk=hmmse_ie&amp;lnk2=learn"><span>Industry expertise</span></a></li><li><a href="http://www.ibm.com/training/?lnk=hmmse_tr&amp;lnk2=learn"><span>Training and skills</span></a></li></ul></div></div></li><li><a href="http://www.ibm.com/industries?lnk=hmmin">Industries</a></li><li><div data-widget="showhide" data-type="panel" class="ibm-show-hide ibm-widget-processed"><h2><a href="javascript:void();">Developers</a></h2><div class="ibm-container-body" style="display: none;"><ul><li><a href="http://www.ibm.com/developerworks/?lnk=hmmdev_dw&amp;lnk2=learn"><span>developerWorks</span></a></li><li><a href="https://developer.ibm.com/api/?lnk=hmmdev_api&amp;lnk2=learn"><span>API</span></a></li><li><a href="https://www.ibm.com/cloud-computing/bluemix/?lnk=hmmdev_cl&amp;lnk2=learn"><span>Cloud</span></a></li><li><a href="https://www.ibm.com/cloud-computing/bluemix/?lnk=hmmdev_da&amp;lnk2=learn"><span>Data</span></a></li><li><a href="https://www.ibm.com/watson/?lnk=hmmpr_buwa&amp;lnk2=learn"><span>Watson</span></a></li><li><a href="https://developer.ibm.com/open/?lnk=hmmdev_os&amp;lnk2=learn"><span>Open source</span></a></li></ul></div></div></li><li><a href="http://support.ibm.com/?lnk=hmmsu">Support</a></li><li><a href="http://www.ibm.com/employment/?lnk=hmmca">Careers</a></li></ul></div></div><div class="ibm-mhplaceholder"></div><!-- MASTHEAD_END -->
+	    
+<!-- LAYOUT -->
+<div id="ibm-content-wrapper">
+    <!-- LEADSPACE_BEGIN -->
+    <header role="banner" aria-labelledby="ibm-pagetitle-h1">
+        
+        <!-- MASTHEAD_SITENAV_BEGIN -->
+        <div class="ibm-sitenav-menu-container" data-widgetprocessed="true">
+    <div class="ibm-sitenav-menu-name">
+        <a href="https://www.ibm.com/developerworks/">
+            <img width="186" height="24" alt="developerWorks®" src="./Cleansing, processing, and visualizing a data set, Part 1_ Working with messy data_files/dw-mf-wordmark.svg">
+        </a>
+    </div>
+    <div class="ibm-sitenav-menu-list" style="opacity: 1;">
+        <ul role="menubar">
+                            <li class="dw-navpage-learn ibm-haschildlist" role="presentation">
+                    <button role="menuitem" tabindex="0" onclick="document.location=&#39;//www.ibm.com/developerworks/learn/&#39;"><a href="https://www.ibm.com/developerworks/learn/" tabindex="-1">Learn</a></button>
+	                <ul role="menu" aria-label="Learn" id="dw-mega-learn" class="ibm-align-right" style="width: 1349px;">
+	                    <li role="presentation"> 
+                            <div class="ibm-columns">
+    	                        <div class="ibm-col-5-3 dw-mega-main">
+    	                           <h2>Learn with our tutorials and training</h2>
+    	                            <p class="dw-mega-main-p">developerWorks provides tutorials, articles and other
+    	                            technical resources to help you grow your development skills
+    	                            on a wide variety of topics and products. Learn about a specific
+    	                            product or take a course and get certified. So, what do you want to learn 
+    	                            about?</p>
+    	                            <p class="ibm-button-link">                                   
+                                        <a href="https://www.ibm.com/developerworks/learn/" class="ibm-btn-pri">Choose a topic</a>
+                                    </p>
+    	                        </div>
+    	                        <div class="ibm-col-5-1 dw-mega-nav">
+    	                            <h3>Featured topics</h3>
+    	                            
+    	                            <div class="dw-mega-nav-item">
+                                        <div class="dw-mega-nav-img">
+                                            <img width="30" height="30" alt="" src="./Cleansing, processing, and visualizing a data set, Part 1_ Working with messy data_files/dw-mplist-java.png">
+                                        </div>
+                                        <div class="dw-mega-nav-link">
+                                            <a href="https://developer.ibm.com/java/">Java</a>
+                                        </div>
+    	                            </div>
+    	                            <div class="dw-mega-nav-item">
+                                        <div class="dw-mega-nav-img">
+                                            <img width="30" height="30" alt="" src="./Cleansing, processing, and visualizing a data set, Part 1_ Working with messy data_files/dw-mplist-bigdata.png">
+                                        </div>
+                                        <div class="dw-mega-nav-link">
+                                            <a href="https://www.ibm.com/developerworks/learn/analytics">Data and analytics</a>
+                                        </div>
+    	                            </div>
+    	                            <div class="dw-mega-nav-item">
+                                        <div class="dw-mega-nav-img">
+                                            <img width="30" height="30" alt="" src="./Cleansing, processing, and visualizing a data set, Part 1_ Working with messy data_files/dw-mplist-cognitive.png">
+                                        </div>
+                                        <div class="dw-mega-nav-link">
+                                            <a href="https://www.ibm.com/developerworks/learn/cognitive">Cognitive computing</a>
+                                        </div>
+    	                            </div>
+    	                            <div class="dw-mega-nav-item">
+                                        <div class="dw-mega-nav-img">
+                                            <img width="30" height="30" alt="" src="./Cleansing, processing, and visualizing a data set, Part 1_ Working with messy data_files/dw-mplist-cloud.png">
+                                        </div>
+                                        <div class="dw-mega-nav-link">
+                                            <a href="https://www.ibm.com/developerworks/learn/cloud">Cloud</a>
+                                        </div>
+    	                            </div>       	                            
+    	                        </div>	
+    	                        <div class="ibm-col-5-1 dw-mega-nav">
+    	                            <h3>Featured destinations</h3>
+    	                
+    	                            <div class="dw-mega-nav-item">
+                                        <div class="dw-mega-nav-img">
+                                            <img width="30" height="30" alt="" src="./Cleansing, processing, and visualizing a data set, Part 1_ Working with messy data_files/dw-mplist-swift.png">
+                                        </div>
+                                        <div class="dw-mega-nav-link">
+                                            <a href="https://developer.ibm.com/swift/?lnk=hm">Swift @ IBM</a>
+                                        </div>
+    	                            </div>
+    	                            <div class="dw-mega-nav-item">
+                                        <div class="dw-mega-nav-img">
+                                            <img width="30" height="30" alt="" src="./Cleansing, processing, and visualizing a data set, Part 1_ Working with messy data_files/dw-mplist-blockchain.png">
+                                        </div>
+                                        <div class="dw-mega-nav-link">
+                                            <a href="https://developer.ibm.com/blockchain/">Blockchain</a>
+                                        </div>
+    	                            </div>
+    	                            <div class="dw-mega-nav-item">
+                                        <div class="dw-mega-nav-img">
+                                            <img width="30" height="30" alt="" src="./Cleansing, processing, and visualizing a data set, Part 1_ Working with messy data_files/dw-mplist-api-dest.png">
+                                        </div>
+                                        <div class="dw-mega-nav-link">
+                                            <a href="https://developer.ibm.com/api/list/">API Explorer</a>
+                                        </div>
+    	                            </div>      	                            
+    	                        </div>  
+    	                                                       
+    	                    </div>                             
+                        </li>
+                    </ul>
+	            </li>
+                    
+                <li role="presentation" class="dw-navpage-develop ibm-haschildlist">
+                   <button role="menuitem" tabindex="-1" onclick="document.location=&#39;//www.ibm.com/developerworks/develop/&#39;"><a href="https://www.ibm.com/developerworks/develop/" tabindex="-1">Develop</a></button>
+                    <ul role="menu" aria-label="Develop" id="dw-mega-develop" class="ibm-align-right" style="width: 1349px;">
+                        <li role="presentation">
+                            <div class="ibm-columns">
+                                <div class="ibm-col-5-3 dw-mega-main">
+                                    <h2>Develop with our trials &amp; downloads</h2>
+                                    <p class="dw-mega-main-p">Start developing with product trials, free downloads, and IBM Cloud services.
+                                    Sort by topic or product name and find everything we have to offer.</p>
+                                    <p class="ibm-button-link">                                   
+                                        <a href="https://www.ibm.com/developerworks/develop/" class="ibm-btn-pri">View all downloads &amp; trials</a>
+                                    </p>
+                                </div>
+                                <div class="ibm-col-5-1 dw-mega-nav">
+                                    <h3>Featured products</h3>
+                                    
+                                    <div class="dw-mega-nav-item">
+                                        <div class="dw-mega-nav-img">
+                                            <img width="30" height="30" alt="" src="./Cleansing, processing, and visualizing a data set, Part 1_ Working with messy data_files/dw-mplist-bluemix.png">
+                                        </div>
+                                        <div class="dw-mega-nav-link">
+                                            <a href="https://console.bluemix.net/registration?cm_sp=dw-bluemix-_-masthead-_-megamenu" onclick="goPage(this);return false;">IBM Cloud</a>
+                                        </div>
+                                    </div>
+                                    <div class="dw-mega-nav-item">
+                                        <div class="dw-mega-nav-img">
+                                            <img width="30" height="30" alt="" src="./Cleansing, processing, and visualizing a data set, Part 1_ Working with messy data_files/dw-mplist-websphere.png">
+                                        </div>
+                                        <div class="dw-mega-nav-link">
+                                            <a href="https://www.ibm.com/developerworks/downloads/ws/was/">WebSphere Application Server</a>
+                                        </div>
+                                    </div>
+                                    <div class="dw-mega-nav-item">
+                                        <div class="dw-mega-nav-img">
+                                            <img width="30" height="30" alt="" src="./Cleansing, processing, and visualizing a data set, Part 1_ Working with messy data_files/dw-mplist-db2express.png">
+                                        </div>
+                                        <div class="dw-mega-nav-link">
+                                            <a href="https://www.ibm.com/developerworks/downloads/im/db2express/">DB2 Express C</a>
+                                        </div>
+                                    </div>
+                                    <div class="dw-mega-nav-item">
+                                        <div class="dw-mega-nav-img">
+                                            <img width="30" height="30" alt="" src="./Cleansing, processing, and visualizing a data set, Part 1_ Working with messy data_files/dw-mplist-watson.png">
+                                        </div>
+                                        <div class="dw-mega-nav-link">
+                                            <a href="https://www.ibm.com/watson/">Watson</a>
+                                        </div>
+                                    </div>       	                            
+                                </div>	
+                                <div class="ibm-col-5-1 dw-mega-nav">
+                                    <h3>Featured destinations</h3>
+                                    
+                                    <div class="dw-mega-nav-item">
+                                        <div class="dw-mega-nav-img">
+                                            <img width="30" height="30" alt="" src="./Cleansing, processing, and visualizing a data set, Part 1_ Working with messy data_files/dw-mplist-swift.png">
+                                        </div>
+                                        <div class="dw-mega-nav-link">
+                                            <a href="https://developer.ibm.com/swift/?lnk=hm">Swift @ IBM</a>
+                                        </div>
+                                    </div>
+                                    <div class="dw-mega-nav-item">
+                                        <div class="dw-mega-nav-img">
+                                            <img width="30" height="30" alt="" src="./Cleansing, processing, and visualizing a data set, Part 1_ Working with messy data_files/dw-mplist-code.png">
+                                        </div>
+                                        <div class="dw-mega-nav-link">
+                                            <a href="https://developer.ibm.com/code/">IBM Code</a>
+                                        </div>
+                                    </div>
+                                    <div class="dw-mega-nav-item">
+                                        <div class="dw-mega-nav-img">
+                                            <img width="30" height="30" alt="" src="./Cleansing, processing, and visualizing a data set, Part 1_ Working with messy data_files/dw-mplist-api-dest.png">
+                                        </div>
+                                        <div class="dw-mega-nav-link">
+                                            <a href="https://developer.ibm.com/api/list/">API Explorer</a>
+                                        </div>
+                                    </div>        	                            
+                                </div>  
+                                
+                            </div>                            
+                        </li>
+                    </ul>
+                </li>
+ 
+            
+                <li role="presentation" class="dw-navpage-connect ibm-haschildlist">
+                    <button role="menuitem" tabindex="-1" onclick="document.location=&#39;//www.ibm.com/developerworks/connect/&#39;"><a href="https://www.ibm.com/developerworks/connect/" tabindex="-1">Connect</a></button>
+                    <ul role="menu" aria-label="Connect" id="dw-mega-connect" class="ibm-align-right" style="width: 1349px;">
+                        <li role="presentation">
+                            <div class="ibm-columns">
+                                <div class="ibm-col-5-3 dw-mega-main">
+                                    <h2>Find a community and connect</h2>
+                                    <p class="dw-mega-main-p">Learn from the experts and share with other developers in one of our
+                                        dev centers.  Ask questions and get answers with dW answers.  Search for local events
+                                        in your area.  All in developerWorks communities.</p>
+                                    <p class="ibm-button-link">                                   
+                                        <a href="https://www.ibm.com/developerworks/connect/" class="ibm-btn-pri">View communities</a>
+                                    </p>
+                                </div>
+                                <div class="ibm-col-5-1 dw-mega-nav">
+                                    <h3>Featured Developer Centers</h3>
+                                    
+                                    <div class="dw-mega-nav-item">
+                                        <div class="dw-mega-nav-img">
+                                            <img width="30" height="30" alt="" src="./Cleansing, processing, and visualizing a data set, Part 1_ Working with messy data_files/dw-mplist-blockchain.png">
+                                        </div>
+                                        <div class="dw-mega-nav-link">
+                                            <a href="https://developer.ibm.com/blockchain/">Blockchain</a>
+                                        </div>
+                                    </div>
+                                    <div class="dw-mega-nav-item">
+                                        <div class="dw-mega-nav-img">
+                                            <img width="30" height="30" alt="" src="./Cleansing, processing, and visualizing a data set, Part 1_ Working with messy data_files/dw-mplist-bluemix-dev.png">
+                                        </div>
+                                        <div class="dw-mega-nav-link">
+                                            <a href="https://developer.ibm.com/bluemix/">IBM Cloud</a>
+                                        </div>
+                                    </div>
+                                    <div class="dw-mega-nav-item">
+                                        <div class="dw-mega-nav-img">
+                                            <img width="30" height="30" alt="" src="./Cleansing, processing, and visualizing a data set, Part 1_ Working with messy data_files/dw-mplist-was-dev.png">
+                                        </div>
+                                        <div class="dw-mega-nav-link">
+                                            <a href="https://developer.ibm.com/wasdev/">WebSphere Application Server</a>
+                                        </div>
+                                    </div>       	                            
+                                </div>	
+                                <div class="ibm-col-5-1 dw-mega-nav">
+                                    <h3>Featured destinations</h3>
+
+                                    <div class="dw-mega-nav-item">
+                                        <div class="dw-mega-nav-img">
+                                            <img width="30" height="30" alt="" src="./Cleansing, processing, and visualizing a data set, Part 1_ Working with messy data_files/dw-mplist-code.png">
+                                        </div>
+                                        <div class="dw-mega-nav-link">
+                                            <a href="https://developer.ibm.com/code/">IBM Code</a>
+                                        </div>
+                                    </div>
+                                    <div class="dw-mega-nav-item">
+                                        <div class="dw-mega-nav-img">
+                                            <img width="30" height="30" alt="" src="./Cleansing, processing, and visualizing a data set, Part 1_ Working with messy data_files/dw-mplist-swift.png">
+                                        </div>
+                                        <div class="dw-mega-nav-link">
+                                            <a href="https://developer.ibm.com/swift/?lnk=hm">Swift @ IBM</a>
+                                        </div>
+                                    </div>
+                                    <div class="dw-mega-nav-item">
+                                        <div class="dw-mega-nav-img">
+                                            <img width="30" height="30" alt="" src="./Cleansing, processing, and visualizing a data set, Part 1_ Working with messy data_files/dw-mplist-api-dest.png">
+                                        </div>
+                                        <div class="dw-mega-nav-link">
+                                            <a href="https://developer.ibm.com/api/list/">API Explorer</a>
+                                        </div>
+                                    </div>      	                            
+                                </div>  
+                                
+                            </div>                            
+                        </li>
+                    </ul>
+                </li> 
+            
+                <!-- dW featured -->
+                <!-- <li role="presentation" class="dw-navpage-devcenter"><strong>Subheading</strong></li> -->
+                <li role="presentation" class="dw-navpage-devcenter"><a role="menuitem" href="https://www.ibm.com/developerworks/learn/cognitive/">Cognitive</a></li>
+                <li role="presentation" class="dw-navpage-devcenter"><a role="menuitem" href="https://www.ibm.com/developerworks/learn/cloud/">Cloud</a></li>
+                <li role="presentation" class="dw-navpage-devcenter"><a role="menuitem" href="https://www.ibm.com/developerworks/learn/analytics/">Data</a></li>
+                <li role="presentation" class="dw-navpage-devcenter"><a role="menuitem" href="https://www.ibm.com/developerworks/learn/iot/">Internet of Things</a></li>
+                <li role="presentation" class="dw-navpage-devcenter"><a role="menuitem" href="https://www.ibm.com/developerworks/learn/java/">Java</a></li>
+                <li role="presentation" class="dw-navpage-devcenter"><a role="menuitem" href="https://www.ibm.com/developerworks/learn/">All topics</a></li>    
+        </ul>
+    </div>
+</div>        <!-- MASTHEAD_SITENAV_END -->
+        
+        <!-- NAVIGATION_TRAIL_BEGIN -->
+        <div id="ibm-leadspace-head" class="ibm-alternate">
+            <div id="ibm-leadspace-body">
+                <nav aria-label="Breadcrumb" role="navigation">                     
+                                <ul id="dw-navigation-trail" itemscope="" itemtype="http://schema.org/BreadcrumbList"><li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a itemprop="item" href="https://www.ibm.com/developerworks/learn/"><span itemprop="name">Learn</span></a><meta itemprop="position" content="1"></li><li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a itemprop="item" href="https://www.ibm.com/developerworks/analytics/"><span itemprop="name">Data and analytics</span></a><meta itemprop="position" content="2"></li></ul>
+                </nav>
+            </div>
+        </div>
+        <!-- NAVIGATION_TRAIL_END -->
+        
+    </header>
+    <!-- LEADSPACE_END -->
+    
+    <!-- MAIN_CONTENT_BEGIN -->
+    <main role="main" aria-label=""> 
+        <div id="ibm-pcon">
+            <!-- BEGIN_IBM-CONTENT -->
+            <div id="ibm-content">
+                <!-- BEGIN_IBM-CONTENT-BODY -->
+                <div id="ibm-content-body">
+                    <!-- BEGIN_IBM-CONTENT-MAIN -->
+                    <div id="ibm-content-main" class="dw-article">                        
+                        <!-- BEGIN_INTERIOR-COLUMNS -->
+                                <div class="ibm-columns dw-article-toc">
+                                    <!-- LEFT_6_2_CONTENT_COLUMN_BEGIN -->  
+                                    <div id="dw-article-toc-container" class="ibm-col-6-2">
+                                        <div id="dw-article-toc-body" data-widget="scrollable" data-height="426" style="width: 380px; height: 426px;" class="nano has-scrollbar ibm-widget-processed"><div class="nano-content" tabindex="-1" style="right: -17px;">
+                                            <h2>Contents</h2><div class="ibm-alternate-rule"><hr></div><ul role="directory" aria-label="Table of contents" class="ibm-plain-list"><li class=""><a onclick="tocLink(&#39;#ibm-pagetitle-h1&#39;)" role="link" tabindex="0">Introduction</a></li><li><a onclick="tocLink(&#39;#what_is&#39;)" role="link" tabindex="0">What is messy data?</a></li><li><a onclick="tocLink(&#39;#schema&#39;)" role="link" tabindex="0">Data formats and schemas</a></li><li><a onclick="tocLink(&#39;#fusion&#39;)" role="link" tabindex="0">Data blending or fusion</a></li><li class=""><a onclick="tocLink(&#39;#method&#39;)" role="link" tabindex="0">Methods for data cleansing</a></li><li class=""><a onclick="tocLink(&#39;#profiling&#39;)" role="link" tabindex="0">Data profiling</a></li><li class="dw-highlight"><a onclick="tocLink(&#39;#tool&#39;)" role="link" tabindex="0">Build a data-cleansing tool</a></li><li><a onclick="tocLink(&#39;#os_tools&#39;)" role="link" tabindex="0">Open source data-cleansing
+                tools</a></li><li><a onclick="tocLink(&#39;#further&#39;)" role="link" tabindex="0">Going further</a></li><li><a onclick="tocLink(&#39;#artdownload&#39;)" role="link" tabindex="0">Downloadable resources</a></li><li><a onclick="tocLink(&#39;#artrelatedtopics&#39;)" role="link" tabindex="0">Related topics</a></li><li><a onclick="tocLink(&#39;#icomments&#39;)" role="link" tabindex="0">Comments</a></li></ul>
+                                        </div><div class="nano-pane" style="opacity: 1; visibility: visible;"><div class="nano-slider" style="height: 330px; transform: translate(0px, 0px);"></div></div></div>
+                                    </div>
+                                    <!-- LEFT_6_2_CONTENT_COLUMN_END -->
+                                    
+                                    <!-- CENTER_6_4_CONTENT_COLUMN_BEGIN -->
+                                    <div class="ibm-col-6-4">
+                                            <p class="dw-article-series-head">Cleansing, processing, and visualizing a data set, Part
+                1</p>
+                                        <h1 id="ibm-pagetitle-h1" class="ibm-h1">Working with messy data</h1>
+                                        <!-- Article Top Bar -->
+                                                <div class="ibm-columns dw-article-topbar">
+                                                    <!-- Author and article info. -->
+                                                    <div class="ibm-col-6-2 ibm-col-medium-6-4 dw-article-metadata">
+                                                        <div class="dw-article-avatar"><img width="42" height="42" src="./Cleansing, processing, and visualizing a data set, Part 1_ Working with messy data_files/p-mtjones60.jpg" alt="M. TIm Jones"></div><div class="dw-article-authordate"><span class="dw-article-author"><a href="https://developer.ibm.com/author/mtj/">M. Tim Jones</a></span><br><span class="dw-article-pubdate">Published on December 14,  2017</span></div>
+                                                    </div>
+                                                    <!-- Social -->
+                                                    <div class="ibm-col-6-2 ibm-col-medium-6-4 ibm-col-small-6-2 dw-article-social">
+                                                        <!-- Sharing links -->
+                                                        <div id="dw-article-share-inline">
+                                                            <div class="dw-article-sharelink-inline">
+                                                                <div class="ibm-sharethispage"><h4 class="ibm-bold">Share this page</h4><p class="ibm-icononly"><a class="ibm-facebook-encircled-link" href="http://www.facebook.com/sharer.php?u=http%3A%2F%2Fwww.ibm.com%2Fdeveloperworks%2Flibrary%2Fba-cleanse-process-visualize-data-set-1%2Findex.html&amp;t=Cleansing%2C%20processing%2C%20and%20visualizing%20a%20data%20set%2C%20Part%201%3A%20Working%20with%20messy%20data" data-id="facebook" onclick="return IBMCore.common.module.sharethispage.gotoUrl(window.open(), this);">Facebook</a><a class="ibm-twitter-encircled-link" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fibm.co%2F2BrjZm7&amp;text=Cleansing%2C%20processing%2C%20and%20visualizing%20a%20data%20set%2C%20Part%201%3A%20Working%20with%20messy%20data&amp;via=developerWorks" data-id="twitter" onclick="return IBMCore.common.module.sharethispage.gotoUrl(window.open(), this);">Twitter</a><a class="ibm-linkedin-encircled-link" href="http://www.linkedin.com/shareArticle?mini=true&amp;url=http%3A%2F%2Fwww.ibm.com%2Fdeveloperworks%2Flibrary%2Fba-cleanse-process-visualize-data-set-1%2Findex.html&amp;title=Cleansing%2C%20processing%2C%20and%20visualizing%20a%20data%20set%2C%20Part%201%3A%20Working%20with%20messy%20data" data-id="linkedin" onclick="return IBMCore.common.module.sharethispage.gotoUrl(window.open(), this);">Linked In</a><a class="ibm-googleplus-encircled-link" href="https://plus.google.com/share?url=http%3A%2F%2Fwww.ibm.com%2Fdeveloperworks%2Flibrary%2Fba-cleanse-process-visualize-data-set-1%2Findex.html&amp;t=Cleansing%2C%20processing%2C%20and%20visualizing%20a%20data%20set%2C%20Part%201%3A%20Working%20with%20messy%20data" data-id="googleplus" onclick="return IBMCore.common.module.sharethispage.gotoUrl(window.open(), this);">Google+</a><a class="ibm-email-encircled-link" href="mailto:?subject=Cleansing%2C%20processing%2C%20and%20visualizing%20a%20data%20set%2C%20Part%201%3A%20Working%20with%20messy%20data&amp;body=http%3A%2F%2Fwww.ibm.com%2Fdeveloperworks%2Flibrary%2Fba-cleanse-process-visualize-data-set-1%2Findex.html" data-id="email" onclick="">E-mail this page</a></p></div>
+                                                            </div>
+                                                        </div>
+                                                        <!-- Number of comments and link to comments -->
+                                                        <div id="dw-article-cmts">
+                                                            <div class="dw-article-cmtslink">
+                                                                <a onclick="tocLink(&#39;#icomments&#39;)" href="https://www.ibm.com/developerworks/library/ba-cleanse-process-visualize-data-set-1/index.html#icomments" role="link" tabindex="0" aria-label="Comments">
+                                                                    <img src="./Cleansing, processing, and visualizing a data set, Part 1_ Working with messy data_files/dw-article-cmt-icon.png" width="29" height="29" alt="Comments">
+                                                                </a>
+                                                            </div>
+                                                            <div class="dw-article-cmtslink">
+                                                                <a onclick="tocLink(&#39;#icomments&#39;)" href="https://www.ibm.com/developerworks/library/ba-cleanse-process-visualize-data-set-1/index.html#icomments" role="link" tabindex="0">
+                                                                    <div id="nCmts">0</div>
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+<div id="dw-series-container" style="display: block;"><h3 class="ibm-h3" id="dw-series-heading">Content series:</h3><div data-widget="showhide" data-type="panel" class="ibm-show-hide ibm-widget-processed"><h2 id="dw-series-show-hide"><a href="javascript:void();">This content is part <span id="dw-series-part">1</span> of <span id="dw-series-total">3</span> in the series: <span id="dw-series-title">Cleansing, processing, and visualizing a data set</span></a></h2><div class="ibm-container-body" id="dw-series-links" style="display: none;"><ul id="dw-series-list"><li class="dw-series-item">Part 1: Working with messy data</li><li class="dw-series-item"><a href="http://www.ibm.com/developerworks/library/ba-cleanse-process-visualize-data-set-2/index.html?ca=drs-" class="dw-series-article-link">Part 2: Gaining invaluable insight from clean data sets</a></li><li class="dw-series-item"><a href="http://www.ibm.com/developerworks/opensource/library/ba-cleanse-process-visualize-data-set-3/index.html?ca=drs-" class="dw-series-article-link">Part 3: Visualizing data</a></li></ul></div></div></div>
+                                        <!-- Article Body -->
+                                        
+                                        <p>Data comes in many forms, all of it messy. Whether we're talking about
+                missing data, unstructured data, or data that lacks regular structure, you
+                need methods to cleanse data before you can process it to improve its
+                quality. This tutorial explores some of the key problems of working with
+                real-world data and the methods you can apply. </p><p>This is the first installment in a three-part series that explores the
+                problem of messy data and the methods available to increase the quality of
+                your data sets (see Figure 1). Parts 2 and 3 will continue with data
+                analysis using machine learning and data visualization. </p><h5 id="fig01" class="ibm-h5">Figure 1. Data processing pipeline, from cleansing to
+                    learning and visualization </h5><img src="./Cleansing, processing, and visualizing a data set, Part 1_ Working with messy data_files/image001.png" class="ibm-downsize" alt="Three boxes in a row showing the data processing pipeline, from cleansing     to machine learning to data visualization" height="128" width="636"><p class="ibm-ind-link ibm-hide"><a class="ibm-popup-link" onclick="IBMCore.common.widget.overlay.show(&#39;N10076&#39;);return false;" href="https://www.ibm.com/developerworks/library/ba-cleanse-process-visualize-data-set-1/index.html#N10076">View image at full size</a></p><p>Data science and its algorithms are clean and precise, but the data on
+                which they operate come from the real world, which means that they're
+                messy and require some preparation before you can use them effectively.
+                The quality of insights you derive from data depends on the validity of
+                that data, so some preparation is required. </p><p>Data cleansing has a long history in databases and is a key step in what's
+                known as <em>extract, transform, load</em> (ETL). ETL is commonly used in
+                data warehouses, where data is extracted from one or more sources;
+                transformed into its proper format and structure, including cleansing of
+                the data; and finally loaded into a final target location, such as a
+                single database or file. </p><p>Let's begin with a discussion of what it means to have messy data, then dig
+                into some of the methods for deal with that mess. </p><h2 id="what_is" class="ibm-h2">What is messy data?</h2><p>Data sets large and small are rarely ready to use. As Figure 2 shows, my
+                simple comma-separated value (CSV) data set has a variety of issues,
+                including invalid fields, missing and additional values, and other issues
+                that will be problematic when I attempt to parse this file for use by a
+                machine learning algorithm. </p><h5 id="fig02" class="ibm-h5">Figure 2. A simple messy data set example</h5><img src="./Cleansing, processing, and visualizing a data set, Part 1_ Working with messy data_files/image002.png" class="ibm-downsize" alt="A central box of data, with callouts for all the problems in the data set" height="386" width="827"><p class="ibm-ind-link"><a class="ibm-popup-link" onclick="IBMCore.common.widget.overlay.show(&#39;N1008E&#39;);return false;" href="https://www.ibm.com/developerworks/library/ba-cleanse-process-visualize-data-set-1/index.html#N1008E">View image at full size</a></p><p>This example is a simple one, but anyone who has worked with a public data
+                set will understand these issues and the need to preprocess data to make
+                it useful. Data sets that have such obvious errors make the results of the
+                processed data somewhat questionable. The observations with errors result
+                in incomplete data or invalid observations that can lead to incorrect
+                results. Cleansing data is therefore a key step in the data processing
+                pipeline. </p><p>Data may also come from multiple sources. Although each source may be valid
+                in isolation, bringing the data together may require processing for
+                consistency and uniformity. For example, one data set may have a different
+                unit of measure for a given field than another, requiring that they be
+                normalized. </p><p>One key factor for data validity, then, is the format in which the data is
+                represented. Let's look at that next. </p><h2 id="schema" class="ibm-h2">Data formats and schemas</h2><p>Data sets can be in many forms, but the majority are stored as delimited
+                text files. As shown in prior examples, these data sets delimit their
+                fields by using a character, commonly a comma, but in other cases through
+                white space (space, tab, etc.). These raw data sets are particularly prone
+                to error because they lack any information that indicates their structure
+                and so require data scientists to interpret the data set manually. </p><p>So-called "self-describing formats" can greatly improve our ability to
+                maintain data correctly. These formats include XML and JSON. These data
+                formats allow the data to be embedded within metadata to make it fully
+                self-describing within a single file. They also permit complex data
+                formats that are more difficult to describe with simple flat text files
+                (such as variant arrays of data or relationships within the data). </p><p>Figure 3 shows how you can represent temperature data by using the JSON
+                format. As shown, the data is labeled, and the labels are predefined such
+                that the ingest tool understands what to expect. </p><h5 id="fig03" class="ibm-h5">Figure 3. Using JSON format to self-describe a data
+                    set</h5><img src="./Cleansing, processing, and visualizing a data set, Part 1_ Working with messy data_files/image003.png" class="ibm-downsize" alt="Image showing a data set in JSON format" height="305" width="455"><p class="ibm-ind-link ibm-hide"><a class="ibm-popup-link" onclick="IBMCore.common.widget.overlay.show(&#39;N100A7&#39;);return false;" href="https://www.ibm.com/developerworks/library/ba-cleanse-process-visualize-data-set-1/index.html#N100A7">View image at full size</a></p><p>The downside of using self-describing formats is obvious from the example.
+                In a simple flat text file, the size of the data is small compared to a
+                self-describing format. That said, binary formats do exist that can
+                achieve self-description with much less overhead, but the simplicity of
+                CSV or other flat-file text formats prevail because of their simplicity of
+                parsing. You can define schemas for flat-file text data sets, as I show in
+                the sample application. </p><h2 id="fusion" class="ibm-h2">Data blending or fusion</h2><p><em>Data blending</em> is the process by which a data set is constructed
+                from two or more independent data sets. Blending data may not be a
+                one-time process; instead, it can be performed on demand based on the
+                machine learning use case. </p><p>Blending data has all the problems discussed thus far — namely, the
+                need to cleanse more than one data source. Fusing multiple data sets has
+                additional problems, however, in the representation of the data in each
+                source (such as one data set that uses Celsius and another that uses
+                Kelvin, as illustrated below). The data may not be consistent across
+                sources and may require transforming and reordering data fields so that
+                the fused data can be properly used. </p><h5 id="fig04" class="ibm-h5">Figure 4. Blending and transforming two data sets</h5><img src="./Cleansing, processing, and visualizing a data set, Part 1_ Working with messy data_files/image004.png" class="ibm-downsize" alt="Image showing two boxes on the top, each representing a data set,       being merged into a single data set in a box beneath them" height="356" width="848"><p class="ibm-ind-link"><a class="ibm-popup-link" onclick="IBMCore.common.widget.overlay.show(&#39;N100BE&#39;);return false;" href="https://www.ibm.com/developerworks/library/ba-cleanse-process-visualize-data-set-1/index.html#N100BE">View image at full size</a></p><h2 id="method" class="ibm-h2">Methods for data cleansing</h2><p>Data cleansing begins with <em>data parsing,</em> which means taking each
+                observation from its data file and extracting each independent element.
+                You can easily identify parsing if the records are similar (same number of
+                elements, similar types, etc.). </p><p>Given the definition of a <em>schema</em>— that is, a higher-level representation of the data observations
+                — you can type-check the observation to ensure that it matches the
+                schema and the user's expectation for later data analysis. For example,
+                you can ensure that a number is contained at a given field location
+                instead of a string given that you intend to perform numerical operations
+                on it. A schema can also tell you whether the proper number of fields is
+                represented for each observation (otherwise, your understanding of the
+                data set may be flawed). </p><p>Some data-cleansing applications permit the construction of rules with
+                functions that permit more complex transformations of data — for
+                example, interrogating fields to create or modify other fields based on
+                their contents. The rules can also validate the consistency of an
+                observation (where possible) to remove invalid data or to transform data
+                for greater accuracy — for example, modifying a U.S. ZIP code from
+                five digits to the enhanced nine digits. </p><p>You can also identify duplicates, although there are applications for
+                duplicate observations in a data set so that duplicate elimination isn't
+                always required or necessary. </p><p>When a data set is syntactically correct, you can apply methods to ensure
+                that the data is semantically correct. We'll explore one approach to this
+                step next. </p><h2 id="profiling" class="ibm-h2">Data profiling</h2><p>When your data is clean, the next step is to profile the data as a
+                secondary step in the cleansing process. <em>Profiling</em> is an analysis
+                of the data to ensure that the data is consistent. Through profiling, you
+                can dig into the data to see the distribution of the individual fields to
+                look for outliers and other data that doesn't match the general data set. </p><p>For example, Figure 5 illustrates this process. In line 1, given that the
+                real values represent physical measurements, a zero value may indicate an
+                issue with this observation. In line 3, you see that the range of the
+                measurement is obviously not in the same range as other measurements of
+                this field (and its type differs). Finally, in line 5, notice that the
+                class name is misspelled. </p><h5 id="fig05" class="ibm-h5">Figure 5. Data set errors made visible through data
+                    profiling</h5><img src="./Cleansing, processing, and visualizing a data set, Part 1_ Working with messy data_files/image005.png" class="ibm-downsize" alt="A central box of data, with callouts for the errors in the data set" height="386" width="667"><p class="ibm-ind-link ibm-hide"><a class="ibm-popup-link" onclick="IBMCore.common.widget.overlay.show(&#39;N100ED&#39;);return false;" href="https://www.ibm.com/developerworks/library/ba-cleanse-process-visualize-data-set-1/index.html#N100ED">View image at full size</a></p><p>In some cases, these issues can be detected automatically through
+                profiling. You could indicate that all measurements should be greater than
+                0 to catch the first issue. Through statistical analysis, you could
+                identify the second outlier measurement. The final issue could be
+                identified by capturing the unique class names and through their
+                frequencies understand that this particular class name is an outlier
+                (likely an occurrence of one). </p><p>You can validate time-series data in the context of flow to ensure that the
+                data is processed in the correct order given timestamps. Otherwise, the
+                validity of the result could be in question. You can use moving data
+                windows to modify outliers (or <em>spikes</em>) to the window median value
+                (as applied through Hampel filters). </p><p>Data profiling can be performed manually, which I'll demonstrate through
+                the construction of a data-cleansing tool. </p><h2 id="tool" class="ibm-h2">Build a data-cleansing tool</h2><p>It's relatively simple to build a generalized data-cleansing tool. I
+                demonstrate the construction of a simple CSV data-cleansing tool that
+                implements a set of key features, including: </p><ul class="ibm-bullet-list"><li>Field type checking through a user-defined schema</li><li>Observation validation for too few or too many fields</li><li>Automatic extraction of erroneous data for user review</li><li>Training and test data generation using a user-defined
+                    probability</li><li>Data summarization for simple data profiling</li></ul><p>Let's begin with a short discussion of the flow of this tool. Figure 6
+                illustrates the processes at work and the data that results. </p><h5 id="fig06" class="ibm-h5">Figure 6. Flow for a data-cleansing and profiling
+                    tool</h5><img src="./Cleansing, processing, and visualizing a data set, Part 1_ Working with messy data_files/image006.png" class="ibm-downsize" alt="Flow chart of the process that the data-cleansing tool uses" height="425" width="606"><p class="ibm-ind-link ibm-hide"><a class="ibm-popup-link" onclick="IBMCore.common.widget.overlay.show(&#39;N10112&#39;);return false;" href="https://www.ibm.com/developerworks/library/ba-cleanse-process-visualize-data-set-1/index.html#N10112">View image at full size</a></p><p>I begin with a raw data set formatted as a comma-delimited text file. The
+                user provides the schema as a string, identifying the type of each field
+                used to parse and validate each field of each observation. Those that
+                don't pass the type check (or contain too few or too many fields) are
+                written to an error file (which I can repair manually and reapply to the
+                raw data set). Those observations that pass the initial checks are
+                considered validated and move on to data set split and summarization. I
+                can send each new sample to a training or test data file (based on a
+                user-defined probability), and each field is summarized in a type-specific
+                way. For example, strings are aggregated (up to 10), and integer and real
+                values are profiled for minimum, maximum, and average. </p><p>You can find the source for the <a href="https://github.com/mtimjones/dataprocessing">simple cleansing tool</a> on GitHub, as shown below. This
+                repository contains three source files that implement the input file
+                management, line parsing, and summarization. The source splits the
+                functionality between processing loop (<code>cleanse.c</code>), field
+                parsing (<code>parse.c</code>), and summarization
+                (<code>summary.c</code>). The processing loop parses the options from the
+                command line, opens (and closes) all relevant files, and iterates over
+                reading lines from the input file. These lines are passed to the parser,
+                which then parses each individual field from the line and validates it by
+                using the provided schema. Summaries are managed in a separate file to
+                maintain a list of unique strings for a given field or profiling data for
+                numerical data. </p><h5 id="fig07" class="ibm-h5">Figure 7. Flowchart illustrating the data-cleansing and
+                    profiling tool</h5><img src="./Cleansing, processing, and visualizing a data set, Part 1_ Working with messy data_files/image007.png" class="ibm-downsize" alt="Flow chart showing the input of data through file close" height="606" width="394"><p class="ibm-ind-link ibm-hide"><a class="ibm-popup-link" onclick="IBMCore.common.widget.overlay.show(&#39;N1012C&#39;);return false;" href="https://www.ibm.com/developerworks/library/ba-cleanse-process-visualize-data-set-1/index.html#N1012C">View image at full size</a></p><p>Now let's look at the tool in action.</p><p>I'm using an old data set called the <a href="https://archive.ics.uci.edu/ml/machine-learning-databases/zoo/">Zoo database</a> created by Richard Forsyth that contains 15
+                binary-valued attributes describing an animal, with its name and class
+                (called <em>type</em>) and a nonbinary attribute indicating the number of
+                that animal's legs. The schema and sample are shown in Figure 8, with
+                three of the 101 total observations (of seven possible classes) in this
+                data set. </p><h5 id="fig08" class="ibm-h5">Figure 8. Zoo dataset illustration (schema and three
+                    observations) </h5><img src="./Cleansing, processing, and visualizing a data set, Part 1_ Working with messy data_files/image008.png" class="ibm-downsize" alt="Image showing three rows of binary responses for three animal      species" height="244" width="765"><p class="ibm-ind-link ibm-hide"><a class="ibm-popup-link" onclick="IBMCore.common.widget.overlay.show(&#39;N10140&#39;);return false;" href="https://www.ibm.com/developerworks/library/ba-cleanse-process-visualize-data-set-1/index.html#N10140">View image at full size</a></p><p>The source includes a <code>Makefile</code> I can use to build the tool
+                simply bu typing <code>make</code> on a standard Linux command line: </p><div class="ibm-syntax-container"><div><div id="highlighter_811237" class="syntaxhighlighter  htmlscript"><table border="0" cellpadding="0" cellspacing="0" role="none"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div><div class="line number2 index1 alt1">2</div><div class="line number3 index2 alt2">3</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="htmlscript plain">$ make</code></div><div class="line number2 index1 alt1"><code class="htmlscript plain">gcc -o cleanse cleanse.c parse.c summary.c -I. -g -std=c99 -Wall</code></div><div class="line number3 index2 alt2"><code class="htmlscript plain">$</code></div></div></td></tr></tbody></table></div></div></div><p>The resulting executable is called <code>cleanse</code>. I invoke this tool
+                by specifying the input file (the <code>-i</code> option), the output file
+                (the <code>-o</code> option), and the schema (the <code>-c</code> option).
+                The schema is represented by a single letter for each comma-delimited
+                field in the data (<code>d</code> for integer, <code>s</code> for string,
+                and <code>g</code> for float or double). </p><div class="ibm-syntax-container"><div><div id="highlighter_186014" class="syntaxhighlighter  htmlscript"><table border="0" cellpadding="0" cellspacing="0" role="none"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div><div class="line number2 index1 alt1">2</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="htmlscript plain">$ ./cleanse -i zoo.dat -o output -c "sddddddddddddddddd"</code></div><div class="line number2 index1 alt1"><code class="htmlscript plain">$</code></div></div></td></tr></tbody></table></div></div></div><p>If I inspect the error file, I see the records that weren't correctly
+                parsed and were therefore stored as errors. Note that comments are also
+                generated to indicate where the first error was located in a given
+                observation. As shown in the following code, the first error finds a
+                question mark (<code>?</code>) in place of a binary value, and the second
+                identifies a missing value. The final error lacks any data. For any data
+                that had obvious issues, I could repair it in the original data set. </p><div class="ibm-syntax-container"><div><div id="highlighter_102777" class="syntaxhighlighter  htmlscript"><table border="0" cellpadding="0" cellspacing="0" role="none"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div><div class="line number2 index1 alt1">2</div><div class="line number3 index2 alt2">3</div><div class="line number4 index3 alt1">4</div><div class="line number5 index4 alt2">5</div><div class="line number6 index5 alt1">6</div><div class="line number7 index6 alt2">7</div><div class="line number8 index7 alt1">8</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="htmlscript plain">$ cat output.err</code></div><div class="line number2 index1 alt1"><code class="htmlscript plain"># Error in field 4</code></div><div class="line number3 index2 alt2"><code class="htmlscript plain">cat,1,0,0,?,0,0,1,1,1,1,0,0,4,1,1,1,1</code></div><div class="line number4 index3 alt1"><code class="htmlscript plain"># Error in field 4</code></div><div class="line number5 index4 alt2"><code class="htmlscript plain">dog,1,0,0,,0,0,1,1,1,1,0,0,4,1,1,1,1</code></div><div class="line number6 index5 alt1"><code class="htmlscript plain"># Error in field 0</code></div><div class="line number7 index6 alt2"><code class="htmlscript plain">,,,,,,,,,,,,,,,,,</code></div><div class="line number8 index7 alt1"><code class="htmlscript plain">$</code></div></div></td></tr></tbody></table></div></div></div><p>The output file (called <em>output.dat</em>) contains the observations the
+                tool has validated: </p><div class="ibm-syntax-container"><div><div id="highlighter_448815" class="syntaxhighlighter  htmlscript"><table border="0" cellpadding="0" cellspacing="0" role="none"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div><div class="line number2 index1 alt1">2</div><div class="line number3 index2 alt2">3</div><div class="line number4 index3 alt1">4</div><div class="line number5 index4 alt2">5</div><div class="line number6 index5 alt1">6</div><div class="line number7 index6 alt2">7</div><div class="line number8 index7 alt1">8</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="htmlscript plain">$ more output.dat</code></div><div class="line number2 index1 alt1"><code class="htmlscript plain">aardvark,1,0,0,1,0,0,1,1,1,1,0,0,4,0,0,1,1</code></div><div class="line number3 index2 alt2"><code class="htmlscript plain">antelope,1,0,0,1,0,0,0,1,1,1,0,0,4,1,0,1,1</code></div><div class="line number4 index3 alt1"><code class="htmlscript plain">bass,0,0,1,0,0,1,1,1,1,0,0,1,0,1,0,0,4</code></div><div class="line number5 index4 alt2"><code class="htmlscript plain">...</code></div><div class="line number6 index5 alt1"><code class="htmlscript plain">worm,0,0,1,0,0,0,0,0,0,1,0,0,0,0,0,0,7</code></div><div class="line number7 index6 alt2"><code class="htmlscript plain">wren,0,1,1,0,1,0,0,0,1,1,0,0,2,1,0,0,2</code></div><div class="line number8 index7 alt1"><code class="htmlscript plain">$</code></div></div></td></tr></tbody></table></div></div></div><p>Using the valid data set, I can then view the profile of the data by
+                specifying the <code>-p</code> option. A portion of this output is shown
+                below, with the summary for the string data (the ellipsis [<code>…</code>]
+                indicates that there were 10 or more unique strings) and three of the
+                numeric fields. I can see from this data, for example, that there are few
+                observations with <code>feathers</code>. </p><div class="ibm-syntax-container"><div><div id="highlighter_315783" class="syntaxhighlighter  htmlscript"><table border="0" cellpadding="0" cellspacing="0" role="none"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div><div class="line number2 index1 alt1">2</div><div class="line number3 index2 alt2">3</div><div class="line number4 index3 alt1">4</div><div class="line number5 index4 alt2">5</div><div class="line number6 index5 alt1">6</div><div class="line number7 index6 alt2">7</div><div class="line number8 index7 alt1">8</div><div class="line number9 index8 alt2">9</div><div class="line number10 index9 alt1">10</div><div class="line number11 index10 alt2">11</div><div class="line number12 index11 alt1">12</div><div class="line number13 index12 alt2">13</div><div class="line number14 index13 alt1">14</div><div class="line number15 index14 alt2">15</div><div class="line number16 index15 alt1">16</div><div class="line number17 index16 alt2">17</div><div class="line number18 index17 alt1">18</div><div class="line number19 index18 alt2">19</div><div class="line number20 index19 alt1">20</div><div class="line number21 index20 alt2">21</div><div class="line number22 index21 alt1">22</div><div class="line number23 index22 alt2">23</div><div class="line number24 index23 alt1">24</div><div class="line number25 index24 alt2">25</div><div class="line number26 index25 alt1">26</div><div class="line number27 index26 alt2">27</div><div class="line number28 index27 alt1">28</div><div class="line number29 index28 alt2">29</div><div class="line number30 index29 alt1">30</div><div class="line number31 index30 alt2">31</div><div class="line number32 index31 alt1">32</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="htmlscript plain">$ ./cleanse -i output.dat -o output2 -c "sddddddddddddddddd" -p</code></div><div class="line number2 index1 alt1"><code class="htmlscript plain">Data Profile:</code></div><div class="line number3 index2 alt2">&nbsp;</div><div class="line number4 index3 alt1"><code class="htmlscript plain">Field 0: (STRING)</code></div><div class="line number5 index4 alt2"><code class="htmlscript spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="htmlscript plain">aardvark</code></div><div class="line number6 index5 alt1"><code class="htmlscript spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="htmlscript plain">antelope</code></div><div class="line number7 index6 alt2"><code class="htmlscript spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="htmlscript plain">bass</code></div><div class="line number8 index7 alt1"><code class="htmlscript spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="htmlscript plain">bear</code></div><div class="line number9 index8 alt2"><code class="htmlscript spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="htmlscript plain">boar</code></div><div class="line number10 index9 alt1"><code class="htmlscript spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="htmlscript plain">buffalo</code></div><div class="line number11 index10 alt2"><code class="htmlscript spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="htmlscript plain">calf</code></div><div class="line number12 index11 alt1"><code class="htmlscript spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="htmlscript plain">carp</code></div><div class="line number13 index12 alt2"><code class="htmlscript spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="htmlscript plain">catfish</code></div><div class="line number14 index13 alt1"><code class="htmlscript spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="htmlscript plain">cavy</code></div><div class="line number15 index14 alt2"><code class="htmlscript spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="htmlscript plain">...</code></div><div class="line number16 index15 alt1">&nbsp;</div><div class="line number17 index16 alt2"><code class="htmlscript plain">Field 1: (INT)</code></div><div class="line number18 index17 alt1"><code class="htmlscript spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="htmlscript plain">Min: 0</code></div><div class="line number19 index18 alt2"><code class="htmlscript spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="htmlscript plain">Max: 1</code></div><div class="line number20 index19 alt1"><code class="htmlscript spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="htmlscript plain">Avg: 0.425743</code></div><div class="line number21 index20 alt2">&nbsp;</div><div class="line number22 index21 alt1"><code class="htmlscript plain">Field 2: (INT)</code></div><div class="line number23 index22 alt2"><code class="htmlscript spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="htmlscript plain">Min: 0</code></div><div class="line number24 index23 alt1"><code class="htmlscript spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="htmlscript plain">Max: 1</code></div><div class="line number25 index24 alt2"><code class="htmlscript spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="htmlscript plain">Avg: 0.19802</code></div><div class="line number26 index25 alt1"><code class="htmlscript plain">...</code></div><div class="line number27 index26 alt2"><code class="htmlscript plain">Field 17: (INT)</code></div><div class="line number28 index27 alt1"><code class="htmlscript spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="htmlscript plain">Min: 1</code></div><div class="line number29 index28 alt2"><code class="htmlscript spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="htmlscript plain">Max: 7</code></div><div class="line number30 index29 alt1"><code class="htmlscript spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="htmlscript plain">Avg: 2.83168</code></div><div class="line number31 index30 alt2">&nbsp;</div><div class="line number32 index31 alt1"><code class="htmlscript plain">$</code></div></div></td></tr></tbody></table></div></div></div><p>The final feature in this simple data-cleansing tool is the ability to
+                split the data set into two parts: one for training and one for test. I
+                can do this with the <code>-s</code> option (for <em>split</em> data set).
+                To illustrate this function, I specify a 90/10 split of the data (using a
+                probability of 0.9 for the training data), and then look at the line
+                lengths for each output file (using the <code>wc</code>, or <em>word
+                    count</em> utility, and the <code>-l</code>, or <em>line</em> option)
+                to see that the training and test data has been split roughly 90/10.
+                Finally, I emit the 12-line test data file to see the distribution of the
+                test observations. </p><div class="ibm-syntax-container"><div><div id="highlighter_663001" class="syntaxhighlighter  htmlscript"><table border="0" cellpadding="0" cellspacing="0" role="none"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div><div class="line number2 index1 alt1">2</div><div class="line number3 index2 alt2">3</div><div class="line number4 index3 alt1">4</div><div class="line number5 index4 alt2">5</div><div class="line number6 index5 alt1">6</div><div class="line number7 index6 alt2">7</div><div class="line number8 index7 alt1">8</div><div class="line number9 index8 alt2">9</div><div class="line number10 index9 alt1">10</div><div class="line number11 index10 alt2">11</div><div class="line number12 index11 alt1">12</div><div class="line number13 index12 alt2">13</div><div class="line number14 index13 alt1">14</div><div class="line number15 index14 alt2">15</div><div class="line number16 index15 alt1">16</div><div class="line number17 index16 alt2">17</div><div class="line number18 index17 alt1">18</div><div class="line number19 index18 alt2">19</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="htmlscript plain">$ ./cleanse -i zoo.dat -o output -c "sddddddddddddddddd" -s 0.9</code></div><div class="line number2 index1 alt1"><code class="htmlscript plain">$ wc -l output.dat </code></div><div class="line number3 index2 alt2"><code class="htmlscript plain">89 output.dat</code></div><div class="line number4 index3 alt1"><code class="htmlscript plain">$ wc -l output.tst </code></div><div class="line number5 index4 alt2"><code class="htmlscript plain">12 output.tst</code></div><div class="line number6 index5 alt1"><code class="htmlscript plain">$ cat output.tst</code></div><div class="line number7 index6 alt2"><code class="htmlscript plain">carp,0,0,1,0,0,1,0,1,1,0,0,1,0,1,1,0,4</code></div><div class="line number8 index7 alt1"><code class="htmlscript plain">cheetah,1,0,0,1,0,0,1,1,1,1,0,0,4,1,0,1,1</code></div><div class="line number9 index8 alt2"><code class="htmlscript plain">clam,0,0,1,0,0,0,1,0,0,0,0,0,0,0,0,0,7</code></div><div class="line number10 index9 alt1"><code class="htmlscript plain">crayfish,0,0,1,0,0,1,1,0,0,0,0,0,6,0,0,0,7</code></div><div class="line number11 index10 alt2"><code class="htmlscript plain">flea,0,0,1,0,0,0,0,0,0,1,0,0,6,0,0,0,6</code></div><div class="line number12 index11 alt1"><code class="htmlscript plain">frog,0,0,1,0,0,1,1,1,1,1,0,0,4,0,0,0,5</code></div><div class="line number13 index12 alt2"><code class="htmlscript plain">gorilla,1,0,0,1,0,0,0,1,1,1,0,0,2,0,0,1,1</code></div><div class="line number14 index13 alt1"><code class="htmlscript plain">haddock,0,0,1,0,0,1,0,1,1,0,0,1,0,1,0,0,4</code></div><div class="line number15 index14 alt2"><code class="htmlscript plain">mole,1,0,0,1,0,0,1,1,1,1,0,0,4,1,0,0,1</code></div><div class="line number16 index15 alt1"><code class="htmlscript plain">ostrich,0,1,1,0,0,0,0,0,1,1,0,0,2,1,0,1,2</code></div><div class="line number17 index16 alt2"><code class="htmlscript plain">raccoon,1,0,0,1,0,0,1,1,1,1,0,0,4,1,0,1,1</code></div><div class="line number18 index17 alt1"><code class="htmlscript plain">reindeer,1,0,0,1,0,0,0,1,1,1,0,0,4,1,1,1,1</code></div><div class="line number19 index18 alt2"><code class="htmlscript plain">$</code></div></div></td></tr></tbody></table></div></div></div><p>I can now apply the training data file (output.dat) and the test data file
+                (output.tst) to a machine learning algorithm, which I'll explore in the
+                next tutorial for two unique approaches to classification. </p><h2 id="os_tools" class="ibm-h2">Open source data-cleansing
+                tools</h2><p>You can find data-cleansing tools in the open source domain. One
+                interesting example is called <em><a href="https://github.com/Factual/drake">Drake</a></em>, which performs
+                data cleansing for text-based data by using a workflow approach that
+                automatically handles dependencies in the available data and the commands
+                to cleanse them. It support multiple input and output files and has a
+                similar operation as the <code>make</code> utility (in the context of
+                managing dependencies). </p><p>The <a href="https://github.com/datacleaner/DataCleaner">DataCleaner
+                    tool</a> is a framework and data-profiling engine that exposes an API
+                and allows user-defined extensions for data cleansing. DataCleaner
+                supports multiple input and output formats, with the ability to create
+                rules for data quality over your data. </p><h2 id="further" class="ibm-h2">Going further</h2><p>This tutorial explored some problems and solutions for cleansing data, and
+                discussed the development of a simple utility that can perform data
+                validation and profiling. In Part 2, I'll take this cleansed data and build two
+                models (based on adaptive resonance theory and vector quantization) to
+                classify the data and quantify the accuracy of each model. In Part 3, I'll explore some of the ways you can visualize this data
+                using a variety of open source tools. </p><!--CMA ID: 1055276--><!--Site ID: 1--><!--XSLT stylesheet used to transform this file: dw-document-html-8.0.xsl-->
+                                        <!-- Article Quiz -->
+                                        
+                                        <!-- Article Resources -->
+                                        <div class="ibm-alternate-rule"><hr></div><h4 id="artdownload" class="ibm-h4">Downloadable resources</h4><ul class="ibm-link-list"><li><a class="ibm-document-link" href="https://www.ibm.com/developerworks/library/ba-cleanse-process-visualize-data-set-1/ba-cleanse-process-visualize-data-set-1-pdf.pdf">PDF of this content</a></li></ul><div class="ibm-alternate-rule"><hr></div><h4 id="artrelatedtopics" class="ibm-h4">Related topics</h4><ul class="ibm-plain-list"><li><a href="https://www.ibm.com/cloud/lite-account">Register for a Cloud Lite account</a></li><li><a href="https://www.ibm.com/developerworks/newsletter">Subscribe to the Data and Analytics newsletter</a></li><li><a href="https://developer.ibm.com/code/technologies/data-science/">Try a code pattern</a></li></ul>
+                                        <!-- Commenting -->
+<!-- INLINE_COMMENTS_BEGIN: -->
+<div class="ibm-alternate-rule"><hr></div>
+<div id="dw-article-cmts-top" class="ibm-columns">
+    <div class="ibm-col-6-2">
+        <h4 id="icomments" class="ibm-h4">Comments</h4>
+        <div id="dw-article-cmts-login">
+            <p><a onclick="window.location=userLinks[0].url;" tabindex="0" role="link">Sign in</a> or 
+                <a onclick="window.location=userLinks[1].url;" tabindex="0" role="link">register</a> to add and subscribe to comments.</p>
+        </div>
+    </div>    
+    <div class="ibm-col-6-2" id="dw-notify"> 
+        <input type="checkbox" value="1" name="comment_notification" id="comment_notification" disabled="">
+        <label for="comment_notification" style="color: rgb(204, 204, 204);">Subscribe me to comment notifications</label>	   
+    </div>
+</div>
+
+<div class="dw-article-cmts-container">       
+    <div class="ibm-no-print jquery-comments read-only" id="dw-icomments-container"><div class="commenting-field main"><img src="./Cleansing, processing, and visualizing a data set, Part 1_ Working with messy data_files/user-icon.png" alt="" class="profile-picture round by-current-user"><div class="textarea-wrapper"><span class="close" style="display: none;"><span class="left"></span><span class="right"></span></span><div class="textarea" data-placeholder="Add a comment" contenteditable="true" style="height: 3.65em;"></div><div class="control-row" style="display: none;"><span class="send save highlight-background">Submit</span></div></div></div><ul class="navigation"><div class="navigation-wrapper"><li data-sort-key="newest" data-container-name="comments" class="active">Newest</li><li data-sort-key="oldest" data-container-name="comments">Oldest</li><li data-sort-key="popularity" data-container-name="comments">Popular</li></div><div class="navigation-wrapper responsive"><li class="title active"><header>Newest</header></li><ul class="dropdown"><li data-sort-key="newest" data-container-name="comments" class="active">Newest</li><li data-sort-key="oldest" data-container-name="comments">Oldest</li><li data-sort-key="popularity" data-container-name="comments">Popular</li></ul></div></ul><div class="data-container" data-container="comments"><ul id="comment-list" class="main"></ul><div class="no-comments no-data"><i class="fa fa-comments fa-2x"></i><br>Be the first to add a comment</div></div></div>
+</div>
+<!-- INLINE_COMMENTS_END -->                                        <!-- CENTER_6_4_CONTENT_COLUMN_END -->
+                                    </div>   
+                                </div>
+                        <!--Rating_Meta_BEGIN--><div class="metavalue">static.content.url=http://www.ibm.com/developerworks/js/artrating/</div><div class="metavalue">SITE_ID=1</div><div class="metavalue">Zone=Information Management</div><div class="metavalue">ArticleID=1055276</div><div class="metavalue">ArticleTitle=Cleansing, processing, and visualizing a data set, Part 1: Working with messy data</div><div class="metavalue">publish-date=12142017</div><script language="javascript" type="text/javascript">document.write('<div class="metavalue">url='+location.href.replace(/</g,  '%3C')+'</div>');</script><div class="metavalue">url=https://www.ibm.com/developerworks/library/ba-cleanse-process-visualize-data-set-1/index.html</div><!--Rating_Meta_END-->
+                    </div>
+                    <!-- END_IBM-CONTENT-MAIN -->
+                </div>
+                <!-- END_IBM-CONTENT-BODY -->
+            </div>
+            <!-- END_IBM-CONTENT -->
+        </div>
+        <!-- END_IBM-PCON -->
+    </main>
+    <!-- MAIN_CONTENT_END -->
+    
+    <!-- END_CONTENT-WRAPPER -->	
+</div>
+<!-- FOOTER_BEGIN -->
+<footer role="contentinfo" aria-label="IBM developerWorks">
+    <div id="dw-footer-module" class="dw-footer-home">
+        <section aria-label="Resources" role="contentinfo">
+            <div class="ibm-columns">
+                <div class="ibm-col-6-1 dw-footer-col-1">
+                    <ul>
+                        <li class="dw-footer-heading" aria-label="developerWorks">developerWorks</li>
+                        <li><a href="https://www.ibm.com/developerworks/aboutdw/">About</a></li>
+                        <li><a href="https://www.ibm.com/developerworks/feedback">Help</a></li>
+                        <li class="dw-footer-newline"><a href="https://www.ibm.com/developerworks/ideas">Submit content</a></li>
+                        <li class="dw-footer-newline"><a href="https://www.ibm.com/developerworks/secure/report/">Report abuse</a></li>
+                        <li class="dw-footer-newline"><a href="https://www.ibm.com/developerworks/community/terms/thirdparty/">Third-party notice</a></li>
+                    </ul>
+                    <ul>
+                        <li class="dw-footer-heading" aria-label="Community">Community</li> 
+                        <li class="dw-footer-newline"><a href="https://www.ibm.com/developerworks/rfe/">Product feedback</a></li>
+                        <li class="dw-footer-newline"><a href="https://www.ibm.com/developerworks/connect/">Developer Centers</a></li>
+                    </ul>
+                    <ul>
+                        <li class="dw-footer-heading dw-follow-us" aria-label="Follow us">Follow us</li>
+                    </ul>
+                    <p class="dw-footer-social">
+                        <a href="https://twitter.com/developerWorks">
+                            <img width="28" height="27" alt="Twitter" src="./Cleansing, processing, and visualizing a data set, Part 1_ Working with messy data_files/dw-footer-icon-twitter.png">
+                        </a>
+                    </p>
+                    <p class="dw-footer-social-right">
+                        <a href="https://www.facebook.com/developerworks">
+                            <img width="28" height="27" alt="Facebook" src="./Cleansing, processing, and visualizing a data set, Part 1_ Working with messy data_files/dw-footer-icon-facebook.png">
+                        </a>
+                    </p>
+                    <br>
+                    <p class="dw-footer-social">
+                        <a href="https://www.linkedin.com/groups/IBM-developerWorks-8137234">
+                            <img width="28" height="27" alt="LinkedIn" src="./Cleansing, processing, and visualizing a data set, Part 1_ Working with messy data_files/dw-footer-icon-linkedin.png">
+                        </a>
+                    </p>
+                    <p class="dw-footer-social-right">
+                        <a href="https://www.youtube.com/user/developerworks">
+                            <img width="28" height="27" alt="YouTube" src="./Cleansing, processing, and visualizing a data set, Part 1_ Working with messy data_files/dw-footer-icon-youtube.png">
+                        </a>
+                    </p>
+                </div>
+                <div class="ibm-col-6-1 dw-footer-col-2">
+                    <ul>
+                        <li class="dw-footer-heading" aria-label="Join">Join</li>
+                        <li><a href="https://developer.ibm.com/academic/">Faculty</a></li>
+                        <li><a href="https://developer.ibm.com/students/">Students</a></li>
+                        <li><a href="https://developer.ibm.com/startups/">Startups</a></li>
+                        <li class="dw-footer-newline"><a href="https://www.ibm.com/isv/">Business Partners</a></li>
+                    </ul>
+                    <ul class="dw-footer-lang" aria-label="Select a language">
+                        <li class="dw-footer-heading">Select a language</li>
+                        <li><a href="https://www.ibm.com/developerworks/">English</a></li>
+                        <li><a href="https://www.ibm.com/developerworks/cn/" lang="zh">中文</a></li>
+                        <li><a href="https://www.ibm.com/developerworks/jp/" lang="ja">日本語</a></li>
+                        <li><a href="https://www.ibm.com/developerworks/ru/" lang="ru">Русский</a></li>
+                        <li class="dw-footer-newline"><a href="https://www.ibm.com/developerworks/br/" lang="pt">Português (Brasil)</a></li>
+                        <li><a href="https://www.ibm.com/developerworks/ssa/" lang="es">Español</a></li>
+                        <li><a href="https://developer.ibm.com/kr/" lang="kr">한글</a></li>
+                    </ul>
+                </div>
+                <div class="ibm-col-6-1 dw-footer-col-3"> </div>
+                <div class="ibm-col-6-1 dw-footer-col-4">
+                    <ul class="dw-footer-categories">
+                        <li class="dw-footer-category">
+                            <a href="https://www.ibm.com/developerworks/learn/">Tutorials &amp; training</a>
+                        </li>
+                        <li class="dw-footer-category">
+                            <a href="https://developer.ibm.com/accelerate/">Demos &amp; sample code</a>
+                        </li>                      
+                        <li class="dw-footer-category">
+                            <a href="https://developer.ibm.com/answers">Q&amp;A forums</a>  
+                        </li>
+                        <li class="dw-footer-category">
+                            <a href="https://developer.ibm.com/dwblog/">dW Blog</a>  
+                        </li>
+                        <li class="dw-footer-category">
+                            <a href="https://developer.ibm.com/events/">Events</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="ibm-col-6-1 dw-footer-col-5">
+                    <ul class="dw-footer-categories">
+                        <li class="dw-footer-category">
+                            <a href="https://developer.ibm.com/courses/">Courses</a>  
+                        </li>
+                        <li class="dw-footer-category">
+                            <a href="https://developer.ibm.com/open/">Open source projects</a>  
+                        </li>
+                        <li class="dw-footer-category">
+                            <a href="https://developer.ibm.com/tv/">Videos</a>  
+                        </li>
+                        <li class="dw-footer-category">
+                            <a href="https://developer.ibm.com/recipes/">Recipes</a>  
+                        </li>
+                    </ul>
+                </div>
+                <div class="ibm-col-6-1 dw-footer-col-6">
+                    <ul class="dw-footer-categories">
+                        <li class="dw-footer-category">
+                            <a href="https://www.ibm.com/developerworks/develop/">Downloads</a>  
+                        </li>
+                        <li class="dw-footer-category">
+                            <a href="https://developer.ibm.com/api/">APIs</a>  
+                        </li>
+                        <li class="dw-footer-category">
+                            <a href="https://www.ibm.com/developerworks/newsletter/">Newsletters</a>  
+                        </li>
+                        <li class="dw-footer-category">
+                            <a href="https://www.ibm.com/developerworks/feeds/">Feeds</a>  
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </div>
+    <div id="dw-footer" class="ibm-padding-normal ibm-alternate">
+        <div class="ibm-columns">
+            <div class="ibm-col-1-1">
+                <div class="dw-footer-corporate-links">
+                    <ul>
+                        <li><a href="https://www.ibm.com/developerworks/aboutdw/contacts.html">Contact</a></li>
+                        <li><a href="https://www.ibm.com/privacy/us/en/">Privacy</a></li>
+                        <li><a href="https://www.ibm.com/developerworks/community/terms/use/">Terms of use</a></li>
+                        <li><a href="https://www.ibm.com/accessibility/us/en/">Accessibility</a></li>
+                        <li class="ibm-feedbacklink"><a href="https://www.ibm.com/developerworks/library/ba-cleanse-process-visualize-data-set-1/index.html#">Feedback</a></li>
+                        <li id="ibm-truste-cp"><a onclick="truste.eu.clickListener();return false;" href="https://www.ibm.com/developerworks/library/ba-cleanse-process-visualize-data-set-1/index.html#">Cookie Preferences</a></li>
+                    </ul>                 
+                </div>
+                <div id="ibm-footer-locale-selector"><h3 class="ibm-bold">Select a country/region</h3><select class="ibm-fullwidth select2-hidden-accessible ibm-widget-processed" aria-label="Select a country/region" tabindex="-1" aria-hidden="true" style="width: 401px;"><optgroup label="Worldwide ibm.com home pages"><option data-localecode="en-us" value="http://www.ibm.com/us-en/?lnk=fcc">United States - English</option><option data-localecode="en-af" value="http://www.ibm.com/af-en/?lnk=fcc">Afghanistan - English</option><option data-localecode="fr-dz" value="http://www.ibm.com/dz-fr/?lnk=fcc">Algeria - French</option><option data-localecode="pt-ao" value="http://www.ibm.com/ao-pt/?lnk=fcc">Angola - Portuguese</option><option data-localecode="en-ai" value="http://www.ibm.com/ai-en/?lnk=fcc">Anguilla - English</option><option data-localecode="en-ag" value="http://www.ibm.com/ag-en/?lnk=fcc">Antigua and Barbuda - English</option><option data-localecode="es-ar" value="http://www.ibm.com/ar-es/?lnk=fcc">Argentina - Spanish</option><option data-localecode="en-aw" value="http://www.ibm.com/aw-en/?lnk=fcc">Aruba - English</option><option data-localecode="en-au" value="http://www.ibm.com/au-en/?lnk=fcc">Australia - English</option><option data-localecode="de-at" value="http://www.ibm.com/at-de/?lnk=fcc">Austria - German</option><option data-localecode="en-bs" value="http://www.ibm.com/bs-en/?lnk=fcc">Bahamas - English</option><option data-localecode="en-bh" value="http://www.ibm.com/bh-en/?lnk=fcc">Bahrain - English</option><option data-localecode="en-bd" value="http://www.ibm.com/bd-en/?lnk=fcc">Bangladesh - English</option><option data-localecode="en-bb" value="http://www.ibm.com/bb-en/?lnk=fcc">Barbados - English</option><option data-localecode="nl-be" value="http://www.ibm.com/be-nl/?lnk=fcc">Belgium/Luxembourg - Dutch</option><option data-localecode="en-be" value="http://www.ibm.com/be-en/?lnk=fcc">Belgium/Luxembourg - English</option><option data-localecode="fr-be" value="http://www.ibm.com/be-fr/?lnk=fcc">Belgium/Luxembourg - French</option><option data-localecode="en-bm" value="http://www.ibm.com/bm-en/?lnk=fcc">Bermuda - English</option><option data-localecode="es-bo" value="http://www.ibm.com/bo-es/?lnk=fcc">Bolivia - Spanish</option><option data-localecode="en-bw" value="http://www.ibm.com/bw-en/?lnk=fcc">Botswana - English</option><option data-localecode="pt-br" value="http://www.ibm.com/br-pt/?lnk=fcc">Brazil - Portuguese</option><option data-localecode="en-bn" value="http://www.ibm.com/bn-en/?lnk=fcc">Brunei Darussalam - English</option><option data-localecode="bg-bg" value="http://www.ibm.com/bg-bg/?lnk=fcc">Bulgaria - Bulgarian</option><option data-localecode="fr-bf" value="http://www.ibm.com/bf-fr/?lnk=fcc">Burkina Faso - French</option><option data-localecode="en-kh" value="http://www.ibm.com/kh-en/?lnk=fcc">Cambodia - English</option><option data-localecode="en-cm" value="http://www.ibm.com/cm-en/?lnk=fcc">Cameroon - English</option><option data-localecode="fr-cm" value="http://www.ibm.com/cm-fr/?lnk=fcc">Cameroon - French</option><option data-localecode="en-ca" value="http://www.ibm.com/ca-en/?lnk=fcc">Canada - English</option><option data-localecode="fr-ca" value="http://www.ibm.com/ca-fr/?lnk=fcc">Canada - French</option><option data-localecode="en-ky" value="http://www.ibm.com/ky-en/?lnk=fcc">Cayman Islands - English</option><option data-localecode="fr-td" value="http://www.ibm.com/td-fr/?lnk=fcc">Chad - French</option><option data-localecode="es-cl" value="http://www.ibm.com/cl-es/?lnk=fcc">Chile - Spanish</option><option data-localecode="zh-cn" value="http://www.ibm.com/cn-zh/?lnk=fcc">China - Chinese (Simplified)</option><option data-localecode="es-co" value="http://www.ibm.com/co-es/?lnk=fcc">Colombia - Spanish</option><option data-localecode="fr-cg" value="http://www.ibm.com/cg-fr/?lnk=fcc">Congo - French</option><option data-localecode="fr-cd" value="http://www.ibm.com/cd-fr/?lnk=fcc">Congo, The Democratic Republic of the - French</option><option data-localecode="es-cr" value="http://www.ibm.com/cr-es/?lnk=fcc">Costa Rica - Spanish</option><option data-localecode="hr-hr" value="http://www.ibm.com/hr-hr/?lnk=fcc">Croatia - Croatian</option><option data-localecode="en-cw" value="http://www.ibm.com/cw-en/?lnk=fcc">Curacao - English</option><option data-localecode="en-cy" value="http://www.ibm.com/cy-en/?lnk=fcc">Cyprus - English</option><option data-localecode="cs-cz" value="http://www.ibm.com/cz-cs/?lnk=fcc">Czech Republic - Czech</option><option data-localecode="da-dk" value="http://www.ibm.com/dk-da/?lnk=fcc">Denmark - Danish</option><option data-localecode="en-dm" value="http://www.ibm.com/dm-en/?lnk=fcc">Dominica - English</option><option data-localecode="es-ec" value="http://www.ibm.com/ec-es/?lnk=fcc">Ecuador - Spanish</option><option data-localecode="en-eg" value="http://www.ibm.com/eg-en/?lnk=fcc">Egypt - English</option><option data-localecode="et-ee" value="http://www.ibm.com/ee-et/?lnk=fcc">Estonia - Estonian</option><option data-localecode="en-et" value="http://www.ibm.com/et-en/?lnk=fcc">Ethiopia - English</option><option data-localecode="fi-fi" value="http://www.ibm.com/fi-fi/?lnk=fcc">Finland - Finnish</option><option data-localecode="fr-fr" value="http://www.ibm.com/fr-fr/?lnk=fcc">France - French</option><option data-localecode="fr-ga" value="http://www.ibm.com/ga-fr/?lnk=fcc">Gabon - French</option><option data-localecode="de-de" value="http://www.ibm.com/de-de/?lnk=fcc">Germany - German</option><option data-localecode="en-gh" value="http://www.ibm.com/gh-en/?lnk=fcc">Ghana - English</option><option data-localecode="el-gr" value="http://www.ibm.com/gr-el/?lnk=fcc">Greece - Greek</option><option data-localecode="en-gd" value="http://www.ibm.com/gd-en/?lnk=fcc">Grenada - English</option><option data-localecode="en-gy" value="http://www.ibm.com/gy-en/?lnk=fcc">Guyana - English</option><option data-localecode="en-hk" value="http://www.ibm.com/hk-en/?lnk=fcc">Hong Kong S.A.R. of China - English</option><option data-localecode="hu-hu" value="http://www.ibm.com/hu-hu/?lnk=fcc">Hungary - Hungarian</option><option data-localecode="en-in" value="http://www.ibm.com/in-en/?lnk=fcc">India - English</option><option data-localecode="en-id" value="http://www.ibm.com/id-en/?lnk=fcc">Indonesia - English</option><option data-localecode="en-iq" value="http://www.ibm.com/iq-en/?lnk=fcc">Iraq - English</option><option data-localecode="en-ie" value="http://www.ibm.com/ie-en/?lnk=fcc">Ireland - English</option><option data-localecode="he-il" value="http://www.ibm.com/il-he/?lnk=fcc">Israel - Hebrew</option><option data-localecode="it-it" value="http://www.ibm.com/it-it/?lnk=fcc">Italy - Italian</option><option data-localecode="fr-ci" value="http://www.ibm.com/ci-fr/?lnk=fcc">Ivory Coast - French</option><option data-localecode="en-jm" value="http://www.ibm.com/jm-en/?lnk=fcc">Jamaica - English</option><option data-localecode="ja-jp" value="http://www.ibm.com/jp-ja/?lnk=fcc">Japan - Japanese</option><option data-localecode="en-jo" value="http://www.ibm.com/jo-en/?lnk=fcc">Jordan - English</option><option data-localecode="kk-kz" value="http://www.ibm.com/kz-kk/?lnk=fcc">Kazakhstan - Kazakh</option><option data-localecode="en-ke" value="http://www.ibm.com/ke-en/?lnk=fcc">Kenya - English</option><option data-localecode="ko-kr" value="http://www.ibm.com/kr-ko/?lnk=fcc">Korea, Republic of - Korean</option><option data-localecode="en-kw" value="http://www.ibm.com/kw-en/?lnk=fcc">Kuwait - English</option><option data-localecode="lv-lv" value="http://www.ibm.com/lv-lv/?lnk=fcc">Latvia - Latvian</option><option data-localecode="en-lb" value="http://www.ibm.com/lb-en/?lnk=fcc">Lebanon - English</option><option data-localecode="en-ly" value="http://www.ibm.com/ly-en/?lnk=fcc">Libya - English</option><option data-localecode="lt-lt" value="http://www.ibm.com/lt-lt/?lnk=fcc">Lithuania - Lithuanian</option><option data-localecode="fr-mg" value="http://www.ibm.com/mg-fr/?lnk=fcc">Madagascar - French</option><option data-localecode="en-mw" value="http://www.ibm.com/mw-en/?lnk=fcc">Malawi - English</option><option data-localecode="en-my" value="http://www.ibm.com/my-en/?lnk=fcc">Malaysia - English</option><option data-localecode="en-mu" value="http://www.ibm.com/mu-en/?lnk=fcc">Mauritius - English</option><option data-localecode="fr-mu" value="http://www.ibm.com/mu-fr/?lnk=fcc">Mauritius - French</option><option data-localecode="es-mx" value="http://www.ibm.com/mx-es/?lnk=fcc">Mexico - Spanish</option><option data-localecode="en-ms" value="http://www.ibm.com/ms-en/?lnk=fcc">Montserrat - English</option><option data-localecode="fr-ma" value="http://www.ibm.com/ma-fr/?lnk=fcc">Morocco - French</option><option data-localecode="pt-mz" value="http://www.ibm.com/mz-pt/?lnk=fcc">Mozambique - Portuguese</option><option data-localecode="en-na" value="http://www.ibm.com/na-en/?lnk=fcc">Namibia - English</option><option data-localecode="en-np" value="http://www.ibm.com/np-en/?lnk=fcc">Nepal - English</option><option data-localecode="nl-nl" value="http://www.ibm.com/nl-nl/?lnk=fcc">Netherlands - Dutch</option><option data-localecode="en-nz" value="http://www.ibm.com/nz-en/?lnk=fcc">New Zealand - English</option><option data-localecode="fr-ne" value="http://www.ibm.com/ne-fr/?lnk=fcc">Niger - French</option><option data-localecode="en-ng" value="http://www.ibm.com/ng-en/?lnk=fcc">Nigeria - English</option><option data-localecode="no-no" value="http://www.ibm.com/no-no/?lnk=fcc">Norway - Norwegian</option><option data-localecode="en-om" value="http://www.ibm.com/om-en/?lnk=fcc">Oman - English</option><option data-localecode="en-pk" value="http://www.ibm.com/pk-en/?lnk=fcc">Pakistan - English</option><option data-localecode="es-py" value="http://www.ibm.com/py-es/?lnk=fcc">Paraguay - Spanish</option><option data-localecode="es-pe" value="http://www.ibm.com/pe-es/?lnk=fcc">Peru - Spanish</option><option data-localecode="en-ph" value="http://www.ibm.com/ph-en/?lnk=fcc">Philippines - English</option><option data-localecode="pl-pl" value="http://www.ibm.com/pl-pl/?lnk=fcc">Poland - Polish</option><option data-localecode="pt-pt" value="http://www.ibm.com/pt-pt/?lnk=fcc">Portugal - Portuguese</option><option data-localecode="en-qa" value="http://www.ibm.com/qa-en/?lnk=fcc">Qatar - English</option><option data-localecode="ro-ro" value="http://www.ibm.com/ro-ro/?lnk=fcc">Romania - Romanian</option><option data-localecode="ru-ru" value="http://www.ibm.com/ru-ru/?lnk=fcc">Russian Federation - Russian</option><option data-localecode="en-kn" value="http://www.ibm.com/kn-en/?lnk=fcc">Saint Kitts and Nevis - English</option><option data-localecode="en-lc" value="http://www.ibm.com/lc-en/?lnk=fcc">Saint Lucia - English</option><option data-localecode="en-vc" value="http://www.ibm.com/vc-en/?lnk=fcc">Saint Vincent and the Grenadines - English</option><option data-localecode="en-sa" value="http://www.ibm.com/sa-en/?lnk=fcc">Saudi Arabia - English</option><option data-localecode="fr-sn" value="http://www.ibm.com/sn-fr/?lnk=fcc">Senegal - French</option><option data-localecode="sr-rs" value="http://www.ibm.com/rs-sr/?lnk=fcc">Serbia - Serbian</option><option data-localecode="fr-sc" value="http://www.ibm.com/sc-fr/?lnk=fcc">Seychelles - French</option><option data-localecode="en-sl" value="http://www.ibm.com/sl-en/?lnk=fcc">Sierra Leone - English</option><option data-localecode="en-sg" value="http://www.ibm.com/sg-en/?lnk=fcc">Singapore - English</option><option data-localecode="sk-sk" value="http://www.ibm.com/sk-sk/?lnk=fcc">Slovakia - Slovak</option><option data-localecode="sl-si" value="http://www.ibm.com/si-sl/?lnk=fcc">Slovenia - Slovenian</option><option data-localecode="en-za" value="http://www.ibm.com/za-en/?lnk=fcc">South Africa - English</option><option data-localecode="es-es" value="http://www.ibm.com/es-es/?lnk=fcc">Spain - Spanish</option><option data-localecode="en-lk" value="http://www.ibm.com/lk-en/?lnk=fcc">Sri Lanka - English</option><option data-localecode="en-sr" value="http://www.ibm.com/sr-en/?lnk=fcc">Suriname - English</option><option data-localecode="sv-se" value="http://www.ibm.com/se-sv/?lnk=fcc">Sweden - Swedish</option><option data-localecode="fr-ch" value="http://www.ibm.com/ch-fr/?lnk=fcc">Switzerland - French</option><option data-localecode="de-ch" value="http://www.ibm.com/ch-de/?lnk=fcc">Switzerland - German</option><option data-localecode="zh-tw" value="http://www.ibm.com/tw-zh/?lnk=fcc">Taiwan - Chinese (Traditional)</option><option data-localecode="en-tz" value="http://www.ibm.com/tz-en/?lnk=fcc">Tanzania, United Republic of - English</option><option data-localecode="en-th" value="http://www.ibm.com/th-en/?lnk=fcc">Thailand - English</option><option data-localecode="en-tt" value="http://www.ibm.com/tt-en/?lnk=fcc">Trinidad and Tobago - English</option><option data-localecode="fr-tn" value="http://www.ibm.com/tn-fr/?lnk=fcc">Tunisia - French</option><option data-localecode="tr-tr" value="http://www.ibm.com/tr-tr/?lnk=fcc">Turkey - Turkish</option><option data-localecode="en-tc" value="http://www.ibm.com/tc-en/?lnk=fcc">Turks and Caicos Islands - English</option><option data-localecode="en-ug" value="http://www.ibm.com/ug-en/?lnk=fcc">Uganda - English</option><option data-localecode="uk-ua" value="http://www.ibm.com/ua-uk/?lnk=fcc">Ukraine - Ukrainian</option><option data-localecode="en-ae" value="http://www.ibm.com/ae-en/?lnk=fcc">United Arab Emirates - English</option><option data-localecode="en-uk" value="http://www.ibm.com/uk-en/?lnk=fcc">United Kingdom - English</option><option data-localecode="es-uy" value="http://www.ibm.com/uy-es/?lnk=fcc">Uruguay - Spanish</option><option data-localecode="uz-uz" value="http://www.ibm.com/uz-uz/?lnk=fcc">Uzbekistan - Uzbek</option><option data-localecode="es-ve" value="http://www.ibm.com/ve-es/?lnk=fcc">Venezuela - Spanish</option><option data-localecode="en-vn" value="http://www.ibm.com/vn-en/?lnk=fcc">Vietnam - English</option><option data-localecode="vi-vn" value="http://www.ibm.com/vn-vi/?lnk=fcc">Vietnam - Vietnamese</option><option data-localecode="en-vg" value="http://www.ibm.com/vg-en/?lnk=fcc">Virgin Islands, British - English</option><option data-localecode="en-ye" value="http://www.ibm.com/ye-en/?lnk=fcc">Yemen - English</option><option data-localecode="en-zm" value="http://www.ibm.com/zm-en/?lnk=fcc">Zambia - English</option><option data-localecode="en-zw" value="http://www.ibm.com/zw-en/?lnk=fcc">Zimbabwe - English</option></optgroup></select><span class="select2 select2-container select2-container--default" dir="ltr" style="width: 100%;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-labelledby="select2-hsnn-container"><span class="select2-selection__rendered" id="select2-hsnn-container" title="United States - English">United States - English</span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span></div>
+            </div>
+        </div>
+    </div>        
+</footer> <!-- FOOTER_END -->
+
+<!-- END_IBM-TOP -->
+</div>
+
+<!-- SCRIPTS_INCLUDE_BEGIN -->
+<!-- Styles -->
+<link rel="stylesheet" type="text/css" href="./Cleansing, processing, and visualizing a data set, Part 1_ Working with messy data_files/jquery-comments.css">
+<link rel="stylesheet" href="./Cleansing, processing, and visualizing a data set, Part 1_ Working with messy data_files/font-awesome.min.css">
+
+<!-- Libraries -->
+<script type="text/javascript" src="./Cleansing, processing, and visualizing a data set, Part 1_ Working with messy data_files/jquery-comments.min.js.download"></script>
+<script type="text/javascript" src="./Cleansing, processing, and visualizing a data set, Part 1_ Working with messy data_files/moment-with-locales.js.download"></script>
+<script type="text/javascript" src="./Cleansing, processing, and visualizing a data set, Part 1_ Working with messy data_files/ContentComments.js.download"></script>
+<script type="text/javascript" src="./Cleansing, processing, and visualizing a data set, Part 1_ Working with messy data_files/ContentCommentsFormatter.js.download"></script>
+<script type="text/javascript" language="JavaScript">
+
+	IBMCore.common.module.masthead.subscribe("ready", "customjs", setupCommentsPlugin).runAsap(setupCommentsPlugin);
+
+	function setupCommentsPlugin(){
+		//debugger;
+			//alert(userLinks);
+			var commentsInitInfo = {
+				contentId : $("div[class=metavalue]:contains('ArticleID=')").text().split("=")[1],
+				siteId :  $("div[class=metavalue]:contains('SITE_ID=')").text().split("=")[1],
+				pluginDivId : '#dw-icomments-container',
+				notifyElementId : "#comment_notification",
+				loginMessageDivId : "#dw-article-cmts-login",
+				totalCommentsDivId : "#nCmts",
+						isIdea:false
+
+			};				
+								
+			ContentComments.Setup(commentsInitInfo);
+	}
+</script>
+<script type="text/javascript">eval(function(p,a,c,k,e,d){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a)>35?String.fromCharCode(c+29):c.toString(36))};while(c--){if(k[c]){p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c])}}return p}('(h(i,s,o,g,r,a,m){i[\'A\']=r;i[r]=i[r]||h(){(i[r].q=i[r].q||[]).M(K)},i[r].l=1*I H();a=s.G(o),m=s.J(o)[0];a.N=1;a.F=g;m.O.C(a,m)})(z,E,\'D\',\'B://L.S-j.P/j.p\',\'2\');2(\'10\',\'Z-11-3\',\'12\');2(\'14\',\'k\',\'k.p\');2(\'8\',\'X\',R);7 c=(6.4.5.f)?6.4.5.f:"T-U-V";7 b=(6.4.5.e.d)?6.4.5.e.d:"-";7 v=($("n[w=\'9\']").y("x"))?$("n[w=\'9\']").y("x"):"!9-Y-W-15!";2(\'8\',\'t\',c);2(\'8\',\'u\',b);2(\'Q\',\'13\',{\'4\':v,\'t\':c,\'u\':b});',62,68,'||ga||page|pageInfo|digitalData|var|set|canonical||cmaid|dcdate|contentId|ibm|publishDate||function||analytics|linkid|||link||js||||dimension1|dimension2|dw_canonical|rel|href|attr|window|GoogleAnalyticsObject|https|insertBefore|script|document|src|createElement|Date|new|getElementsByTagName|arguments|www|push|async|parentNode|com|send|true|google|YYYY|MM|DD|is|anonymizeIp|url|UA|create|41146412|auto|pageview|require|missing'.split('|')))</script><!-- Hotjar Tracking Code for ibm.com -->
+<script>
+    (function(h,o,t,j,a,r){
+    h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+    h._hjSettings={hjid:42920,hjsv:5};
+    a=o.getElementsByTagName('head')[0];
+    r=o.createElement('script');r.async=1;
+    r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+    a.appendChild(r);
+    })(window,document,'//static.hotjar.com/c/hotjar-','.js?sv=');
+</script>
+<!-- Segment -->
+<script src="./Cleansing, processing, and visualizing a data set, Part 1_ Working with messy data_files/bluemix-analytics.min.js.download"></script>    
+
+<!-- SCRIPTS_INCLUDE_END -->
+
+
+
+<div id="ibm-overlay-backdrop"></div><div class="ibm-common-overlay ibm-overlay-alt-three" id="ibm-overlaywidget-N10076" role="dialog" aria-describedby="ibm-overlaywidget-N10076-content" aria-label="Overlay content" data-widget="overlay container" data-name=""><div class="ibm-overlay-heading-con"><p class="ibm-icononly"><a href="javascript:void(0);" class="ibm-close-link" role="button">Close</a></p></div><div id="ibm-overlaywidget-N10076-content" class="content"><div class="ibm-widget-processed" data-widget="overlay" id="N10076"><img alt="Three boxes in a row showing the data processing pipeline, from cleansing to machine learning to data visualization" src="./Cleansing, processing, and visualizing a data set, Part 1_ Working with messy data_files/image001.png" width="636"></div></div></div><div class="ibm-common-overlay ibm-overlay-alt-three" id="ibm-overlaywidget-N1008E" role="dialog" aria-describedby="ibm-overlaywidget-N1008E-content" aria-label="Overlay content" data-widget="overlay container" data-name=""><div class="ibm-overlay-heading-con"><p class="ibm-icononly"><a href="javascript:void(0);" class="ibm-close-link" role="button">Close</a></p></div><div id="ibm-overlaywidget-N1008E-content" class="content"><div class="ibm-widget-processed" data-widget="overlay" id="N1008E"><img alt="A central box of data, with callouts for all the problems in the data set" src="./Cleansing, processing, and visualizing a data set, Part 1_ Working with messy data_files/image002.png" width="827"></div></div></div><div class="ibm-common-overlay ibm-overlay-alt-three" id="ibm-overlaywidget-N100A7" role="dialog" aria-describedby="ibm-overlaywidget-N100A7-content" aria-label="Overlay content" data-widget="overlay container" data-name=""><div class="ibm-overlay-heading-con"><p class="ibm-icononly"><a href="javascript:void(0);" class="ibm-close-link" role="button">Close</a></p></div><div id="ibm-overlaywidget-N100A7-content" class="content"><div class="ibm-widget-processed" data-widget="overlay" id="N100A7"><img alt="Image showing a data set in JSON format" src="./Cleansing, processing, and visualizing a data set, Part 1_ Working with messy data_files/image003.png" width="455"></div></div></div><div class="ibm-common-overlay ibm-overlay-alt-three" id="ibm-overlaywidget-N100BE" role="dialog" aria-describedby="ibm-overlaywidget-N100BE-content" aria-label="Overlay content" data-widget="overlay container" data-name=""><div class="ibm-overlay-heading-con"><p class="ibm-icononly"><a href="javascript:void(0);" class="ibm-close-link" role="button">Close</a></p></div><div id="ibm-overlaywidget-N100BE-content" class="content"><div class="ibm-widget-processed" data-widget="overlay" id="N100BE"><img alt="Image showing two boxes on the top, each representing a data set, being merged into a single data set in a box beneath them" src="./Cleansing, processing, and visualizing a data set, Part 1_ Working with messy data_files/image004.png" width="848"></div></div></div><div class="ibm-common-overlay ibm-overlay-alt-three" id="ibm-overlaywidget-N100ED" role="dialog" aria-describedby="ibm-overlaywidget-N100ED-content" aria-label="Overlay content" data-widget="overlay container" data-name=""><div class="ibm-overlay-heading-con"><p class="ibm-icononly"><a href="javascript:void(0);" class="ibm-close-link" role="button">Close</a></p></div><div id="ibm-overlaywidget-N100ED-content" class="content"><div class="ibm-widget-processed" data-widget="overlay" id="N100ED"><img alt="A central box of data, with callouts for the errors in the data set" src="./Cleansing, processing, and visualizing a data set, Part 1_ Working with messy data_files/image005.png" width="667"></div></div></div><div class="ibm-common-overlay ibm-overlay-alt-three" id="ibm-overlaywidget-N10112" role="dialog" aria-describedby="ibm-overlaywidget-N10112-content" aria-label="Overlay content" data-widget="overlay container" data-name=""><div class="ibm-overlay-heading-con"><p class="ibm-icononly"><a href="javascript:void(0);" class="ibm-close-link" role="button">Close</a></p></div><div id="ibm-overlaywidget-N10112-content" class="content"><div class="ibm-widget-processed" data-widget="overlay" id="N10112"><img alt="Flow chart of the process that the data-cleansing tool uses" src="./Cleansing, processing, and visualizing a data set, Part 1_ Working with messy data_files/image006.png" width="606"></div></div></div><div class="ibm-common-overlay ibm-overlay-alt-three" id="ibm-overlaywidget-N1012C" role="dialog" aria-describedby="ibm-overlaywidget-N1012C-content" aria-label="Overlay content" data-widget="overlay container" data-name=""><div class="ibm-overlay-heading-con"><p class="ibm-icononly"><a href="javascript:void(0);" class="ibm-close-link" role="button">Close</a></p></div><div id="ibm-overlaywidget-N1012C-content" class="content"><div class="ibm-widget-processed" data-widget="overlay" id="N1012C"><img alt="Flow chart showing the input of data through file close" src="./Cleansing, processing, and visualizing a data set, Part 1_ Working with messy data_files/image007.png" width="394"></div></div></div><div class="ibm-common-overlay ibm-overlay-alt-three" id="ibm-overlaywidget-N10140" role="dialog" aria-describedby="ibm-overlaywidget-N10140-content" aria-label="Overlay content" data-widget="overlay container" data-name=""><div class="ibm-overlay-heading-con"><p class="ibm-icononly"><a href="javascript:void(0);" class="ibm-close-link" role="button">Close</a></p></div><div id="ibm-overlaywidget-N10140-content" class="content"><div class="ibm-widget-processed" data-widget="overlay" id="N10140"><img alt="Image showing three rows of binary responses for three animal species" src="./Cleansing, processing, and visualizing a data set, Part 1_ Working with messy data_files/image008.png" width="765"></div></div></div><div id="ibm-mobilemenu-screen"></div><iframe name="_hjRemoteVarsFrame" title="_hjRemoteVarsFrame" id="_hjRemoteVarsFrame" src="./Cleansing, processing, and visualizing a data set, Part 1_ Working with messy data_files/rcj-99d43ead6bdf30da8ed5ffcb4f17100c.html" style="display: none !important; width: 1px !important; height: 1px !important; opacity: 0 !important; pointer-events: none !important;"></iframe><div id="ads"></div></body></html>

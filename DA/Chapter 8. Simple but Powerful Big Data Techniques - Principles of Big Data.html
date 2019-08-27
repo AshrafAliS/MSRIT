@@ -1,0 +1,1808 @@
+<!--[if IE]><![endif]-->
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js ie8 oldie" lang="en" prefix="og: http://ogp.me/ns/# og:book: http://ogp.me/ns/book# og:video: http://ogp.me/ns/video#"
+
+    
+        itemscope itemtype="http://schema.org/Book http://schema.org/ItemPage"" data-login-url="/accounts/login/"
+data-offline-url="/"
+data-url="/library/view/principles-of-big/9780124045767/xhtml/CHP008.html"
+data-csrf-cookie="csrfsafari"
+data-highlight-privacy=""
+
+
+  data-user-id="2714230"
+  data-user-uuid="5cf7157d-0bf4-4955-8581-dd84755fafee"
+  data-username="lakshmichakrala"
+  data-account-type="Trial"
+  
+  data-activated-trial-date="03/26/2018"
+
+
+  data-archive="9780124045767"
+  data-publishers="Morgan Kaufmann"
+
+
+
+  data-htmlfile-name="CHP008.html"
+  data-epub-title="Principles of Big Data" data-debug=0 data-testing=0><![endif]-->
+<!--[if gt IE 8]><!-->
+<html class=" js flexbox flexboxlegacy no-touch no-websqldatabase indexeddb history csscolumns csstransforms localstorage sessionstorage applicationcache svg inlinesvg no-zoom" prefix="og: http://ogp.me/ns/# og:book: http://ogp.me/ns/book# og:video: http://ogp.me/ns/video#" itemscope="" itemtype="http://schema.org/Book http://schema.org/ItemPage" "="" data-login-url="/accounts/login/" data-offline-url="/" data-url="/library/view/principles-of-big/9780124045767/xhtml/CHP008.html" data-csrf-cookie="csrfsafari" data-highlight-privacy="" data-user-id="2714230" data-user-uuid="5cf7157d-0bf4-4955-8581-dd84755fafee" data-username="lakshmichakrala" data-account-type="Trial" data-activated-trial-date="03/26/2018" data-archive="9780124045767" data-publishers="Morgan Kaufmann" data-htmlfile-name="CHP008.html" data-epub-title="Principles of Big Data" data-debug="0" data-testing="0" style="" lang="en"><!--<![endif]--><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="author" content="Safari Books Online"><meta name="format-detection" content="telephone=no"><meta http-equiv="cleartype" content="on"><meta name="HandheldFriendly" content="True"><meta name="MobileOptimized" content="320"><meta name="apple-itunes-app" content="app-id=881697395, app-argument=safaridetail://9780124045767"><meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, maximum-scale=1.0"><meta property="twitter:account_id" content="4503599627559754"><link rel="apple-touch-icon" href="https://www.safaribooksonline.com/static/images/apple-touch-icon.0c29511d2d72.png"><link rel="shortcut icon" href="https://www.safaribooksonline.com/favicon.ico" type="image/x-icon"><link href="Chapter%208.%20Simple%20but%20Powerful%20Big%20Data%20Techniques%20-%20Principles%20of%20Big%20Data_files/css.css" rel="stylesheet" type="text/css"><title>Chapter 8. Simple but Powerful Big Data Techniques - Principles of Big Data</title><link rel="stylesheet" href="Chapter%208.%20Simple%20but%20Powerful%20Big%20Data%20Techniques%20-%20Principles%20of%20Big%20Data_files/0b3b41598d70.css" type="text/css"><link rel="stylesheet" type="text/css" href="Chapter%208.%20Simple%20but%20Powerful%20Big%20Data%20Techniques%20-%20Principles%20of%20Big%20Data_files/annotator.css"><link rel="stylesheet" href="Chapter%208.%20Simple%20but%20Powerful%20Big%20Data%20Techniques%20-%20Principles%20of%20Big%20Data_files/font-awesome.css"><style type="text/css" title="ibis-book">
+    #sbo-rt-content div{margin-left:2em;margin-right:2em;font-family:"Palatino Linotype","Book Antiqua",Palatino,serif}#sbo-rt-content .book_halftitle{text-align:center;font-size:160%;margin-top:80px}#sbo-rt-content .book_title{font-family:"Palatino Linotype","Book Antiqua",Palatino,serif;font-size:300%;line-height:1.2em;text-align:left;text-indent:0;border-bottom:2px solid #999;margin-top:60px;margin-bottom:.5em;padding-bottom:.5em}#sbo-rt-content .book_subtitle{font-family:Arial,Helvetica,sans-serif;font-size:180%;font-weight:lighter;text-align:left;text-indent:0;margin-bottom:2em}#sbo-rt-content .edition{font-family:Arial,Helvetica,sans-serif;color:#999;font-size:90%;text-transform:uppercase;letter-spacing:1px;text-align:left;text-indent:0;margin-top:60px;margin-bottom:46px;padding-bottom:.5em}#sbo-rt-content .dropnum{font-family:Arial,Helvetica,sans-serif;color:#999;font-size:180%;font-weight:lighter;letter-spacing:-1px}#sbo-rt-content div.ctr{text-align:left;text-indent:0;font-weight:bold;font-size:80%;padding-top:.2em;padding-bottom:.25em;padding-left:.2em;padding-right:.2em}#sbo-rt-content .titleauthor{font-family:"Palatino Linotype","Book Antiqua",Palatino,serif;color:#3f8099;font-size:150%;text-align:left;text-indent:0;margin-top:1em;margin-bottom:.5em}#sbo-rt-content span.degrees{font-family:"Palatino Linotype","Book Antiqua",Palatino,serif;font-size:100%}#sbo-rt-content .base{text-align:left;text-indent:0;margin-top:125px}#sbo-rt-content .fmaffiliation{text-align:left;text-indent:0;margin-top:.05em;margin-bottom:0;font-size:80%;font-style:italic;color:#999}#sbo-rt-content .publisher{text-align:left;text-indent:0;font-size:80%;margin-bottom:.5em;margin-top:90px;padding-right:10px;padding-top:10px;padding-bottom:10px}#sbo-rt-content .dedication{font-family:"Palatino Linotype","Book Antiqua",Palatino,serif;font-size:90%;line-height:1.3em;text-align:center;margin-top:12em}#sbo-rt-content .dedicationau{font-family:Arial,Helvetica,sans-serif;font-size:75%;font-weight:bold;text-transform:capitalize;text-align:center;color:#3F8099}#sbo-rt-content .dedication2{font-family:"Palatino Linotype","Book Antiqua",Palatino,serif;font-size:90%;text-align:center;margin-top:0}#sbo-rt-content .para_fl{font-size:80%;text-align:justify;text-indent:0;margin-bottom:.5em;margin-top:0}#sbo-rt-content .para_indented{font-size:80%;text-align:justify;margin-bottom:.5em;margin-top:0;text-indent:1em}#sbo-rt-content .fmauthor{font-family:"Palatino Linotype","Book Antiqua",Palatino,serif;font-size:80%;font-weight:bold;text-align:left;text-indent:0;margin-top:.5em;margin-bottom:.5em;margin-left:30px;color:#999}#sbo-rt-content .fmauthoraffil{font-size:70%;font-weight:normal;text-align:left;text-indent:0;margin-bottom:0;font-family:Arial,Helvetica,sans-serif;color:#999;margin-left:0;font-style:italic;margin-top:-.75em}#sbo-rt-content .authorsignature{font-family:"Palatino Linotype","Book Antiqua",Palatino,serif;font-size:80%;line-height:1em;font-weight:bold;text-transform:capitalize;text-align:left;text-indent:0;color:#999;margin-top:1em;margin-bottom:.75em;padding-left:2em}#sbo-rt-content span.contribname{font-family:"Palatino Linotype","Book Antiqua",Palatino,serif;font-size:100%;font-weight:bold;text-align:left;text-indent:0;color:#3F8099;margin-top:1em}#sbo-rt-content span.contributors-affiliation{font-size:80%}#sbo-rt-content span.affiliation{font-family:Arial,Helvetica,sans-serif;font-size:75%;text-align:left;color:#999}#sbo-rt-content .contributors-chapter-title{text-align:left;text-indent:0;font-size:100%;margin-top:.3em;margin-bottom:.5em;margin-left:1.25em;font-style:italic}#sbo-rt-content .hangtext{font-family:"Palatino Linotype","Book Antiqua",Palatino,serif;text-align:left;text-indent:-2em;margin-top:-.5em;padding-left:2em}#sbo-rt-content #VN{font-family:Arial,Helvetica,sans-serif;background-color:#800000;height:40px;width:340px;color:#fff;text-align:center;letter-spacing:4px;font-size:120%;border-right-width:1px;border-right-style:solid;border-right-color:#000;line-height:1.5em;text-transform:uppercase;padding-top:6px;padding-left:8px;margin-bottom:.25em}#sbo-rt-content .volumeau{font-size:120%;text-align:left;text-indent:0;color:#800000;line-height:normal;margin-bottom:.25em;margin-left:25px}#sbo-rt-content .volumauaffil{font-family:Arial,Helvetica,sans-serif;font-size:70%;color:#999;text-indent:0;margin-top:0;text-align:left;margin-bottom:2em;margin-left:25px}#sbo-rt-content .illustrationline{text-align:left;text-indent:0;margin-top:2.5em;margin-bottom:-.75em;font-size:90%;font-style:oblique;color:#999;font-family:Arial,Helvetica,sans-serif;margin-left:25px}#sbo-rt-content p.parttitle{display:block;font-size:300%;text-align:left;text-indent:0;margin-top:0;margin-bottom:1em;padding-right:10px;line-height:1em;font-family:"Palatino Linotype","Book Antiqua",Palatino,serif}#sbo-rt-content p.partsubt{display:block;font-size:160%;text-align:left;text-indent:0;margin-top:.5em;margin-bottom:.5em;padding-right:10px}#sbo-rt-content .partau{font-size:90%;font-weight:bold;text-align:left;text-indent:0;margin-top:0;margin-bottom:1.5em}#sbo-rt-content .partoutlhd{font-family:Arial,Helvetica,sans-serif;font-size:100%;font-style:normal;font-weight:bold;text-transform:uppercase;color:#3f8099;letter-spacing:2px;text-align:left;text-indent:0;border-bottom-width:4px;border-bottom-style:solid;border-bottom-color:#707808;padding-bottom:3px;margin-bottom:0}#sbo-rt-content p.sectnum{display:block;font-size:120%;text-align:left;text-indent:0;padding-left:8px;font-weight:bold;color:#3f8099}#sbo-rt-content #SN{font-family:Arial,Helvetica,sans-serif;font-size:130%;line-height:1.5em;font-weight:bold;font-variant:normal;text-transform:uppercase;color:#3f8099;letter-spacing:4px;text-align:left;text-indent:0;padding-top:8px;padding-left:0;border-top-width:8px;border-top-style:solid;border-top-color:#d26e29}#sbo-rt-content p.secttitle{display:block;font-size:240%;text-align:left;text-indent:0;padding-right:10px;margin-top:0;margin-bottom:1em;font-weight:normal;font-family:"Palatino Linotype","Book Antiqua",Palatino,serif;line-height:1.2em}#sbo-rt-content p.sectsubt{display:block;font-size:175%;padding-right:10px;margin-top:.5em;margin-bottom:1em}#sbo-rt-content .sectau{font-size:80%;font-weight:bold;text-align:left;text-indent:0;margin-top:.25em;margin-bottom:1.5em}#sbo-rt-content div.outl{padding-top:0;padding-bottom:3px;padding-left:3px;padding-right:3px;margin-bottom:1em;background-color:#E3F2E7}#sbo-rt-content div.outlchap{margin-bottom:2em;background-color:#dce5f2;color:#000;padding:8px;margin-top:0;border-top-color:#285050;border-top-style:solid;border-top-width:0}#sbo-rt-content .sectoutlhd{font-size:100%;font-weight:bold;background-color:#fff;padding-top:0;padding-left:0;padding-right:0;padding-bottom:3px;margin-top:0;margin-bottom:0;font-family:Arial,Helvetica,sans-serif;color:#d26e29;line-height:1.3em;text-transform:uppercase;letter-spacing:2px;font-style:normal;border-bottom-color:#3f8099;border-bottom-style:solid;border-bottom-width:4px}#sbo-rt-content div.outlsect{margin-bottom:2em;background-color:#E9E9E9;color:#000;padding:8px;margin-top:0;border-top-color:#d26e29;border-top-style:solid;border-top-width:0}#sbo-rt-content div.outl .sectoutlchap{font-size:85%;margin-top:.25em;margin-bottom:.25em;margin-left:1em;text-indent:-1em;padding-top:.5em;padding-left:.5em;padding-right:0;padding-bottom:0;background-color:#E3F2E7}#sbo-rt-content .secttextfl{font-size:80%;text-indent:0;text-align:justify;margin-bottom:.5em;margin-top:0}#sbo-rt-content .secttext{font-size:80%;text-align:justify;margin-bottom:.5em;margin-top:0;text-indent:1em}#sbo-rt-content h1.chapnum{margin-top:0;margin-bottom:0;font-size:120%;text-align:right;text-indent:0;background-color:#9E0052;padding-top:.25em;padding-bottom:.25em;padding-right:.25em;color:#fff;border-bottom:1px solid #000}#sbo-rt-content h1.chapnum1{margin-top:0;margin-bottom:0;font-size:120%;font-weight:bold;text-align:left;text-indent:0;background-color:#9E0052;padding-top:.25em;padding-bottom:.25em;padding-right:.25em;color:#fff;border-bottom:1px solid #000}#sbo-rt-content p.chaptitle1{margin-top:1em;margin-bottom:0;font-size:240%;text-align:left;text-indent:0;line-height:1em}#sbo-rt-content h2.chapsubt{margin-top:0;margin-bottom:1em;font-size:150%;text-indent:0;line-height:1.1em;font-family:Arial,Helvetica,sans-serif;font-weight:lighter;font-variant:normal}#sbo-rt-content .chapau{font-family:"Palatino Linotype","Book Antiqua",Palatino,serif;font-size:70%;padding-left:0;margin-left:0;text-indent:0;font-weight:lighter;color:#999;margin-bottom:3em}#sbo-rt-content .chapau1{text-align:left;text-indent:0;margin-top:.5em;font-weight:bold;font-size:88%}#sbo-rt-content p.chapoutlhd{font-size:105%;font-weight:normal;margin-top:2em;margin-bottom:0;text-align:left;line-height:1.3em;padding-left:0;padding-top:7px;padding-bottom:2px;font-family:Arial,Helvetica,sans-serif;letter-spacing:2px;padding-right:5px;text-transform:uppercase;border-bottom-width:8px;border-bottom-style:solid;border-bottom-color:#d26e29;text-indent:-1px}#sbo-rt-content p.chapoutl1{font-size:80%;font-weight:normal;margin-left:0;margin-top:.5em;margin-bottom:0;margin-right:2em;text-align:left;text-indent:0;line-height:1.3em;font-family:Arial,Helvetica,sans-serif}#sbo-rt-content p.chapoutl2{font-size:80%;font-weight:normal;margin-left:1em;margin-right:2em;margin-top:0;text-indent:0;margin-bottom:0;text-align:left;line-height:1.3em;font-family:Arial,Helvetica,sans-serif}#sbo-rt-content p.chapoutl3{font-size:80%;font-weight:normal;margin-left:2em;margin-right:2em;text-indent:0;margin-top:0;margin-bottom:0;text-align:left;line-height:1.3em;font-family:Arial,Helvetica,sans-serif}#sbo-rt-content .objectset{margin-bottom:2em;margin-top:0;text-indent:0;padding-top:8px;background-color:#dce5f2;color:#000;padding-bottom:8px}#sbo-rt-content .objhead{font-size:105%;margin-top:2em;margin-bottom:0;padding-top:5px;padding-left:0;padding-right:5px;padding-bottom:2px;font-weight:normal;font-family:Arial,Helvetica,sans-serif;letter-spacing:2px;line-height:1.3em;text-align:left;text-indent:-1px;border-bottom-width:8px;border-bottom-style:solid;border-bottom-color:#c5a44e}#sbo-rt-content .objtext{font-size:80%;font-weight:bold;margin-bottom:0;margin-top:0;margin-left:.05em;padding-top:0;padding-left:.5em;font-family:Arial,Helvetica,sans-serif;color:#3F8099;line-height:1em}#sbo-rt-content .objectivetext{font-family:Arial,Helvetica,sans-serif;font-style:italic;padding-left:8px;line-height:0;font-size:80%}#sbo-rt-content .Key_Term_Head{font-family:Arial,Helvetica,sans-serif;font-size:105%;font-style:normal;line-height:1.3em;font-weight:normal;text-transform:uppercase;letter-spacing:2px;text-align:left;margin-left:0;padding-top:7px;padding-bottom:2px;padding-left:0;margin-bottom:0;text-indent:-1px;margin-top:2px;border-bottom-width:8px;border-bottom-style:solid;border-bottom-color:#3f8099}#sbo-rt-content .Key_Term_List{font-family:Arial,Helvetica,sans-serif;font-size:80%;line-height:1.3em;font-weight:bold;text-align:left;margin-top:0;margin-right:8px;margin-bottom:.5em;text-indent:-1em;padding-left:1em}#sbo-rt-content .Key_Term_def{font-family:Arial,Helvetica,sans-serif;font-size:80%;font-style:normal;line-height:1.3em;text-align:left;text-indent:-2em;padding-left:1em;font-weight:normal;margin-left:0}#sbo-rt-content .objbulllist{font-size:80%;font-weight:normal;margin-top:.2em;margin-bottom:.2em;text-indent:-.7em;margin-left:1em;font-family:Arial,Helvetica,sans-serif}#sbo-rt-content h2.h1hd{font-size:130%;margin-top:1em;margin-bottom:.25em;font-family:Arial,Helvetica,sans-serif;color:#707B08;page-break-inside:avoid}#sbo-rt-content h3.h2hd{font-size:110%;margin-top:1em;margin-bottom:.25em;font-family:Arial,Helvetica,sans-serif;color:#3f8099;text-transform:capitalize}#sbo-rt-content h4.h3hd{font-size:90%;font-weight:bold;font-style:italic;margin-top:1em;margin-bottom:.25em;text-transform:none;color:#800000;font-family:Arial,Helvetica,sans-serif}#sbo-rt-content .h3after2{font-family:Arial,Helvetica,sans-serif;font-size:90%;font-weight:bold;font-variant:normal;color:#800000;text-indent:0;margin-top:0;margin-bottom:.25em;font-style:italic}#sbo-rt-content span.h4hd{font-size:85%;font-weight:bold;font-family:Arial,Helvetica,sans-serif;font-style:normal;text-transform:capitalize;color:#888}#sbo-rt-content span.h5hd{font-size:80%;font-weight:bold;font-style:normal}#sbo-rt-content span.h6hd{font-size:80%;font-style:italic;font-weight:bold}#sbo-rt-content .textfl{font-size:80%;text-align:justify;margin-bottom:0;margin-top:0;text-indent:0}#sbo-rt-content .text{font-size:80%;text-align:justify;margin-bottom:0;margin-top:0;text-indent:1em}#sbo-rt-content .ttextfl{font-size:80%;text-align:justify;margin-bottom:0;margin-top:0;text-indent:0}#sbo-rt-content .Reduced_text{font-family:"Palatino Linotype","Book Antiqua",Palatino,serif;font-size:70%;line-height:1.2em;text-align:left;text-indent:0;margin-top:.75em;margin-right:1em;margin-bottom:.75em;margin-left:1em}#sbo-rt-content .fig{margin-top:2em;margin-bottom:.5em;padding-right:5px;padding-left:5px;padding-top:5px;text-align:center}#sbo-rt-content .figleg{font-size:72.5%;line-height:1.2em;text-align:left;text-indent:0;font-family:Arial,Helvetica,sans-serif;margin-right:2em;margin-left:2em}#sbo-rt-content .figtitle{font-family:Arial,Helvetica,sans-serif;font-size:72.5%;line-height:1.25em;font-weight:bold}#sbo-rt-content .figcredit{font-size:70%;padding-right:10px;text-indent:0;text-align:left}#sbo-rt-content .b1source{font-size:60%;color:#000;text-indent:0;margin-left:0;border-top-width:1px;border-top-style:solid;border-top-color:#999}#sbo-rt-content .fignum{font-size:90%;font-weight:bold;padding-right:10px;text-align:left;text-indent:0;text-transform:uppercase;color:#800000}#sbo-rt-content .tablediv{background-color:#E3F2E7;padding:10px;border-top-width:5px;border-top-style:solid;border-top-color:#007DAC;color:#000}#sbo-rt-content .t1hd{font-family:Arial,Helvetica,sansserif;font-size:90%;color:#007DAC;font-weight:bold;margin-top:.5em;margin-bottom:.5em}#sbo-rt-content td.straddlehd{font-family:Arial,Helvetica,sans-serif;font-size:70%;color:#007DAC;padding-top:.5em;padding-bottom:.5em;font-weight:bold;background-color:#E3F2E7}#sbo-rt-content .tbody{vertical-align:top;font-family:Arial,Helvetica,sans-serif;padding:.5em;text-indent:0;margin-top:1em;margin-left:0}#sbo-rt-content td.tcolhd{font-size:70%;font-weight:bold;border-bottom:1px solid #000;font-family:Arial,Helvetica,sans-serif;padding:.5em .5em .5em 0;text-indent:.5em}#sbo-rt-content td.tcolhd2{font-size:70%;font-weight:normal;border-bottom:1px solid #000;text-indent:.5em}#sbo-rt-content td.t2hd{font-family:Arial,Helvetica,sans-serif;font-size:85%;font-weight:bold;margin-top:.5em;margin-bottom:.25em}#sbo-rt-content .tbody_fl{font-family:Arial,Helvetica,sans-serif;font-size:80%;margin:0;line-height:1.25em}#sbo-rt-content .tbody_ind{font-family:Arial,Helvetica,sans-serif;font-size:80%;text-indent:1em;margin:0;line-height:1.25em}#sbo-rt-content td.t3hd{font-size:70%;font-weight:bold;text-indent:.5em}#sbo-rt-content td.tunnlist{vertical-align:top;font-size:80%;text-indent:1px;padding-top:0;padding-right:0;padding-bottom:0;padding-left:1em}#sbo-rt-content .tunnumlist{padding-left:.7em;text-indent:-.7em;margin-left:0;margin-top:0;margin-bottom:0;vertical-align:top}#sbo-rt-content .tunnumlist1{padding-left:1.6em;text-indent:-.7em;margin-left:0;margin-top:0;margin-bottom:0;vertical-align:top}#sbo-rt-content .tbulllist{font-size:80%;padding-left:.7em;text-indent:-.7em;margin-left:0;margin-top:0;margin-bottom:0;vertical-align:top}#sbo-rt-content .tbulllist1{font-size:inherit;padding-left:1.6em;text-indent:-.7em;margin-left:0;margin-top:0;margin-bottom:0;vertical-align:top}#sbo-rt-content .tnumlist{padding-left:1em;text-indent:-1em;margin-left:0;margin-top:0;margin-bottom:0;vertical-align:top}#sbo-rt-content .tnumlista{padding-left:1.2em;text-indent:-1.7em;margin-left:0;margin-top:0;margin-bottom:0;vertical-align:top}#sbo-rt-content .tnumlist1{padding-left:2.7em;text-indent:-1em;margin-left:0;margin-top:0;margin-bottom:0;vertical-align:top}#sbo-rt-content .tnumlist1a{padding-left:2.7em;text-indent:-1.7em;margin-left:0;margin-top:0;margin-bottom:0;vertical-align:top}#sbo-rt-content .tlist{font-family:Arial,Helvetica,sans-serif;font-size:80%;line-height:1.25em;text-indent:-1em;display:block;list-style-type:none;margin-left:-1.25em}#sbo-rt-content .tlist2{font-family:Arial,Helvetica,sans-serif;font-size:80%;line-height:1.25em;margin-left:-2.5em;list-style-type:none}#sbo-rt-content .table{text-align:left;text-indent:0;margin-top:1em;margin-bottom:.5em;border-bottom:5px solid #007DAC}#sbo-rt-content .table1{text-align:left;text-indent:0;margin-top:2em;margin-bottom:.5em}#sbo-rt-content .table2{text-align:left;text-indent:0;margin-top:1em;margin-bottom:1em}#sbo-rt-content .pageavoid{page-break-inside:avoid;text-indent:0;margin-top:0;padding-bottom:10px}#sbo-rt-content td.green{background-color:#E3F2E7}#sbo-rt-content .tnum{font-size:75%;font-weight:bold;font-family:Arial,Helvetica,sans-serif;color:#800000;border-top-width:2px;border-top-style:solid;border-top-color:#007DAC;padding-top:5px;margin-bottom:0;text-indent:0}#sbo-rt-content .ttitle{font-size:75%;font-weight:bold;font-family:Arial,Helvetica,sans-serif;margin:5px 0 -1px 0;border-bottom-width:2px;border-bottom-style:solid;border-bottom-color:#007DAC;padding-bottom:5px;text-indent:0}#sbo-rt-content p.tftnote{font-size:65%;margin-top:.5em;margin-bottom:0;margin-left:0;text-indent:0;vertical-align:top;font-family:Arial,Helvetica,sans-serif}#sbo-rt-content .box{text-align:left;text-indent:0;background-color:#F3D68B;color:#000;margin-bottom:0;padding-top:.5em;padding-bottom:.5em;border-bottom:1px solid #000}#sbo-rt-content .boxa{text-align:left;text-indent:0;background-color:#F3D68B;color:#000;padding-top:.5em;padding-bottom:.5em;border-bottom:1px solid #000;margin-bottom:0}#sbo-rt-content .box2{text-align:left;text-indent:0;background-color:#C7EAFB;color:#000;margin-bottom:0;padding-top:.5em;padding-bottom:.5em;border-bottom:5px solid #007DAC}#sbo-rt-content .boxg1{margin-top:2em;margin-bottom:3em;background-color:#EDEDED;color:#000;margin-right:2em;margin-left:1.5em;text-indent:0;padding-top:6px;padding-right:8px;padding-bottom:8px;padding-left:8px;border:medium solid #666}#sbo-rt-content .boxg2{font-size:72%;padding-left:0;padding-right:0;padding-bottom:1em;margin-bottom:1em;margin-top:-.25em;background-color:#E3F2E7;color:#000}#sbo-rt-content .boxg3{font-size:72%;padding-left:0;padding-right:0;padding-bottom:.5em;margin-bottom:.25em;margin-top:1em;border-top:solid 2px #8781BD;border-bottom:solid 2px #8781BD;border-left:solid 2px #8781BD;border-right:solid 2px #8781BD;background-color:#EEEDF6;color:#000}#sbo-rt-content .boxg4{font-size:72%;padding-top:0;padding-left:0;padding-right:0;padding-bottom:1em;margin-bottom:1em;background-color:#FFF1D0;color:#000;border-bottom:1px solid #000}#sbo-rt-content .b1num{padding-left:0;padding-right:0;font-weight:bold;font-size:85%;margin-left:0;text-indent:0;font-family:Arial,Helvetica,sans-serif;text-transform:capitalize;padding-bottom:4px;padding-top:0;margin-right:-7px;margin-bottom:3px;display:inline-block;border-bottom-width:thick;border-bottom-style:solid;border-bottom-color:#3F8099}#sbo-rt-content .b2num{margin-top:0;color:#000;padding-left:5px;padding-right:5px;font-weight:bold;font-size:80%}#sbo-rt-content .b1title{text-align:left;text-indent:0;padding-left:0;padding-bottom:0;padding-right:5px;font-weight:bold;font-size:100%;letter-spacing:2px;color:#d26e29;margin-top:0;margin-bottom:0;border-bottom-color:#cdcdcd;border-bottom-style:solid;border-bottom-width:2px}#sbo-rt-content .b1caption{padding-left:0;padding-bottom:0;padding-right:5px;text-indent:0;font-weight:bold;font-size:90%;letter-spacing:2px;color:#3F8099;margin-bottom:0;margin-top:0}#sbo-rt-content .b2title{text-align:left;text-indent:0;padding-top:.25px;padding-left:5px;padding-bottom:5px;padding-right:5px;font-weight:bold;font-size:90%;color:#000;margin-top:.25em}#sbo-rt-content .b1subt{text-align:left;text-indent:0;padding-left:0;padding-right:0;padding-bottom:0;font-weight:bold;font-size:95%;margin-bottom:.25em;color:#3F8099;padding-top:0;margin-top:10px}#sbo-rt-content .b1au{padding-left:0;padding-bottom:10px;font-size:75%;margin-top:0;margin-bottom:0;font-weight:bold;color:#666;text-align:left;text-indent:0;padding-top:5px}#sbo-rt-content .b1textfl{font-size:80%;text-align:justify;color:#000;margin-bottom:0;margin-top:0;text-indent:0;padding-left:0;padding-right:5px}#sbo-rt-content .b1text{font-size:80%;text-align:justify;color:#000;margin-bottom:0;margin-top:0;text-indent:1em;padding-left:0;padding-right:5px}#sbo-rt-content .b11hd{text-align:left;text-indent:0;font-size:90%;font-weight:bold;margin-top:.5em;margin-bottom:.25em;padding-left:0;padding-top:0;color:#3f8099}#sbo-rt-content .b12hd{text-align:left;text-indent:0;font-size:90%;color:#000;font-weight:bold;font-style:italic;margin-top:.5em;margin-bottom:0;padding-left:0}#sbo-rt-content .b13hd{font-size:80%;text-align:left;color:#000;text-indent:0;font-weight:bold;margin-top:.25em;margin-bottom:0;padding-left:0}#sbo-rt-content .b2subt{text-align:left;color:#000;text-indent:0;padding-top:5px;padding-left:5px;padding-bottom:5px;padding-right:5px;font-weight:normal;font-size:90%;margin-top:.25em;margin-bottom:.25em;border-bottom:2px solid #007DAC}#sbo-rt-content .b1quote{font-size:80%;color:#000;font-style:italic;margin-top:.75em;margin-right:3em;margin-bottom:.75em;margin-left:35px;text-align:left;text-indent:0}#sbo-rt-content .b1quoteau{font-family:Arial,Helvetica,sans-serif;color:#000;font-size:60%;text-align:left;text-indent:0;margin-left:5px;font-style:normal;font-weight:bold}#sbo-rt-content p.b1ftnote{font-size:68%;color:#000;margin-right:5px;margin-left:2em;text-indent:-2em;margin-bottom:0;margin-top:0}#sbo-rt-content .unnumlist{font-size:80%;text-indent:-1em;margin-left:1.5em;margin-top:0;margin-bottom:0}#sbo-rt-content .unnumlist1{font-size:80%;text-indent:-1em;margin-left:2.5em;margin-top:0;margin-bottom:0}#sbo-rt-content .unnumlist2{font-size:80%;text-indent:-1em;margin-left:3.5em;margin-top:0;margin-bottom:0}#sbo-rt-content .unnumlist3{font-size:80%;text-indent:-1em;margin-left:4.5em;margin-top:0;margin-bottom:0}#sbo-rt-content .unnumlist4{font-size:80%;text-indent:-1em;margin-left:5.5em;margin-top:0;margin-bottom:0}#sbo-rt-content .unnumlist5{font-size:80%;text-indent:-1em;margin-left:6.5em;margin-top:0;margin-bottom:0}#sbo-rt-content .numlist{font-size:80%;text-indent:-1.2em;margin-left:3em;margin-top:0;margin-bottom:0}#sbo-rt-content .numlista{font-size:80%;text-indent:-1.8em;margin-left:3em;margin-top:0;margin-bottom:0}#sbo-rt-content .numlistb{font-size:80%;text-indent:-2.3em;margin-left:2.9em;margin-top:0;margin-bottom:0}#sbo-rt-content .numlistc{font-size:80%;text-indent:-2.9em;margin-left:2.9em;margin-top:0;margin-bottom:0}#sbo-rt-content .numlist1{font-size:80%;text-indent:-1.2em;margin-left:6.1em;margin-top:0;margin-bottom:0}#sbo-rt-content .numlist1a{font-size:80%;text-indent:-1.8em;margin-left:6.2em;margin-top:0;margin-bottom:0}#sbo-rt-content .numlist1b{font-size:80%;text-indent:-2.3em;margin-left:6.1em;margin-top:0;margin-bottom:0}#sbo-rt-content .numlist1c{font-size:80%;text-indent:-2.8em;margin-left:6em;margin-top:0;margin-bottom:0}#sbo-rt-content .numlist2{font-size:80%;text-indent:-1em;margin-left:8.8em;margin-top:0;margin-bottom:0}#sbo-rt-content .numlist2a{font-size:80%;text-indent:-1.8em;margin-left:9.1em;margin-top:0;margin-bottom:0}#sbo-rt-content .numlist2b{font-size:80%;text-indent:-2.4em;margin-left:9.1em;margin-top:0;margin-bottom:0}#sbo-rt-content .numlist2c{font-size:80%;text-indent:-2.9em;margin-left:9em;margin-top:0;margin-bottom:0}#sbo-rt-content .numlist3{font-size:80%;text-indent:-1.3em;margin-left:12.1em;margin-top:0;margin-bottom:0}#sbo-rt-content .numlist3a{font-size:80%;text-indent:-1.8em;margin-left:11.9em;margin-top:0;margin-bottom:0}#sbo-rt-content .numlist3b{font-size:80%;text-indent:-2.2em;margin-left:11.7em;margin-top:0;margin-bottom:0}#sbo-rt-content .numlist3c{font-size:80%;text-indent:-2.9em;margin-left:11.9em;margin-top:0;margin-bottom:0}#sbo-rt-content .numlist4{font-size:80%;text-indent:-1.3em;margin-left:15em;margin-top:0;margin-bottom:0}#sbo-rt-content .numlist4a{font-size:80%;text-indent:-1.8em;margin-left:15em;margin-top:0;margin-bottom:0}#sbo-rt-content .numlist4b{font-size:80%;text-indent:-2.2em;margin-left:15em;margin-top:0;margin-bottom:0}#sbo-rt-content .numlist4c{font-size:80%;text-indent:-2.9em;margin-left:15em;margin-top:0;margin-bottom:0}#sbo-rt-content .numlist5{font-size:80%;text-indent:-1.3em;margin-left:17.7em;margin-top:0;margin-bottom:0}#sbo-rt-content .numlist5a{font-size:80%;text-indent:-1.8em;margin-left:17.7em;margin-top:0;margin-bottom:0}#sbo-rt-content .numlist5b{font-size:80%;text-indent:-2.2em;margin-left:17.7em;margin-top:0;margin-bottom:0}#sbo-rt-content .numlist5c{font-size:80%;text-indent:-2.9em;margin-left:17.7em;margin-top:0;margin-bottom:0}#sbo-rt-content .bulllist{font-size:80%;text-indent:-1em;margin-left:1.5em;margin-top:0;margin-bottom:0}#sbo-rt-content .bulllist1{font-size:80%;text-indent:-1em;margin-left:2.5em;margin-top:0;margin-bottom:0}#sbo-rt-content .bulllist2{font-size:80%;text-indent:-1em;margin-left:3.5em;margin-top:0;margin-bottom:0}#sbo-rt-content .bulllist3{font-size:80%;text-indent:-1em;margin-left:4.5em;margin-top:0;margin-bottom:0}#sbo-rt-content .bulllist4{font-size:80%;text-indent:-1em;margin-left:5.5em;margin-top:0;margin-bottom:0}#sbo-rt-content .bulllist5{font-size:80%;text-indent:-1em;margin-left:6.5em;margin-top:0;margin-bottom:0}#sbo-rt-content p.dispquote{font-size:80%;font-style:italic;margin-left:0;margin-top:2em;margin-bottom:0;text-align:left;text-indent:0;line-height:1.3em;font-family:Arial,Helvetica,sans-serif}#sbo-rt-content p.dispquoteau{font-size:70%;margin-left:0;margin-top:0;margin-bottom:1em;text-align:left;text-indent:0;line-height:1.5em;font-family:Arial,Helvetica,sans-serif}#sbo-rt-content p.quote{font-size:80%;font-style:italic;margin-left:2em;margin-right:0;margin-top:1em;margin-bottom:1em;text-align:left;text-indent:0;line-height:1.3em}#sbo-rt-content p.quoteau{font-size:70%;font-weight:normal;margin-top:.2em;margin-bottom:1.5em;text-align:right;line-height:1.3em}#sbo-rt-content p.b2numlist{font-size:80%;color:#000;text-indent:-1.1em;margin-left:1em;margin-top:.25em;margin-bottom:0;padding-left:.5em}#sbo-rt-content p.b2numlist2{font-size:80%;color:#000;text-indent:-1.1em;margin-left:2em;margin-top:.25em;margin-bottom:0;padding-left:.5em}#sbo-rt-content .te{margin-top:0;margin-bottom:.5em;margin-left:1em;padding-top:0;padding-bottom:0}#sbo-rt-content .tet{padding-bottom:.25em;text-indent:0;margin-bottom:0;border-bottom:2px solid #007DAC}#sbo-rt-content .tenum{font-size:95%;margin-top:0;padding-left:5px;padding-right:5px;font-weight:bold;}#sbo-rt-content .tetitle{font-size:85%;padding-top:.25px;padding-left:5px;padding-bottom:.25px;padding-right:5px;font-weight:bold;margin-top:.25em}#sbo-rt-content .tesubt{padding-top:5px;padding-left:5px;padding-bottom:5px;padding-right:5px;font-weight:bold;font-style:italic;font-size:92%;margin-top:.25em;margin-bottom:.25em}#sbo-rt-content .tetext{font-size:72%;text-align:justify;margin-bottom:2px;margin-top:.25em;text-indent:0}#sbo-rt-content .tetextin{font-size:72%;text-align:justify;margin-bottom:2px;margin-top:.25em;text-indent:1em}#sbo-rt-content .te1{font-size:80%;font-weight:bold;margin-top:.25em;margin-bottom:.25em;border-bottom:solid 2px #8781BD}#sbo-rt-content .te1hd{font-size:80%;font-weight:bold;margin-top:.5em;margin-bottom:.25em}#sbo-rt-content .te2hd{font-size:80%;font-weight:bold;font-style:italic;margin-top:1em;margin-bottom:.25em}#sbo-rt-content .te3hd{font-size:80%;font-weight:bold}#sbo-rt-content p.tenumlist{font-size:72%;text-indent:-1em;margin-left:2em;margin-top:.25em;margin-bottom:.25em}#sbo-rt-content p.tenumlist2{font-size:72%;margin-left:3.3em;text-indent:-1.5em;margin-top:.25em;margin-bottom:.25em}#sbo-rt-content p.tebulllist{font-size:72%;text-indent:-.7em;margin-left:2em;margin-top:.25em;margin-bottom:.25em}#sbo-rt-content p.tebulllist2{font-size:72%;margin-left:3.3em;text-indent:-1.25em;margin-top:.25em;margin-bottom:.25em}#sbo-rt-content p.teunnlist{font-size:72%;text-indent:-1em;margin-left:2em;margin-top:.25em;margin-bottom:.25em}#sbo-rt-content p.teunnlist2{font-size:72%;margin-left:3.3em;text-indent:-1.5em;margin-top:.25em;margin-bottom:.25em}#sbo-rt-content td.colhd{font-size:80%;font-weight:bold}#sbo-rt-content td.coltext{font-size:80%}#sbo-rt-content p.eq{font-size:75%;text-align:right;margin-top:.5em;margin-bottom:.5em}#sbo-rt-content .eqnum{font-size:90%;font-weight:bold;padding-right:5px;padding-left:5px;padding-bottom:3px;float:right}#sbo-rt-content .b1numlist{font-size:80%;color:#000;margin-top:0;margin-right:0;margin-bottom:0;margin-left:2.5em;text-indent:-1.2em}#sbo-rt-content .b1numlista{font-size:80%;color:#000;margin-top:0;margin-right:0;margin-bottom:0;margin-left:2.5em;text-indent:-1.8em}#sbo-rt-content .b1numlistb{font-size:80%;color:#000;margin-top:0;margin-right:0;margin-bottom:0;margin-left:2.5em;text-indent:-2.2em}#sbo-rt-content .b1numlist1{font-size:80%;color:#000;margin-top:0;margin-bottom:0;margin-left:4.2em;text-indent:-1.2em}#sbo-rt-content .b1numlist1a{font-size:80%;color:#000;margin-top:0;margin-bottom:0;margin-left:4.2em;text-indent:-1.8em}#sbo-rt-content .b1numlist2{font-size:80%;color:#000;margin-top:0;margin-bottom:0;margin-left:5.9em;text-indent:-1.2em}#sbo-rt-content .b1numlist2a{font-size:80%;color:#000;margin-top:0;margin-bottom:0;margin-left:6em;text-indent:-1.8em}#sbo-rt-content .b1numlist3{font-size:80%;color:#000;margin-top:0;margin-bottom:0;margin-left:7.8em;text-indent:-1.2em}#sbo-rt-content .b1numlist3a{font-size:80%;color:#000;margin-top:0;margin-bottom:0;margin-left:7.8em;text-indent:-1.8em}#sbo-rt-content .b1numlist4{font-size:80%;color:#000;margin-top:0;margin-bottom:0;margin-left:9.6em;text-indent:-1.2em}#sbo-rt-content .b1numlist4a{font-size:80%;color:#000;margin-top:0;margin-bottom:0;margin-left:9.6em;text-indent:-1.8em}#sbo-rt-content .b1numlist5{font-size:80%;color:#000;margin-top:0;margin-bottom:0;margin-left:11.2em;text-indent:-1.2em}#sbo-rt-content .b1numlist5a{font-size:80%;color:#000;margin-top:0;margin-bottom:0;margin-left:11.2em;text-indent:-1.8em}#sbo-rt-content .b1bulllist{font-size:80%;color:#000;margin-top:0;margin-right:0;margin-bottom:.2em;margin-left:.9em;text-indent:-.7em}#sbo-rt-content .b1bulllist1{font-size:80%;color:#000;margin-top:0;margin-bottom:0;margin-left:1.9em;text-indent:-.9em}#sbo-rt-content .b1bulllist2{font-size:80%;color:#000;margin-top:0;margin-bottom:0;margin-left:2.9em;text-indent:-.9em}#sbo-rt-content .b1bulllist3{font-size:80%;color:#000;margin-top:0;margin-bottom:0;margin-left:3.9em;text-indent:-.9em}#sbo-rt-content .b1bulllist4{font-size:80%;color:#000;margin-top:0;margin-bottom:0;margin-left:4.9em;text-indent:-.9em}#sbo-rt-content .b1bulllist5{font-size:80%;color:#000;margin-top:0;margin-bottom:0;margin-left:5.9em;text-indent:-.9em}#sbo-rt-content .b1unnumlist{font-size:80%;color:#000;margin-top:0;margin-right:0;margin-bottom:0;margin-left:.9em;text-indent:-.7em}#sbo-rt-content .b1unnumlist1{font-size:80%;color:#000;margin-top:0;margin-bottom:0;margin-left:1.9em;text-indent:-.9em}#sbo-rt-content .b1unnumlist2{font-size:80%;color:#000;margin-top:0;margin-bottom:0;margin-left:2.9em;text-indent:-.9em}#sbo-rt-content .b1unnumlist3{font-size:80%;color:#000;margin-top:0;margin-bottom:0;margin-left:3.9em;text-indent:-.9em}#sbo-rt-content .b1unnumlist4{font-size:80%;color:#000;margin-top:0;margin-bottom:0;margin-left:4.9em;text-indent:-.9em}#sbo-rt-content .b1unnumlist5{font-size:80%;color:#000;margin-top:0;margin-bottom:0;margin-left:5.9em;text-indent:-.9em}#sbo-rt-content .b1list{font-size:80%;color:#000;margin-top:.5em;margin-right:0;margin-bottom:.5em;list-style-type:none;display:block;text-indent:-1em;margin-left:-1em}#sbo-rt-content .b1list2{font-size:80%;color:#000;list-style-type:none;display:block;text-indent:-1em;margin-left:-1.4em}#sbo-rt-content .icon1{vertical-align:middle}#sbo-rt-content .icon2{vertical-align:middle}#sbo-rt-content .b3num{font-size:90%;margin-top:0;text-indent:0;padding-left:5px;padding-right:5px;font-weight:bold;color:#2E3092}#sbo-rt-content .b3title{color:#000;text-indent:0;padding-top:.25px;padding-left:5px;padding-bottom:5px;padding-right:5px;font-weight:normal;font-size:90%;margin-top:.25em}#sbo-rt-content .b3subt{color:#000;text-indent:0;padding-top:5px;padding-left:5px;padding-bottom:5px;padding-right:5px;font-weight:normal;font-size:90%;margin-top:.25em;margin-bottom:.25em;border-bottom:solid 2px #8781BD}#sbo-rt-content p.b3ftnote{font-size:68%;text-indent:0;color:#000;margin-right:5px;margin-left:0;margin-bottom:0;margin-top:.5em}#sbo-rt-content p.b3numlist{font-size:80%;color:#000;text-indent:-1em;margin-left:2em;margin-top:.25em;margin-bottom:.25em}#sbo-rt-content p.b3bulllist{font-size:80%;color:#000;text-indent:-1em;margin-left:2em;margin-top:.25em;margin-bottom:.25em}#sbo-rt-content p.b3bulllist2{font-size:80%;color:#000;text-indent:-1.1em;margin-left:2em;margin-top:.5em;margin-bottom:.25em}#sbo-rt-content p.b3unnlist{font-size:80%;color:#000;text-indent:-1em;margin-left:2em;margin-top:.25em;margin-bottom:.25em}#sbo-rt-content .b31hd{font-size:80%;text-indent:0;color:#000;font-weight:bold;padding-left:5px;margin-top:.25em;margin-bottom:.5em}#sbo-rt-content .b32hd{font-size:80%;text-indent:0;color:#000;font-weight:bold;font-style:italic;margin-top:.5em;margin-bottom:.5em;padding-left:5px}#sbo-rt-content .b33hd{font-size:80%;text-indent:0;color:#000;font-weight:bold}#sbo-rt-content .b3textfl{font-size:80%;color:#000;text-align:justify;margin-bottom:0;margin-top:0;text-indent:0;padding-left:5px;padding-right:5px}#sbo-rt-content .b3text{font-size:80%;color:#000;text-align:justify;margin-bottom:0;margin-top:0;text-indent:1em}#sbo-rt-content h2.sumhd{font-size:104%;margin-top:1.5em;margin-bottom:.75em}#sbo-rt-content h2.sub{font-size:140%;margin-top:1.5em;margin-bottom:.75em}#sbo-rt-content .sumtext{font-size:80%;text-align:justify;margin-bottom:0;margin-top:0;text-indent:0}#sbo-rt-content .ackhd{font-size:90%;text-indent:0;margin-top:1.25em;margin-bottom:0;font-weight:normal}#sbo-rt-content .ack{font-size:72%;text-indent:0;margin-top:.5em;margin-bottom:1.5em}#sbo-rt-content .margintext1{font-size:72%;text-indent:0;font-weight:bold;margin-top:1.5em;margin-bottom:1.5em}#sbo-rt-content .margintext2{font-size:72%;text-indent:0;font-weight:bold;font-style:italic;margin-top:.5em;margin-bottom:1.5em}#sbo-rt-content .refs{font-size:70%;line-height:1.5em;text-indent:0;margin-top:0}#sbo-rt-content .reftitle{font-size:130%;text-indent:0;margin-top:1em;margin-bottom:.25em;font-family:Arial,Helvetica,sans-serif;color:#707B08;text-transform:capitalize}#sbo-rt-content .ref1hd{font-family:Arial,Helvetica,sans-serif;font-size:75%;text-indent:0;line-height:1.2px;margin-top:1em;margin-bottom:.5em;font-weight:bold}#sbo-rt-content .refs-ital{font-size:70%;text-indent:0;font-style:italic}#sbo-rt-content .ref2hd{color:#666;font-family:Arial,Helvetica,sans-serif;font-size:70%;text-indent:0;margin-bottom:0;font-weight:bold}#sbo-rt-content .bibliohead{font-size:130%;text-indent:0;margin-top:1em;margin-bottom:.25em;font-family:Arial,Helvetica,sans-serif;color:#707B08}#sbo-rt-content .biblio{font-size:72%;text-align:left;margin-left:20px;margin-bottom:.25em;margin-top:0;text-indent:-20px}#sbo-rt-content .annot{font-size:72%;font-style:italic;text-align:left;margin-bottom:.25em;margin-top:0;text-indent:1em}#sbo-rt-content p.qtitle{font-size:100%;text-indent:0;margin-top:1.25em;margin-bottom:.5em;font-weight:bold;padding-bottom:.25em;border-bottom:1px solid #000}#sbo-rt-content p.anstitle{font-size:100%;text-indent:0;margin-top:1.25em;margin-bottom:.5em;padding-bottom:.25em;font-weight:bold;border-bottom:1px solid #000}#sbo-rt-content p.qnumlist{font-size:80%;text-indent:-1.1em;margin-left:1em;margin-top:.5em;margin-bottom:0}#sbo-rt-content p.qnumlist2{font-size:80%;text-indent:-1.1em;margin-left:2em;margin-top:.25em;margin-bottom:0}#sbo-rt-content p.ansnumlist{font-size:80%;text-indent:-1.1em;margin-left:1em;margin-top:.5em;margin-bottom:0}#sbo-rt-content div.ftnote{margin-top:0}#sbo-rt-content p.ftnote1{font-size:64%;margin-top:.5em;margin-bottom:0;vertical-align:top;text-indent:0}#sbo-rt-content p.ft2{font-size:64%;margin-top:.5em;margin-bottom:.5em;vertical-align:top;text-indent:.01em}#sbo-rt-content .subchapnum{margin-top:0;margin-bottom:0;font-size:125%;font-weight:bold;text-indent:0}#sbo-rt-content .subchapttitle{margin-top:0;margin-bottom:0;font-size:130%;font-weight:normal;text-indent:0}#sbo-rt-content div.key{padding-top:1px;padding-bottom:10px;padding-left:8px;padding-right:3px;margin-bottom:1em;background-color:#FFEFE1}#sbo-rt-content .keytermshd{margin-top:.5em;margin-bottom:.25em;font-size:90%;font-weight:normal;text-indent:0;background-color:#FEE2C9;color:#000;padding-top:.5em;padding-bottom:.5em;padding-left:.5em}#sbo-rt-content .keytermslist{margin-top:.25em;margin-bottom:.25em;font-size:80%;font-weight:bold;text-indent:0}#sbo-rt-content a{text-decoration:none}#sbo-rt-content span.bold{font-weight:bold}#sbo-rt-content span.italic{font-style:italic}#sbo-rt-content span.smallcaps{font-size:80%;text-align:left}#sbo-rt-content .bullet_color{color:#d26e29}#sbo-rt-content p.bulllist_flush{font-size:80%;text-indent:-.6em;margin-left:.5em;margin-top:.25em;margin-bottom:.25em;text-align:left}#sbo-rt-content .h2after1{font-family:Arial,Helvetica,sans-serif;font-size:110%;font-weight:bold;color:#3f8099;letter-spacing:1px;margin-top:0;margin-left:0;text-indent:0;font-style:normal;text-transform:capitalize;margin-bottom:.25em}#sbo-rt-content h1.chaptitle{margin-top:1em;margin-bottom:.5em;font-size:240%;text-align:left;text-indent:0;line-height:1em;border-bottom-color:#cdcdcd;border-bottom-style:solid;padding-bottom:.5em;border-bottom-width:2px;font-family:"Palatino Linotype","Book Antiqua",Palatino,serif}#sbo-rt-content .Quote_Source{font-family:Arial,Helvetica,sans-serif;font-size:65%;font-style:italic;line-height:1.3em;font-weight:normal;text-transform:capitalize;color:#999;text-align:left;text-indent:0;margin-left:8%;margin-top:-1em;margin-bottom:1em}#sbo-rt-content .Disp_Quote_Source{font-family:Arial,Helvetica,sans-serif;font-size:60%;font-style:italic;line-height:1.5em;font-weight:normal;text-transform:capitalize;color:#999;margin-left:3%;margin-top:-1em;margin-bottom:1em}#sbo-rt-content .indextitle{font-family:"Palatino Linotype","Book Antiqua",Palatino,serif;font-size:240%;text-align:left;text-indent:0;line-height:1em;border-bottom:#CDCDCD solid 2px;margin-top:1em;margin-bottom:.75em;padding-bottom:.5em}#sbo-rt-content h1.appnum{margin-top:0;margin-bottom:0;font-size:120%;font-weight:bold;text-align:left;text-indent:0;background-color:#9E0052;padding-top:.25em;padding-bottom:.25em;padding-right:.25em;color:#fff;border-bottom:1px solid #000}#sbo-rt-content p.apptitle{margin-top:1em;margin-bottom:0;font-size:240%;text-align:left;text-indent:0;line-height:1em}#sbo-rt-content .appau{text-align:left;text-indent:0;margin-top:1em;margin-bottom:2em;font-weight:bold;font-size:88%}#sbo-rt-content p.glosstitle{font-size:200%;text-align:left;text-indent:0;margin-bottom:2em;margin-top:1em}#sbo-rt-content .gloss{text-align:left;margin-top:.25em;margin-bottom:0;margin-left:1em;text-indent:-1em}#sbo-rt-content .glossterm{font-size:80%;font-weight:bold}#sbo-rt-content .glossdef{font-size:80%}#sbo-rt-content .glossdiv{text-align:left;margin-top:1.25em;margin-bottom:0;margin-left:1em;text-indent:-1em}#sbo-rt-content .CN{height:40px;width:280px;background-color:#3F8099}#sbo-rt-content .fmtitle{font-family:"Palatino Linotype","Book Antiqua",Palatino,serif;font-size:240%;text-align:left;text-indent:0;line-height:1em;border-bottom:#CDCDCD solid 2px;margin-top:1em;margin-bottom:.75em;padding-bottom:.5em}#sbo-rt-content p.tocpartnum{font-size:96%;margin-left:0;margin-bottom:.25em;font-weight:bold;text-align:left;text-indent:0}#sbo-rt-content p.tocparttitle{font-size:104%;margin-left:0;margin-top:0;margin-bottom:0;font-weight:bold;text-align:left;text-indent:0}#sbo-rt-content p.tocpartsubtitle{font-size:96%;margin-left:0;margin-top:1em;margin-bottom:0;font-weight:bold;text-align:left;text-indent:0}#sbo-rt-content p.tocpartau{font-size:72%;margin-left:0;margin-top:.25em;margin-bottom:.5em;font-weight:bold;text-align:left;text-indent:0}#sbo-rt-content p.tocsecnum{font-size:80%;margin-left:0;margin-bottom:0;margin-top:1.5em;font-weight:bold;text-align:left;text-indent:0;color:#2E3092}#sbo-rt-content p.tocsectitle{font-family:"Palatino Linotype","Book Antiqua",Palatino,serif;font-size:100%;font-weight:bold;line-height:1.5em;text-align:left;text-indent:0;border-bottom:#999 solid 1px;margin-top:2em;margin-bottom:-.5em;padding-bottom:.5em}#sbo-rt-content p.tocsecsubtitle{font-size:72%;margin-left:0;margin-bottom:.75em;margin-top:.75em;text-align:left;text-indent:0}#sbo-rt-content p.tocchaptitle{font-family:"Palatino Linotype","Book Antiqua",Palatino,serif;font-size:80%;margin-left:0;margin-bottom:0;margin-top:2em;text-align:left;text-indent:0}#sbo-rt-content span.tocchapter{font-family:"Arial",Helvetica,sans-serif;font-size:75%;text-transform:uppercase;letter-spacing:1px;text-align:left;text-indent:0;margin-top:1em}#sbo-rt-content p.tocchapau{font-size:72%;font-weight:bold;margin-left:1em;margin-bottom:1em;margin-top:0;text-align:left;text-indent:0}#sbo-rt-content p.tocchapsubtitle{font-family:Arial,Helvetica,sans-serif;font-size:70%;text-transform:capitalize;text-align:left;text-indent:0;margin-top:1em;margin-left:2em}#sbo-rt-content #box{background-color:#f4d88d;color:#000;height:70px;width:80px;clear:none;border-top-width:1px;border-left-width:1px;border-top-style:solid;border-left-style:solid;border-top-color:#000;border-left-color:#000;left:250cm;margin-left:250px}#sbo-rt-content #CN{font-family:Arial,Helvetica,sans-serif;background-color:#fff;height:40px;width:230px;color:#800000;text-align:left;letter-spacing:4px;font-size:120%;border-right-width:1px;border-right-style:none;border-right-color:#000;line-height:1.5em;text-transform:uppercase;padding-top:6px;padding-left:8px;border-top-width:8px;border-top-style:solid;border-top-color:#3f8099;font-weight:bold;text-indent:-6px}#sbo-rt-content #empty{height:90px;width:80px;border-left-width:1px;border-left-style:solid;border-left-color:#000;margin-left:250px;clear:both}#sbo-rt-content #pbox1{background-color:rgb(0,125,172);color:#000;height:100px;width:100px;padding:0;top:0;margin-top:0;margin-right:200px;margin-bottom:0;margin-left:50px;border-left-width:1px;border-left-style:solid;border-left-color:rgb(0,0,0)}#sbo-rt-content #pbox2{background-color:rgb(204,231,211);color:#000;height:50px;width:50px;float:left;border-top-width:1px;border-right-width:1px;border-top-style:solid;border-right-style:solid;border-top-color:rgb(0,0,0);border-right-color:rgb(0,0,0)}#sbo-rt-content #PN{font-family:Arial,Helvetica,sans-serif;font-size:150%;font-style:normal;font-weight:bold;color:#3f8099;letter-spacing:4px;text-align:left;text-indent:0;height:40px;width:100%;padding-top:6px;padding-left:0;text-transform:uppercase;border-top-width:8px;border-top-style:solid;border-top-color:#25505d}#sbo-rt-content .boxg{font-size:90%;padding-left:.5em;padding-right:.5em;margin-bottom:1em;margin-top:1em;border-top:solid 1px red;border-bottom:solid 1px red;border-left:solid 1px red;border-right:solid 1px red;background-color:#ffda6b;color:#000}#sbo-rt-content .box_subtitle{text-indent:0;padding-top:5px;padding-left:5px;padding-bottom:5px;padding-right:5px;font-weight:bold;font-size:105%;color:#000;margin-top:.25em}#sbo-rt-content .tb{font-size:70%;margin-top:1.5em;margin-bottom:1.5em;vertical-align:top;padding-left:2em;text-indent:-1.5em;padding-top:.3em;padding-right:.3em;padding-bottom:.3em}#sbo-rt-content .tch{font-size:70%;font-weight:bold;margin-top:1.5em;margin-bottom:1.5em;text-transform:capitalize;vertical-align:top;padding-left:.5em;padding-top:.5em;padding-right:.5em;padding-bottom:.3em}#sbo-rt-content div.idx{text-align:left;text-indent:0;padding-top:.2em;padding-bottom:.25em;padding-left:.2em;padding-right:.2em;font-size:80%}#sbo-rt-content .idxletter{font-size:80%;text-align:left;margin-bottom:0;margin-top:2em;text-indent:0;font-weight:bold}#sbo-rt-content div.ind1{font-size:80%;margin-left:1em;margin-top:.5em;text-indent:-1em}#sbo-rt-content div.ind2{font-size:80%;margin-left:3em;margin-top:.5em;text-indent:-2em}#sbo-rt-content div.ind3{font-size:80%;margin-left:5em;margin-top:.5em;text-indent:-3em}#sbo-rt-content div.ind4{font-size:80%;margin-left:7em;margin-top:.5em;text-indent:-4em}#sbo-rt-content p.indexnote{font-size:80%;text-align:justify;text-indent:0;margin-top:10px;margin-bottom:0}#sbo-rt-content .copyright-top{font-size:80%;text-align:left;margin-bottom:0;margin-top:1em;text-indent:0}#sbo-rt-content .copyright{font-size:80%;text-align:left;margin-bottom:0;margin-top:0;text-indent:0}#sbo-rt-content .center{text-align:center}#sbo-rt-content sup{font-size:60%}#sbo-rt-content sub{font-size:60%}#sbo-rt-content img{max-width:100%}#sbo-rt-content hr{margin-top:0;width:15%;color:#cdcdcd;border-bottom-color:#cdcdcd;border-bottom-style:solid;border-bottom-width:1px;text-align:left;text-indent:0;margin-left:0}#sbo-rt-content hr.top{margin-top:1.5em;width:15%;color:#cdcdcd;border-bottom-color:#cdcdcd;border-bottom-style:solid;border-bottom-width:1px;text-align:left;text-indent:0;margin-left:0}#sbo-rt-content p.reflist{font-size:80%;text-indent:-1em;margin-left:3.5em;margin-top:0;margin-bottom:0}#sbo-rt-content p.reflist1{font-size:80%;text-indent:-1.8em;margin-left:3.5em;margin-top:0;margin-bottom:0}#sbo-rt-content p.reflist2{font-size:80%;text-indent:-2.1em;margin-left:3.5em;margin-top:0;margin-bottom:0}#sbo-rt-content p.reflist3{font-size:80%;text-indent:-2.8em;margin-left:3.5em;margin-top:0;margin-bottom:0}#sbo-rt-content p.reflist4{font-size:80%;text-indent:-3.3em;margin-left:3.5em;margin-top:0;margin-bottom:0}#sbo-rt-content table{border-collapse:collapse}#sbo-rt-content span.underline{text-decoration:underline}#sbo-rt-content span.strike{text-decoration:line-through}#sbo-rt-content span.inlinecode{font-family:monospace;font-size:inherit}#sbo-rt-content span.sansserif{font-family:sans-serif}#sbo-rt-content .table_fig{margin-top:.5em;margin-bottom:.5em;text-align:center}
+    </style><script type="text/javascript" async="" src="Chapter%208.%20Simple%20but%20Powerful%20Big%20Data%20Techniques%20-%20Principles%20of%20Big%20Data_files/linkid.js"></script><script async="" src="Chapter%208.%20Simple%20but%20Powerful%20Big%20Data%20Techniques%20-%20Principles%20of%20Big%20Data_files/gtm.js"></script><script async="" src="Chapter%208.%20Simple%20but%20Powerful%20Big%20Data%20Techniques%20-%20Principles%20of%20Big%20Data_files/analytics.js"></script><script> // <![CDATA[
+    var g = {
+      position_cache: {
+        
+          "chapter": "/api/v1/book/9780124045767/chapter/xhtml/CHP008.html",
+          "book_id": "9780124045767",
+          "chapter_uri": "xhtml/CHP008.html",
+          "position": 0,
+          "user_uuid": "5cf7157d-0bf4-4955-8581-dd84755fafee",
+          "next_chapter_uri": "/library/view/principles-of-big/9780124045767/xhtml/CHP009.html"
+        
+      },
+      title: "Principles of Big Data",
+      author_list: "Jules J. Berman",
+      format: "book",
+      source: "application/epub+zip",
+      is_system_book: true,
+      is_public: false,
+      loaded_from_server: true,
+      allow_scripts: false,
+      has_mathml: false,
+      show_ios_app_teaser: false
+    };
+    // ]]></script><script src="Chapter%208.%20Simple%20but%20Powerful%20Big%20Data%20Techniques%20-%20Principles%20of%20Big%20Data_files/modernizr.js"></script><script>
+    
+      
+        
+
+        
+
+        
+          
+            window.PUBLIC_ANNOTATIONS = true;
+          
+        
+
+      
+
+      
+        window.MOBILE_PUBLIC_ANNOTATIONS = false;
+      
+
+    
+
+    
+      window.PRIVACY_CONTROL_OVERRIDE = false;
+    
+
+    
+      window.PRIVACY_CONTROL_SWITCH = true;
+    
+
+    
+      window.PUBLISHER_PAGES = true;
+    
+
+      window.SBO = {
+        "constants": {
+          "SITB_ENDPOINT": "https://www.safaribooksonline.com/api/v2/sitb/",
+          "SEARCH_SELECT_ENDPOINT": "https://www.safaribooksonline.com/api/v2/search/select/",
+          "ENABLE_ONLINE_TRAINING": true
+        }
+      };
+  </script><link rel="canonical" href="https://www.safaribooksonline.com/library/view/principles-of-big/9780124045767/xhtml/CHP008.html"><meta name="description" content=" Chapter 8 Simple but Powerful Big Data Techniques Outline Background Look at the Data Data Range Denominator Frequency Distributions Mean and Standard Deviation Estimation-Only Analyses Use Case: Watching Data Trends ... "><meta property="og:title" content="Chapter 8. Simple but Powerful Big Data Techniques"><meta itemprop="isPartOf" content="/library/view/principles-of-big/9780124045767/"><meta itemprop="name" content="Chapter 8. Simple but Powerful Big Data Techniques"><meta property="og:url" itemprop="url" content="https://www.safaribooksonline.com/library/view/principles-of-big/9780124045767/xhtml/CHP008.html"><meta property="og:site_name" content="Safari"><meta property="og:image" itemprop="thumbnailUrl" content="https://www.safaribooksonline.com/library/cover/9780124045767/"><meta property="og:description" itemprop="description" content=" Chapter 8 Simple but Powerful Big Data Techniques Outline Background Look at the Data Data Range Denominator Frequency Distributions Mean and Standard Deviation Estimation-Only Analyses Use Case: Watching Data Trends ... "><meta itemprop="inLanguage" content="en"><meta itemprop="publisher" content="Morgan Kaufmann"><meta property="og:type" content="book"><meta property="og:book:isbn" itemprop="isbn" content="9780124047242"><meta property="og:book:author" itemprop="author" content="Jules J. Berman"><meta property="og:book:tag" itemprop="about" content="Big Data"><meta property="og:book:tag" itemprop="about" content="Databases"><meta name="twitter:card" content="summary"><meta name="twitter:site" content="@safari"><script>
+    window.ENABLE_BOWERBIRD_COLLECTIONS = true;
+  </script><style type="text/css" id="font-styles" data-template="#sbo-rt-content, #sbo-rt-content p, #sbo-rt-content div { font-size: &lt;%= font_size %&gt; !important; }"></style><style type="text/css" id="font-family" data-template="#sbo-rt-content, #sbo-rt-content p, #sbo-rt-content div { font-family: &lt;%= font_family %&gt; !important; }"></style><style type="text/css" id="column-width" data-template="#sbo-rt-content { max-width: &lt;%= column_width %&gt;% !important; margin: 0 auto !important; }"></style><noscript><meta http-equiv="refresh" content="0; url=/library/no-js/" /></noscript><script type="text/javascript">
+    (function(i,s,o,g,r,a,m) {
+      i['GoogleAnalyticsObject']=r;
+      i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();
+      a=s.createElement(o),m=s.getElementsByTagName(o)[0];
+      a.async=1;
+      a.src=g;
+      m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    var matches = document.cookie.match(/BrowserCookie\s*=\s*([a-f0-9\-]{36})/),
+      user_uuid = null;
+
+    if (matches && matches.length === 2) {
+      user_uuid = matches[1];
+    }
+
+  
+    ga('create', 'UA-39299553-7', {'userId': '5cf7157d-0bf4-4955-8581-dd84755fafee' });
+  
+
+  
+    
+      ga('set', 'dimension1', 'Trial');
+    
+  
+
+  ga('set', 'dimension6', user_uuid);
+
+  
+    ga('set', 'dimension2', '5cf7157d-0bf4-4955-8581-dd84755fafee');
+    
+  
+
+  
+
+  
+
+  //enable enhanced link tracking
+  ga('require', 'linkid', 'linkid.js');
+
+  // reading interface will track pageviews itself
+  if (document.location.pathname.indexOf("/library/view") !== 0) {
+    ga('send', 'pageview');
+  }
+  </script><script>
+    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-5P4V6Z');
+  </script><script defer="defer" src="Chapter%208.%20Simple%20but%20Powerful%20Big%20Data%20Techniques%20-%20Principles%20of%20Big%20Data_files/vendor.js"></script><script defer="defer" src="Chapter%208.%20Simple%20but%20Powerful%20Big%20Data%20Techniques%20-%20Principles%20of%20Big%20Data_files/reader.js"></script><script async="" src="Chapter%208.%20Simple%20but%20Powerful%20Big%20Data%20Techniques%20-%20Principles%20of%20Big%20Data_files/MathJax.js"></script><style id="annotator-dynamic-style">.annotator-adder, .annotator-outer, .annotator-notice {
+  z-index: 100019;
+}
+.annotator-filter {
+  z-index: 100009;
+}</style></head>
+
+
+<body class="reading sidenav nav-collapsed  scalefonts subscribe-panel library">
+
+    
+  
+  <noscript> 
+    <iframe src="//www.googletagmanager.com/ns.html?id=GTM-5P4V6Z"
+            height="0" width="0"
+            style="display:none;visibility:hidden">
+    </iframe>
+  </noscript>
+  
+
+
+
+    
+      <div class="hide working" role="status">
+        <div class="working-image"></div>
+      </div>
+      <div class="sbo-site-nav">
+        
+
+
+
+
+
+<a href="#container" class="skip">Skip to content</a><header class="topbar t-topbar"><nav role="navigation" class="js-site-nav"><ul class="topnav"><li class="t-logo"><a href="https://www.safaribooksonline.com/home/" class="l0 None safari-home nav-icn js-keyboard-nav-home"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width="20" height="20" version="1.1" fill="#4A3C31"><desc>Safari Home Icon</desc><g stroke="none" stroke-width="1" fill-rule="evenodd"><path d="M4 9.9L4 9.9 4 18 16 18 16 9.9 10 4 4 9.9ZM2.6 8.1L2.6 8.1 8.7 1.9 10 0.5 11.3 1.9 17.4 8.1 18 8.7 18 9.5 18 18.1 18 20 16.1 20 3.9 20 2 20 2 18.1 2 9.5 2 8.7 2.6 8.1Z"></path><rect x="10" y="12" width="3" height="7"></rect><rect transform="translate(18.121320, 10.121320) rotate(-315.000000) translate(-18.121320, -10.121320) " x="16.1" y="9.1" width="4" height="2"></rect><rect transform="translate(2.121320, 10.121320) scale(-1, 1) rotate(-315.000000) translate(-2.121320, -10.121320) " x="0.1" y="9.1" width="4" height="2"></rect></g></svg><span>Safari Home</span></a></li><li><a href="https://www.safaribooksonline.com/r/" class="t-recommendations-nav l0 nav-icn None"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" width="20" height="20" version="1.1" fill="#4A3C31"><desc>recommendations icon</desc><g stroke="none" stroke-width="1" fill-rule="evenodd"><path d="M50 25C50 18.2 44.9 12.5 38.3 11.7 37.5 5.1 31.8 0 25 0 18.2 0 12.5 5.1 11.7 11.7 5.1 12.5 0 18.2 0 25 0 31.8 5.1 37.5 11.7 38.3 12.5 44.9 18.2 50 25 50 31.8 50 37.5 44.9 38.3 38.3 44.9 37.5 50 31.8 50 25ZM25 3.1C29.7 3.1 33.6 6.9 34.4 11.8 30.4 12.4 26.9 15.1 25 18.8 23.1 15.1 19.6 12.4 15.6 11.8 16.4 6.9 20.3 3.1 25 3.1ZM34.4 15.6C33.6 19.3 30.7 22.2 27.1 22.9 27.8 19.2 30.7 16.3 34.4 15.6ZM22.9 22.9C19.2 22.2 16.3 19.3 15.6 15.6 19.3 16.3 22.2 19.2 22.9 22.9ZM3.1 25C3.1 20.3 6.9 16.4 11.8 15.6 12.4 19.6 15.1 23.1 18.8 25 15.1 26.9 12.4 30.4 11.8 34.4 6.9 33.6 3.1 29.7 3.1 25ZM22.9 27.1C22.2 30.7 19.3 33.6 15.6 34.4 16.3 30.7 19.2 27.8 22.9 27.1ZM25 46.9C20.3 46.9 16.4 43.1 15.6 38.2 19.6 37.6 23.1 34.9 25 31.3 26.9 34.9 30.4 37.6 34.4 38.2 33.6 43.1 29.7 46.9 25 46.9ZM27.1 27.1C30.7 27.8 33.6 30.7 34.4 34.4 30.7 33.6 27.8 30.7 27.1 27.1ZM38.2 34.4C37.6 30.4 34.9 26.9 31.3 25 34.9 23.1 37.6 19.6 38.2 15.6 43.1 16.4 46.9 20.3 46.9 25 46.9 29.7 43.1 33.6 38.2 34.4Z"></path></g></svg><span>Recommended</span></a></li><li><a href="https://www.safaribooksonline.com/c/" class="t-queue-nav l0 nav-icn None"><!--?xml version="1.0" encoding="UTF-8"?--><svg width="21px" height="17px" viewBox="0 0 21 17" version="1.1" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink"><!-- Generator: Sketch 46.2 (44496) - http://www.bohemiancoding.com/sketch --><title>icon_Playlist_sml</title><desc>Created with Sketch.</desc><defs></defs><g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g id="icon_Playlist_sml" fill-rule="nonzero" fill="#000000"><g id="playlist-icon"><g id="Group-6"><rect id="Rectangle-path" x="5" y="0" width="16" height="3" rx="0.5"></rect><circle id="Oval" cx="1.5" cy="1.5" r="1.5"></circle></g><g id="Group-5" transform="translate(0.000000, 7.000000)"><circle id="Oval" cx="1.5" cy="1.5" r="1.5"></circle><rect id="Rectangle-path" x="5" y="0" width="16" height="3" rx="0.5"></rect></g><g id="Group-5-Copy" transform="translate(0.000000, 14.000000)"><circle id="Oval" cx="1.5" cy="1.5" r="1.5"></circle><rect id="Rectangle-path" x="5" y="0" width="16" height="3" rx="0.5"></rect></g></g></g></g></svg><span>
+                 Playlists
+              </span></a></li><li class="search"><a href="#" class="t-search-nav trigger nav-icn l0" data-dropdown-selector=".searchbox"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" width="20" height="20" version="1.1" fill="#4A3C31"><desc>search icon</desc><g stroke="none" stroke-width="1" fill-rule="evenodd"><path d="M31.3 0C20.9 0 12.5 8.4 12.5 18.8 12.5 22.5 13.6 25.9 15.4 28.8L1.2 42.9C-0.4 44.5-0.4 47.2 1.2 48.8 2 49.6 3.1 50 4.2 50 5.2 50 6.3 49.6 7.1 48.8L21.2 34.6C24.1 36.5 27.5 37.5 31.3 37.5 41.6 37.5 50 29.1 50 18.8 50 8.4 41.6 0 31.3 0ZM31.3 31.3C24.4 31.3 18.8 25.6 18.8 18.8 18.8 11.9 24.4 6.3 31.3 6.3 38.1 6.3 43.8 11.9 43.8 18.8 43.8 25.6 38.1 31.3 31.3 31.3Z"></path></g></svg><span>Search</span></a></li><li class="usermenu dropdown"><a href="#" class="trigger l0 nav-icn nav-dropdown"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width="20" height="20" version="1.1" fill="#4A3C31"><desc>navigation arrow</desc><g stroke="none" stroke-width="1" fill-rule="evenodd"><path d="M0.1 12.5L9.7 3.1C9.8 3 9.9 3 10 3 10.1 3 10.2 3 10.3 3.1L19.9 12.5C20 12.5 20 12.6 20 12.8 20 12.9 20 13 19.9 13L17 15.9C16.9 16 16.8 16 16.7 16 16.5 16 16.4 16 16.4 15.9L10 9.7 3.6 15.9C3.6 16 3.5 16 3.3 16 3.2 16 3.1 16 3 15.9L0.1 13C0 12.9 0 12.8 0 12.7 0 12.7 0 12.6 0.1 12.5Z"></path></g></svg><span>Expand Nav</span></a><div class="drop-content"><ul><li><a href="https://www.safaribooksonline.com/history/" class="t-recent-nav l1 nav-icn None"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" width="20" height="20" version="1.1" fill="#4A3C31"><desc>recent items icon</desc><g stroke="none" stroke-width="1" fill-rule="evenodd"><path d="M25 0C11.2 0 0 11.2 0 25 0 38.8 11.2 50 25 50 38.8 50 50 38.8 50 25 50 11.2 38.8 0 25 0ZM6.3 25C6.3 14.6 14.6 6.3 25 6.3 35.4 6.3 43.8 14.6 43.8 25 43.8 35.4 35.4 43.8 25 43.8 14.6 43.8 6.3 35.4 6.3 25ZM31.8 31.5C32.5 30.5 32.4 29.2 31.6 28.3L27.1 23.8 27.1 12.8C27.1 11.5 26.2 10.4 25 10.4 23.9 10.4 22.9 11.5 22.9 12.8L22.9 25.7 28.8 31.7C29.2 32.1 29.7 32.3 30.2 32.3 30.8 32.3 31.3 32 31.8 31.5Z"></path></g></svg><span>History</span></a></li><li><a href="https://www.safaribooksonline.com/topics" class="t-topics-link l1 nav-icn None"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 55" width="20" height="20" version="1.1" fill="#4A3C31"><desc>topics icon</desc><g stroke="none" stroke-width="1" fill-rule="evenodd"><path d="M25 55L50 41.262 50 13.762 25 0 0 13.762 0 41.262 25 55ZM8.333 37.032L8.333 17.968 25 8.462 41.667 17.968 41.667 37.032 25 46.538 8.333 37.032Z"></path></g></svg><span>Topics</span></a></li><li><a href="https://www.safaribooksonline.com/tutorials/" class="l1 nav-icn t-tutorials-nav js-toggle-menu-item None"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width="20" height="20" version="1.1" fill="#4A3C31"><desc>tutorials icon</desc><g stroke="none" stroke-width="1" fill-rule="evenodd"><path d="M15.8 18.2C15.8 18.2 15.9 18.2 16 18.2 16.1 18.2 16.2 18.2 16.4 18.2 16.5 18.2 16.7 18.1 16.9 18 17 17.9 17.1 17.8 17.2 17.7 17.3 17.6 17.4 17.5 17.4 17.4 17.5 17.2 17.6 16.9 17.6 16.7 17.6 16.6 17.6 16.5 17.6 16.4 17.5 16.2 17.5 16.1 17.4 15.9 17.3 15.8 17.2 15.6 17 15.5 16.8 15.3 16.6 15.3 16.4 15.2 16.2 15.2 16 15.2 15.8 15.2 15.7 15.2 15.5 15.3 15.3 15.4 15.2 15.4 15.1 15.5 15 15.7 14.9 15.8 14.8 15.9 14.7 16 14.7 16.1 14.6 16.3 14.6 16.4 14.6 16.5 14.6 16.6 14.6 16.6 14.6 16.7 14.6 16.9 14.6 17 14.6 17.1 14.7 17.3 14.7 17.4 14.8 17.6 15 17.7 15.1 17.9 15.2 18 15.3 18 15.5 18.1 15.5 18.1 15.6 18.2 15.7 18.2 15.7 18.2 15.7 18.2 15.8 18.2L15.8 18.2ZM9.4 11.5C9.5 11.5 9.5 11.5 9.6 11.5 9.7 11.5 9.9 11.5 10 11.5 10.2 11.5 10.3 11.4 10.5 11.3 10.6 11.2 10.8 11.1 10.9 11 10.9 10.9 11 10.8 11.1 10.7 11.2 10.5 11.2 10.2 11.2 10 11.2 9.9 11.2 9.8 11.2 9.7 11.2 9.5 11.1 9.4 11 9.2 10.9 9.1 10.8 8.9 10.6 8.8 10.5 8.7 10.3 8.6 10 8.5 9.9 8.5 9.7 8.5 9.5 8.5 9.3 8.5 9.1 8.6 9 8.7 8.8 8.7 8.7 8.8 8.6 9 8.5 9.1 8.4 9.2 8.4 9.3 8.2 9.5 8.2 9.8 8.2 10 8.2 10.1 8.2 10.2 8.2 10.3 8.2 10.5 8.3 10.6 8.4 10.7 8.5 10.9 8.6 11.1 8.7 11.2 8.9 11.3 9 11.4 9.1 11.4 9.2 11.4 9.3 11.5 9.3 11.5 9.3 11.5 9.4 11.5 9.4 11.5L9.4 11.5ZM3 4.8C3.1 4.8 3.1 4.8 3.2 4.8 3.4 4.8 3.5 4.8 3.7 4.8 3.8 4.8 4 4.7 4.1 4.6 4.3 4.5 4.4 4.4 4.5 4.3 4.6 4.2 4.6 4.1 4.7 4 4.8 3.8 4.8 3.5 4.8 3.3 4.8 3.1 4.8 3 4.8 2.9 4.7 2.8 4.7 2.6 4.6 2.5 4.5 2.3 4.4 2.2 4.2 2.1 4 1.9 3.8 1.9 3.6 1.8 3.5 1.8 3.3 1.8 3.1 1.8 2.9 1.8 2.7 1.9 2.6 2 2.4 2.1 2.3 2.2 2.2 2.3 2.1 2.4 2 2.5 2 2.6 1.8 2.8 1.8 3 1.8 3.3 1.8 3.4 1.8 3.5 1.8 3.6 1.8 3.8 1.9 3.9 2 4 2.1 4.2 2.2 4.4 2.4 4.5 2.5 4.6 2.6 4.7 2.7 4.7 2.8 4.7 2.9 4.8 2.9 4.8 3 4.8 3 4.8 3 4.8L3 4.8ZM13.1 15.2C13.2 15.1 13.2 15.1 13.2 15.1 13.3 14.9 13.4 14.7 13.6 14.5 13.8 14.2 14.1 14 14.4 13.8 14.7 13.6 15.1 13.5 15.5 13.4 15.9 13.4 16.3 13.4 16.7 13.5 17.2 13.5 17.6 13.7 17.9 13.9 18.2 14.1 18.5 14.4 18.7 14.7 18.9 15 19.1 15.3 19.2 15.6 19.3 15.9 19.4 16.1 19.4 16.4 19.4 17 19.3 17.5 19.1 18.1 19 18.3 18.9 18.5 18.7 18.7 18.5 19 18.3 19.2 18 19.4 17.7 19.6 17.3 19.8 16.9 19.9 16.6 20 16.3 20 16 20 15.8 20 15.6 20 15.4 19.9 15.4 19.9 15.4 19.9 15.4 19.9 15.2 19.9 15 19.8 14.9 19.8 14.8 19.7 14.7 19.7 14.6 19.7 14.4 19.6 14.3 19.5 14.1 19.3 13.7 19.1 13.4 18.7 13.2 18.4 13.1 18.1 12.9 17.8 12.9 17.5 12.8 17.3 12.8 17.1 12.8 16.9L3.5 14.9C3.3 14.9 3.1 14.8 3 14.8 2.7 14.7 2.4 14.5 2.1 14.3 1.7 14 1.4 13.7 1.2 13.3 1 13 0.9 12.6 0.8 12.3 0.7 12 0.7 11.7 0.7 11.4 0.7 11 0.8 10.5 1 10.1 1.1 9.8 1.3 9.5 1.6 9.2 1.8 8.9 2.1 8.7 2.4 8.5 2.8 8.3 3.2 8.1 3.6 8.1 3.9 8 4.2 8 4.5 8 4.6 8 4.8 8 4.9 8.1L6.8 8.5C6.8 8.4 6.8 8.4 6.8 8.4 6.9 8.2 7.1 8 7.2 7.8 7.5 7.5 7.7 7.3 8 7.1 8.4 6.9 8.7 6.8 9.1 6.7 9.5 6.7 10 6.7 10.4 6.8 10.8 6.8 11.2 7 11.5 7.2 11.8 7.5 12.1 7.7 12.4 8 12.6 8.3 12.7 8.6 12.8 8.9 12.9 9.2 13 9.4 13 9.7 13 9.7 13 9.8 13 9.8 13.6 9.9 14.2 10.1 14.9 10.2 15 10.2 15 10.2 15.1 10.2 15.3 10.2 15.4 10.2 15.6 10.2 15.8 10.1 16 10 16.2 9.9 16.4 9.8 16.5 9.6 16.6 9.5 16.8 9.2 16.9 8.8 16.9 8.5 16.9 8.3 16.9 8.2 16.8 8 16.8 7.8 16.7 7.7 16.6 7.5 16.5 7.3 16.3 7.2 16.2 7.1 16 7 15.9 6.9 15.8 6.9 15.7 6.9 15.6 6.8 15.5 6.8L6.2 4.8C6.2 5 6 5.2 5.9 5.3 5.7 5.6 5.5 5.8 5.3 6 4.9 6.2 4.5 6.4 4.1 6.5 3.8 6.6 3.5 6.6 3.2 6.6 3 6.6 2.8 6.6 2.7 6.6 2.6 6.6 2.6 6.5 2.6 6.5 2.5 6.5 2.3 6.5 2.1 6.4 1.8 6.3 1.6 6.1 1.3 6 1 5.7 0.7 5.4 0.5 5 0.3 4.7 0.2 4.4 0.1 4.1 0 3.8 0 3.6 0 3.3 0 2.8 0.1 2.2 0.4 1.7 0.5 1.5 0.7 1.3 0.8 1.1 1.1 0.8 1.3 0.6 1.6 0.5 2 0.3 2.3 0.1 2.7 0.1 3.1 0 3.6 0 4 0.1 4.4 0.2 4.8 0.3 5.1 0.5 5.5 0.8 5.7 1 6 1.3 6.2 1.6 6.3 1.9 6.4 2.3 6.5 2.5 6.6 2.7 6.6 3 6.6 3 6.6 3.1 6.6 3.1 9.7 3.8 12.8 4.4 15.9 5.1 16.1 5.1 16.2 5.2 16.4 5.2 16.7 5.3 16.9 5.5 17.2 5.6 17.5 5.9 17.8 6.2 18.1 6.5 18.3 6.8 18.4 7.2 18.6 7.5 18.6 7.9 18.7 8.2 18.7 8.6 18.7 9 18.6 9.4 18.4 9.8 18.3 10.1 18.2 10.3 18 10.6 17.8 10.9 17.5 11.1 17.3 11.3 16.9 11.6 16.5 11.8 16 11.9 15.7 12 15.3 12 15 12 14.8 12 14.7 12 14.5 11.9 13.9 11.8 13.3 11.7 12.6 11.5 12.5 11.7 12.4 11.9 12.3 12 12.1 12.3 11.9 12.5 11.7 12.7 11.3 12.9 10.9 13.1 10.5 13.2 10.2 13.3 9.9 13.3 9.6 13.3 9.4 13.3 9.2 13.3 9 13.2 9 13.2 9 13.2 9 13.2 8.8 13.2 8.7 13.2 8.5 13.1 8.2 13 8 12.8 7.7 12.6 7.4 12.4 7.1 12 6.8 11.7 6.7 11.4 6.6 11.1 6.5 10.8 6.4 10.6 6.4 10.4 6.4 10.2 5.8 10.1 5.2 9.9 4.5 9.8 4.4 9.8 4.4 9.8 4.3 9.8 4.1 9.8 4 9.8 3.8 9.8 3.6 9.9 3.4 10 3.2 10.1 3 10.2 2.9 10.4 2.8 10.5 2.6 10.8 2.5 11.1 2.5 11.5 2.5 11.6 2.5 11.8 2.6 12 2.6 12.1 2.7 12.3 2.8 12.5 2.9 12.6 3.1 12.8 3.2 12.9 3.3 13 3.5 13.1 3.6 13.1 3.7 13.1 3.8 13.2 3.9 13.2L13.1 15.2 13.1 15.2Z"></path></g></svg><span>Tutorials</span></a></li><li class="nav-offers flyout-parent"><a href="#" class="l1 nav-icn None"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" width="20" height="20" version="1.1" fill="#4A3C31"><desc>offers icon</desc><g stroke="none" stroke-width="1" fill-rule="evenodd"><path d="M35.9 20.6L27 15.5C26.1 15 24.7 15 23.7 15.5L14.9 20.6C13.9 21.1 13.2 22.4 13.2 23.4L13.2 41.4C13.2 42.4 13.9 43.7 14.9 44.2L23.3 49C24.2 49.5 25.6 49.5 26.6 49L35.9 43.6C36.8 43.1 37.6 41.8 37.6 40.8L37.6 23.4C37.6 22.4 36.8 21.1 35.9 20.6L35.9 20.6ZM40 8.2C39.1 7.6 37.6 7.6 36.7 8.2L30.2 11.9C29.3 12.4 29.3 13.2 30.2 13.8L39.1 18.8C40 19.4 40.7 20.6 40.7 21.7L40.7 39C40.7 40.1 41.4 40.5 42.4 40L48.2 36.6C49.1 36.1 49.8 34.9 49.8 33.8L49.8 15.6C49.8 14.6 49.1 13.3 48.2 12.8L40 8.2 40 8.2ZM27 10.1L33.6 6.4C34.5 5.9 34.5 5 33.6 4.5L26.6 0.5C25.6 0 24.2 0 23.3 0.5L16.7 4.2C15.8 4.7 15.8 5.6 16.7 6.1L23.7 10.1C24.7 10.6 26.1 10.6 27 10.1ZM10.1 21.7C10.1 20.6 10.8 19.4 11.7 18.8L20.6 13.8C21.5 13.2 21.5 12.4 20.6 11.9L13.6 7.9C12.7 7.4 11.2 7.4 10.3 7.9L1.6 12.8C0.7 13.3 0 14.6 0 15.6L0 33.8C0 34.9 0.7 36.1 1.6 36.6L8.4 40.5C9.3 41 10.1 40.6 10.1 39.6L10.1 21.7 10.1 21.7Z"></path></g></svg><span>Offers &amp; Deals</span></a><ul class="flyout"><li><a href="https://www.safaribooksonline.com/oreilly-newsletters/" class="l2 nav-icn"><span>Newsletters</span></a></li></ul></li><li class="nav-highlights"><a href="https://www.safaribooksonline.com/u/5cf7157d-0bf4-4955-8581-dd84755fafee/" class="t-highlights-nav l1 nav-icn None"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 35" width="20" height="20" version="1.1" fill="#4A3C31"><desc>highlights icon</desc><g stroke="none" stroke-width="1" fill-rule="evenodd"><path d="M13.325 18.071L8.036 18.071C8.036 11.335 12.36 7.146 22.5 5.594L22.5 0C6.37 1.113 0 10.632 0 22.113 0 29.406 3.477 35 10.403 35 15.545 35 19.578 31.485 19.578 26.184 19.578 21.556 17.211 18.891 13.325 18.071L13.325 18.071ZM40.825 18.071L35.565 18.071C35.565 11.335 39.86 7.146 50 5.594L50 0C33.899 1.113 27.5 10.632 27.5 22.113 27.5 29.406 30.977 35 37.932 35 43.045 35 47.078 31.485 47.078 26.184 47.078 21.556 44.74 18.891 40.825 18.071L40.825 18.071Z"></path></g></svg><span>Highlights</span></a></li><li><a href="https://www.safaribooksonline.com/u/" class="t-settings-nav l1 js-settings nav-icn None"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 53" width="20" height="20" version="1.1" fill="#4A3C31"><desc>settings icon</desc><g stroke="none" stroke-width="1" fill-rule="evenodd"><path d="M44.6 29.6C44.7 28.6 44.8 27.5 44.8 26.5 44.8 25.5 44.7 24.4 44.6 23.4L49.6 19C50 18.8 50.1 18.3 49.9 17.9 48.9 14.7 47.1 11.7 44.9 9.1 44.6 8.8 44.2 8.7 43.8 8.8L37.4 11.1C35.8 9.8 34 8.7 32.1 8L30.9 1.4C30.8 0.9 30.4 0.6 30 0.5 26.7-0.2 23.3-0.2 20 0.5 19.6 0.6 19.2 0.9 19.1 1.4L17.9 8C16 8.7 14.1 9.8 12.6 11.1L6.2 8.8C5.8 8.7 5.4 8.8 5.1 9.1 2.9 11.7 1.1 14.7 0.1 17.9 -0.1 18.3 0 18.8 0.4 19L5.4 23.4C5.3 24.4 5.2 25.5 5.2 26.5 5.2 27.5 5.3 28.6 5.4 29.6L0.4 34C0 34.2-0.1 34.7 0.1 35.1 1.1 38.3 2.9 41.4 5.1 43.9 5.4 44.2 5.8 44.4 6.2 44.2L12.6 42C14.1 43.2 16 44.3 17.9 45L19.1 51.7C19.2 52.1 19.6 52.5 20 52.5 21.6 52.8 23.3 53 25 53 26.7 53 28.4 52.8 30 52.5 30.4 52.5 30.8 52.1 30.9 51.7L32.1 45C34 44.3 35.8 43.2 37.4 42L43.8 44.2C44.2 44.4 44.6 44.2 44.9 43.9 47.1 41.4 48.9 38.3 49.9 35.1 50.1 34.7 50 34.2 49.6 34L44.6 29.6ZM25 36.4C19.6 36.4 15.2 32 15.2 26.5 15.2 21 19.6 16.6 25 16.6 30.4 16.6 34.8 21 34.8 26.5 34.8 32 30.4 36.4 25 36.4Z"></path></g></svg><span>Settings</span></a></li><li><a href="https://www.safaribooksonline.com/public/support" class="l1 no-icon">Support</a></li><li><a href="https://www.safaribooksonline.com/accounts/logout/" class="l1 no-icon">Sign Out</a></li></ul><ul class="profile"><li><a href="https://www.safaribooksonline.com/u/" class="l2 nav-icn None"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 53" width="20" height="20" version="1.1" fill="#4A3C31"><desc>settings icon</desc><g stroke="none" stroke-width="1" fill-rule="evenodd"><path d="M44.6 29.6C44.7 28.6 44.8 27.5 44.8 26.5 44.8 25.5 44.7 24.4 44.6 23.4L49.6 19C50 18.8 50.1 18.3 49.9 17.9 48.9 14.7 47.1 11.7 44.9 9.1 44.6 8.8 44.2 8.7 43.8 8.8L37.4 11.1C35.8 9.8 34 8.7 32.1 8L30.9 1.4C30.8 0.9 30.4 0.6 30 0.5 26.7-0.2 23.3-0.2 20 0.5 19.6 0.6 19.2 0.9 19.1 1.4L17.9 8C16 8.7 14.1 9.8 12.6 11.1L6.2 8.8C5.8 8.7 5.4 8.8 5.1 9.1 2.9 11.7 1.1 14.7 0.1 17.9 -0.1 18.3 0 18.8 0.4 19L5.4 23.4C5.3 24.4 5.2 25.5 5.2 26.5 5.2 27.5 5.3 28.6 5.4 29.6L0.4 34C0 34.2-0.1 34.7 0.1 35.1 1.1 38.3 2.9 41.4 5.1 43.9 5.4 44.2 5.8 44.4 6.2 44.2L12.6 42C14.1 43.2 16 44.3 17.9 45L19.1 51.7C19.2 52.1 19.6 52.5 20 52.5 21.6 52.8 23.3 53 25 53 26.7 53 28.4 52.8 30 52.5 30.4 52.5 30.8 52.1 30.9 51.7L32.1 45C34 44.3 35.8 43.2 37.4 42L43.8 44.2C44.2 44.4 44.6 44.2 44.9 43.9 47.1 41.4 48.9 38.3 49.9 35.1 50.1 34.7 50 34.2 49.6 34L44.6 29.6ZM25 36.4C19.6 36.4 15.2 32 15.2 26.5 15.2 21 19.6 16.6 25 16.6 30.4 16.6 34.8 21 34.8 26.5 34.8 32 30.4 36.4 25 36.4Z"></path></g></svg><span>Settings</span></a><span class="l2 t-nag-notification" id="nav-nag"><strong class="trial-green">10</strong> days left in your trial.
+  
+  
+
+  
+    
+      
+
+<a class="" href="https://www.safaribooksonline.com/subscribe/">Subscribe</a>.
+
+
+    
+  
+
+  
+
+</span></li><li><a href="https://www.safaribooksonline.com/public/support" class="l2">Support</a></li><li><a href="https://www.safaribooksonline.com/accounts/logout/" class="l2">Sign Out</a></li></ul></div></li></ul></nav></header>
+
+
+      </div>
+      <div id="container" class="application" style="height: auto;">
+        
+          <div class="nav-container clearfix">
+            
+
+
+            
+            
+          </div>
+
+          
+
+  <div class="js-toc">
+    
+      <div class="sbo-reading-menu sbo-menu-top"><section class="sbo-toc-container toc-menu"><a href="#" class="sbo-toc-thumb"><span class="sbo-title ss-list"><h1><div class="visuallyhidden">Table of Contents for </div>
+      
+      Principles of Big Data
+      
+    </h1></span></a><div class="toc-contents"></div></section></div>
+
+    
+
+    <div class="interface-controls interface-controls-top">
+      <ul class="interface-control-btns js-bitlist js-reader">
+        <li class="js-search-in-archive search-in-archive t-search-in-archive"><a href="#" title="Search in archive" class="js-search-controls search-controls"><span class="icon">Search in book...</span></a><form class="search-archive-bar js-search-form"><input name="query" placeholder="Search inside this book..." autocomplete="off" type="search"></form><div class="search-archive-results"><div class="js-sitb-results-region"></div></div></li><li class="queue-control"><div class="js-content-uri" data-content-uri="/api/v1/book/9780124045767/chapter/xhtml/CHP008.html"><div class="js-collections-dropdown collections-dropdown menu-bit-cards"><div data-reactroot="" class="menu-dropdown-wrapper js-menu-dropdown-wrapper align-right"><img class="hidden" src="Chapter%208.%20Simple%20but%20Powerful%20Big%20Data%20Techniques%20-%20Principles%20of%20Big%20Data_files/ajax-transp.gif" alt="loading spinner"><div class="menu-control"><div class="control "><div class="js-playlists-menu"><button class="js-playlist-icon"><svg class="icon-add-to-playlist-sml" viewBox="0 0 16 14" version="1.1" xmlns="http://www.w3.org/2000/svg"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g fill-rule="nonzero" fill="#000000"><g transform="translate(-1.000000, 0.000000)"><rect x="5" y="0" width="12" height="2"></rect><title>Playlists</title><path d="M4.5,14 C6.43299662,14 8,12.4329966 8,10.5 C8,8.56700338 6.43299662,7 4.5,7 C2.56700338,7 1,8.56700338 1,10.5 C1,12.4329966 2.56700338,14 4.5,14 Z M2.5,10 L4,10 L4,8.5 L5,8.5 L5,10 L6.5,10 L6.5,11 L5,11 L5,12.5 L4,12.5 L4,11 L2.5,11 L2.5,10 Z"></path><circle cx="2" cy="5" r="1"></circle><circle cx="1.94117647" cy="1" r="1"></circle><rect x="5" y="4" width="12" height="2"></rect><rect x="9" y="8" width="8" height="2"></rect><rect x="9" y="12" width="8" height="2"></rect></g></g></g></svg><div class="js-playlist-addto-label">Add&nbsp;To</div></button></div></div></div></div></div></div></li><li class="js-font-control-panel font-control-activator"><a href="#" data-push-state="false" id="font-controls" title="Change font size" aria-label="Change font size"><span class="icon">Toggle Font Controls</span></a></li><li class="dropdown sharing-controls"><a href="#" class="trigger" data-push-state="false" title="Share" aria-label="Share"><i class="fa fa-share"></i></a><ul class="social-sharing dropdown-menu"><li><a class="twitter share-button t-twitter" target="_blank" aria-label="Share this section on Twitter" title="Share this section on Twitter" href="https://twitter.com/share?url=https://www.safaribooksonline.com/library/view/principles-of-big/9780124045767/xhtml/CHP008.html&amp;text=Principles%20of%20Big%20Data&amp;via=safari"><span>Twitter</span></a></li><li><a class="facebook share-button t-facebook" target="_blank" aria-label="Share this section on Facebook" title="Share this section on Facebook" href="https://www.facebook.com/sharer/sharer.php?u=https://www.safaribooksonline.com/library/view/principles-of-big/9780124045767/xhtml/CHP008.html"><span>Facebook</span></a></li><li><a class="googleplus share-button t-googleplus" target="_blank" aria-label="Share this secton on Google Plus" title="Share this secton on Google Plus" href="https://plus.google.com/share?url=https://www.safaribooksonline.com/library/view/principles-of-big/9780124045767/xhtml/CHP008.html"><span>Google Plus</span></a></li><li><a class="email share-button t-email" aria-label="Share this section via email" title="Share this section via email" href="mailto:?subject=Safari:%20Chapter%208.%20Simple%20but%20Powerful%20Big%20Data%20Techniques&amp;body=https://www.safaribooksonline.com/library/view/principles-of-big/9780124045767/xhtml/CHP008.html%0D%0Afrom%20Principles%20of%20Big%20Data%0D%0A"><span>Email</span></a></li></ul></li>
+      </ul>
+    </div>
+
+    <section role="document">
+        
+        
+
+
+
+ <!--[if lt IE 9]>
+  
+<![endif]-->
+
+
+
+  <script defer="defer" src="Chapter%208.%20Simple%20but%20Powerful%20Big%20Data%20Techniques%20-%20Principles%20of%20Big%20Data_files/djangoMessagesPage.js"></script>
+
+
+        
+	  <div class="t-sbo-prev sbo-prev sbo-nav-top">
+  
+    
+      
+        <a href="https://www.safaribooksonline.com/library/view/principles-of-big/9780124045767/xhtml/CHP007.html" class="prev nav-link">
+      
+          <span aria-hidden="true" class="pagination-label t-prev-label">Prev</span>
+          <span class="visuallyhidden">Previous Chapter</span>
+          <div class="pagination-title t-prev-title">Chapter 7. Measurement</div>
+        </a>
+    
+  
+  </div>
+
+  <div class="t-sbo-next sbo-next sbo-nav-top">
+  
+    
+      
+        <a href="https://www.safaribooksonline.com/library/view/principles-of-big/9780124045767/xhtml/CHP009.html" class="next nav-link">
+      
+          <span aria-hidden="true" class="pagination-label t-next-label">Next</span>
+          <span class="visuallyhidden">Next Chapter</span>
+          <div class="pagination-title t-next-title">Chapter 9. Analysis</div>
+        </a>
+    
+  
+  </div>
+
+
+
+<div id="sbo-rt-content" style="transform: none;"><div class="annotator-wrapper"><div>
+<a id="CHP008"></a><div id="CN"><a id="CHP008titl"></a>Chapter 8</div><h1 class="chaptitle" id="CHP008tit">Simple but Powerful Big Data Techniques</h1>
+<p class="chapoutlhd" id="ST0010">Outline</p><div class="outlchap">
+<p class="chapoutl1" id="U0010"><a href="#S0010">Background</a><a id="P0010"></a></p>
+<p class="chapoutl1" id="U0015"><a href="#S0015">Look at the Data</a><a id="P0015"></a></p>
+<p class="chapoutl1" id="U0020"><a href="#S0020">Data Range</a><a id="P0020"></a></p>
+<p class="chapoutl1" id="U0025"><a href="#S0025">Denominator</a><a id="P0025"></a></p>
+<p class="chapoutl1" id="U0030"><a href="#S0030">Frequency Distributions</a><a id="P0030"></a></p>
+<p class="chapoutl1" id="U0035"><a href="#S0035">Mean and Standard Deviation</a><a id="P0035"></a></p>
+<p class="chapoutl1" id="U0040"><a href="#S0040">Estimation-Only Analyses</a><a id="P0040"></a></p>
+<p class="chapoutl1" id="U0045"><a href="#S0045">Use Case: Watching Data Trends with Google Ngrams</a><a id="P0045"></a></p>
+<p class="chapoutl1" id="U0050"><a href="#S0050">Use Case: Estimating Movie Preferences</a><a id="P0050"></a></p>
+</div>
+<a id="P8000"></a>
+<p class="quote" id="SP0065">Only theory can tell us what to measure and how to interpret it.</p>
+<p class="quoteau" id="SP0070">Albert Einstein</p>
+<div id="S0010"><h2 class="h1hd" id="ST0020">Background</h2>
+<p id="P0055" class="textfl">It may come as something of a shock, but 
+most Big Data analysis projects can be done without the aid of 
+statistical or analytical software. A good deal of the value in any Big 
+Data resource can be attained simply by looking at the data and thinking
+ about what you’ve seen.</p>
+<p id="P0060" class="text">It is said that we humans have a long-term 
+memory capacity in the petabyte range and that we process many thousands
+ of thoughts each day. In addition, we obtain new information 
+continuously and rapidly in many formats (visual, auditory, olfactory, 
+proprioceptive, and gustatory). Who can deny that humans qualify, under 
+the three v’s (volume, velocity, and variety), as Big Data resources 
+incarnate?</p>
+<p id="P0065" class="text">The late, great Harold Gatty was one of the 
+finest Big Data resources of his time. Harold Gatty gained fame, in 
+1931, when he navigated an 8-day flight around the world. During World 
+War II, he taught navigation and directed air transport for the Allies 
+in the Pacific campaign. His most enduring legacy has been his book 
+“Finding Your Way Without Map or Compass,” in which he explains how to 
+determine your location and direction, the time of day, the season of 
+the year, the day of the month, and the approaching weather through 
+careful observation and deduction.<sup><a href="#BB0460">91</a></sup></p>
+<p id="P0070" class="text">Location and direction can be established by 
+observing the growth of branches on trees: upward-growing branches on 
+the northern side of a tree, sideways-growing branches on the southern 
+side of a tree. Open branches coalescing as pyramids pointing to the top
+ of the tree are found in northern latitudes to catch lateral light; 
+branches coalescing to form flat or round-topped trees are found in 
+temperate zones to capture direct light. Broad-leafed branches are found
+ in the tropics to shield heat and light. At sea, the number of seabirds
+ in the sky can be estimated by latitude; the further away from the 
+equator, the greatest number of seabirds. The paucity of seabirds in the
+ tropics is a consequence of the fish population; the greatest numbers 
+of fish are found in cold water in higher latitudes.</p>
+<p id="P0075" class="text">Gatty’s book contains hundreds of useful 
+tips, but how does any of this relate to Big Data? The knowledge 
+imparted by Harold Gatty was obtained by careful observations of the 
+natural world, collected by hundreds of generations of survivalists 
+living throughout the world. In most cases, observations connected data 
+values measured by one of the five human senses: the distinctive 
+reflection of snow on an overhead cloud as seen from a distance, the 
+odor of a herd of camel grazing at an oasis, the interval between a 
+shout and its echo, the feel of the prevailing wind, or the taste of 
+fresh water. All of these measurements produced a collective Big Data 
+resource stored within human memory. The conclusions that Gatty and his 
+predecessors learned were correlations (e.g., the full moon rises at 
+sunset, the last quarter moon rises at midnight). Many samples of the 
+same data confirmed the correlations.</p>
+<p id="P0080" class="text">Gatty cautions against overconfidence in 
+correlations, insisting that navigators should never depend on a single 
+observation “as it may be an exception to the general rule. It is the 
+combined evidence of a number of different indications which strengthens
+ and confirms the conclusions.”<sup><a href="#BB0460">91</a></sup></p>
+<p id="P0085" class="text">In this chapter, you will learn to conduct 
+preliminary analyses of Big Data resources without the use of 
+statistical packages and without advanced analytical methods (see <a href="https://www.safaribooksonline.com/library/view/principles-of-big/9780124045767/xhtml/GLS001.html#GE0165">Glossary item, Deep analytics</a>).
+ Keen observational skills and a prepared mind are sometimes the only 
+tools necessary to reach profoundly important conclusions from Big Data 
+resources.</p>
+</div>
+<div id="S0015"><h2 class="h1hd" id="ST0025">Look At the Data</h2>
+<p id="P0090" class="textfl">Before you choose and apply analytic 
+methods to data sets, you should spend time studying your raw data. The 
+following steps may be helpful.</p>
+<p id="P0095" class="text">1. <strong>Find a free ASCII editor.</strong>
+ When I encounter a large data file, in plain ASCII format, the first 
+thing I do is open the file and take a look at its contents. Unless the 
+file is small (i.e., under about 20 megabytes), most commercial word 
+processors fail at this task. They simply cannot open really large files
+ (in the range of 100—1000 megabytes). You will want to use an editor 
+designed to work with large ASCII files (see <a href="https://www.safaribooksonline.com/library/view/principles-of-big/9780124045767/xhtml/GLS001.html#GE0655">Glossary item, Text editor</a>).
+ Two of the more popular, freely available editors are Emacs and vi 
+(also available under the name vim). Downloadable versions are available
+ for Linux, Windows, and Macintosh systems. On most computers, these 
+editors will open files of several hundred megabytes, at least.</p>
+<p id="P0100" class="text">If you are reluctant to invest the time 
+required to learn another word processor, and you have a Unix or Windows
+ operating system, then you can read any text file, one screen at a 
+time, with the “more” command, for example, on Windows systems, at the 
+prompt:</p><a id="P0105"></a><pre>c:\&gt;type huge_file.txt |more</pre><p id="P0110" class="text">The
+ first lines from the file will fill the screen, and you can proceed 
+through the file by pressing and holding the &lt;Enter&gt; key.</p>
+<p id="P0115" class="text">Using this simple command, you can assess the
+ format and general organization of any file. For the uninitiated, ASCII
+ data files are inscrutable puzzles. For those who take a few moments to
+ learn the layout of the record items, ASCII records can be read and 
+understood, much like any book.</p>
+<p id="P0120" class="text">Many data files are composed of line records.
+ Each line in the file contains a complete record, and each record is 
+composed of a sequence of data items. The items may be separated by 
+commas, tabs, or some other delimiting character. If the items have 
+prescribed sizes, you can compare the item values for different records 
+by reading up and down a column of the file.</p>
+<p id="P0125" class="text">2. <strong>Download and study the “readme” or index files, or their equivalent.</strong>
+ In prior decades, large collections of data were often assembled as 
+files within subdirectories, and these files could be downloaded in part
+ or in toto via ftp (file transfer protocol). Traditionally, a “readme” 
+file would be included with the files, and the “readme” file would 
+explain the purpose, contents, and organization of all the files. In 
+some cases, an index file might be available, providing a list of terms 
+covered in the files, and their locations, in the various files. When 
+such files are prepared thoughtfully, they are of great value to the 
+data analyst. It is always worth a few minutes time to open and browse 
+the “readme” file. I think of “readme” files as treasure maps. The data 
+files contain great treasure, but you’re unlikely to find anything of 
+value unless you study and follow the map.</p>
+<p id="P0130" class="text">In the past few years, data resources have 
+grown in size and complexity. Today, Big Data resources are often 
+collections of resources, housed on multiple servers. New and innovative
+ access protocols are continually being developed, tested, released, 
+updated, and replaced. Still, some things remain the same. There will 
+always be documents to explain how the Big Data resource “works” for the
+ user. It behooves the data analyst to take the time to read and 
+understand this prepared material. If there is no prepared material, or 
+if the prepared material is unhelpful, then you may want to reconsider 
+using the resource.</p>
+<p id="P0135" class="text">3. <strong>Assess the number of records in the Big Data resource.</strong>
+ There is a tendency among some data managers to withhold information 
+related to the number of records held in the resource. In many cases, 
+the number of records says a lot about the inadequacies of the resource.
+ If the total number of records is much smaller than the typical user 
+might have expected or desired, then the user might seek her data 
+elsewhere. Data managers, unlike data users, sometimes dwell in a 
+perpetual future that never merges into the here and now. They think in 
+terms of the number of records they will acquire in the next 24 hours, 
+the next year, or the next decade. To the data manager, the current 
+number of records may seem irrelevant.</p>
+<p id="P0140" class="text">One issue of particular importance is the 
+sample number/sample dimension dichotomy. Some resources with enormous 
+amounts of data may have very few data records. This occurs when 
+individual records contain mountains of data (e.g., sequences, molecular
+ species, images, and so on), but the number of individual records is 
+woefully low (e.g., hundreds or thousands). This problem, known as the 
+curse of dimensionality, will be further discussed in <a href="https://www.safaribooksonline.com/library/view/principles-of-big/9780124045767/xhtml/CHP010.html">Chapter 10</a>.</p>
+<p id="P0145" class="text">Data managers may be reluctant to divulge the
+ number of records held in the Big Data resource when the number is so 
+large as to defy credibility. Consider this example. There are about 
+5700 hospitals in the United States, serving a population of about 313 
+million people. If each hospital served a specific subset of the 
+population, with no overlap in service between neighboring hospitals, 
+then each would provide care for about 54,000 people. In practice, there
+ is always some overlap in catchment population, and a popular estimate 
+for the average (overlapping) catchment for U.S. hospitals is 100,000. 
+The catchment population for any particular hospital can be estimated by
+ factoring in a parameter related to its size. For example, if a 
+hospital hosts twice the number of beds than the average U.S. hospital, 
+then one would guess that its catchment population would be about 
+200,000.</p>
+<p id="P0150" class="text">The catchment population represents the 
+approximate number of electronic medical records for living patients 
+served by the hospital (one living individual, one hospital record). If 
+you are informed that a hospital, of average size, contains 10 million 
+records (when you are expecting about 100,000), then you can infer that 
+something is very wrong. Most likely, the hospital is creating multiple 
+records for individual patients. In general, institutions do not 
+voluntarily provide users with information that casts doubt on the 
+quality of their information systems. Hence, the data analyst, ignorant 
+of the total number of records in the system, might proceed under the 
+false assumption that each patient is assigned one and only one hospital
+ record. Suffice it to say that the data user must know the number of 
+records available in a resource and the manner in which records are 
+identified and internally organized.</p>
+<p id="P0155" class="text">4. <strong>Determine how data objects are identified and classified.</strong>
+ The identifier and the classifier (the name of the class to which the 
+data object belongs) are the two most important keys to Big Data 
+information. Here is why. If you know the identifier for a data object, 
+you can collect all of the information associated with the object, 
+regardless of its location in the resource. If other Big Data resources 
+use the same identifier for the data object, you can integrate all of 
+the data associated with the data object, regardless of its location in 
+external resources. Furthermore, if you know the class that holds a data
+ object, you can combine objects of a class and study all of the members
+ of the class. Consider the following example:</p><div>
+<p class="unnumlist" id="U0055"><a id="P0160"></a>Big Data resource 1</p>
+<p class="unnumlist1" id="U0060"><a id="P0165"></a>75898039563441 name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;G. Willikers</p>
+<p class="unnumlist1" id="U0065"><a id="P0170"></a>75898039563441 gender&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;male</p>
+<p class="unnumlist" id="U0070"><a id="P0175"></a>Big Data resource 2</p>
+<p class="unnumlist1" id="U0075"><a id="P0180"></a>75898039563441 age&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;35</p>
+<p class="unnumlist1" id="U0080"><a id="P0185"></a>75898039563441 is_a_class_member&nbsp;&nbsp;cowboy</p>
+<p class="unnumlist1" id="U0085"><a id="P0190"></a>94590439540089 name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Hopalong Tagalong</p>
+<p class="unnumlist1" id="U0090"><a id="P0195"></a>94590439540089 is_a_class_member&nbsp;&nbsp;cowboy</p>
+<p class="unnumlist" id="U0095"><a id="P0200"></a>Merged Big Data resource 1&nbsp;+&nbsp;2</p>
+<p class="unnumlist1" id="U0100"><a id="P0205"></a>75898039563441 name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;G. Willikers</p>
+<p class="unnumlist1" id="U0105"><a id="P0210"></a>75898039563441 gender&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;male</p>
+<p class="unnumlist1" id="U0110"><a id="P0215"></a>75898039563441 is_a_class_member&nbsp;&nbsp;cowboy</p>
+<p class="unnumlist1" id="U0115"><a id="P0220"></a>75898039563441 age&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;35</p>
+<p class="unnumlist1" id="U0120"><a id="P0225"></a>94590439540089 name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Hopalong Tagalong</p>
+<p class="unnumlist1" id="U0125"><a id="P0230"></a>94590439540089 is_a_class_member&nbsp;&nbsp;cowboy</p>
+</div>
+<p id="P0235" class="text">The merge of two Big Data resources combines 
+data related to identifier 75898039563441 from both resources. We now 
+know a few things about this data object that we did not know before the
+ merge. The merge also tells us that the two data objects identified as 
+75898039563441 and 94590439540089 are both members of class “cowboy”. We
+ now have two instance members from the same class, and this gives us 
+information related to the types of instances contained in the class.</p>
+<p id="P0240" class="text">The consistent application of standard 
+methods for object identification and for class assignments, using a 
+standard classification or ontology, greatly enhances the value of a Big
+ Data resource (see <a href="https://www.safaribooksonline.com/library/view/principles-of-big/9780124045767/xhtml/GLS001.html#GE0240">Glossary item, Identification</a>). A savvy data analyst will quickly determine whether the resource provides these important features.</p>
+<p id="P0245" class="text">5. <strong>Determine whether data objects contain self-descriptive information.</strong>
+ Data objects should be well specified. All values should be described 
+with metadata, all metadata should be defined, and the definitions for 
+the metadata should be found in documents whose unique names and 
+locations are provided (see <a href="https://www.safaribooksonline.com/library/view/principles-of-big/9780124045767/xhtml/GLS001.html#GE0280">Glossary item, ISO/IEC 11179</a>). The data should be linked to protocols describing how the data was obtained and measured.</p>
+<p id="P0250" class="text">6. <strong>Assess whether the data is complete and representative.</strong>
+ You must be prepared to spend many hours moving through the records; 
+otherwise, you will never really understand the data. After you have 
+spent a few weeks of your life browsing through Big Data resources, you 
+will start to appreciate the value of the process. Nothing comes easy. 
+Just as the best musicians spend thousands of hours practicing and 
+rehearsing their music, the best data analysts devote thousands of hours
+ to studying their data sources. It is always possible to run sets of 
+data through analytic routines that summarize the data, but drawing 
+insightful observations from the data requires thoughtful study.</p>
+<p id="P0255" class="text">An immense Big Data resource may contain 
+spotty data. On one occasion, I was given a large hospital-based data 
+set, with assurances that the data was complete (i.e., containing all 
+necessary data relevant to the project). After determining how the 
+records and the fields were structured, I looked at the distribution 
+frequency of diagnostic entities contained in the data set. Within a few
+ minutes I had the frequencies of occurrence of the different diseases, 
+assembled under broad diagnostic categories. I spent another few hours 
+browsing through the list, and before long I noticed that there were 
+very few skin diseases included in the data. I am not a dermatologist, 
+but I knew that skin diseases are among the most common conditions 
+encountered in medical clinics. Where were the missing skin diseases? I 
+asked one of the staff clinicians assigned to the project. He explained 
+that the skin clinic operated somewhat autonomously from the other 
+hospital clinics. The dermatologists maintained their own information 
+system, and their cases were not integrated into the general disease 
+data set. I inquired as to why I had been assured that the data set was 
+complete when everyone other than myself knew full well that the data 
+set lacked skin cases. Apparently, the staff were all so accustomed to 
+ignoring the field of dermatology that it had never crossed their minds 
+to mention the matter.</p>
+<p id="P0260" class="text">It is a quirk of human nature to ignore 
+anything outside one’s own zone of comfort and experience. Otherwise 
+fastidious individuals will blithely omit relevant information from Big 
+Data resources if they consider the information to be inconsequential, 
+irrelevant, or insubstantial. I have had conversations with groups of 
+clinicians who requested that the free-text information in radiology and
+ pathology reports (the part of the report containing descriptions of 
+findings and other comments) be omitted from the compiled electronic 
+records on the grounds that it is all unnecessary junk. Aside from the 
+fact that “junk” text can serve as important analytic clues (e.g., 
+measurements of accuracy, thoroughness, methodologic trends, and so on),
+ the systematic removal of parts of data records produces a biased and 
+incomplete Big Data resource. In general, data managers should not 
+censor data. It is the job of the data analyst to determine what data 
+should be included or excluded from analysis, and to justify his or her 
+decision. If the data is not available to the data analyst, then there 
+is no opportunity to reach a thoughtful and justifiable determination.</p>
+<p id="P0265" class="text">On another occasion, I was given an anonymized data set of clinical data, contributed from an anonymized hospital (see <a href="https://www.safaribooksonline.com/library/view/principles-of-big/9780124045767/xhtml/GLS001.html#GE0025">Glossary item, Anonymization versus deidentification</a>).
+ As I always do, I looked at the frequency distributions of items on the
+ reports. In a few minutes, I noticed that germ cell tumors, rare tumors
+ that arise from a cell lineage that includes oocytes and spermatocytes,
+ were occurring in high numbers. At first, I thought that I might have 
+discovered an epidemic of germ cell tumors in the hospital’s catchment 
+population. When I looked more closely at the data, I noticed that the 
+increased incidence occurred in virtually every type of germ cell tumor,
+ and there did not seem to be any particular increase associated with 
+gender, age, or ethnicity. Cancer epidemics raise the incidence of one 
+or maybe two types of cancer and may involve a particular at-risk 
+population. A cancer epidemic would not be expected to raise the 
+incidence of all types of germ cell tumors, across ages and genders. It 
+seemed more likely that the high numbers of germ cell tumors were 
+explained by a physician or specialized care unit that concentrated on 
+treating patients with germ cell tumors, receiving referrals from across
+ the nation. Based on the demographics of the data set (the numbers of 
+patients of different ethnicities), I could guess the geographic region 
+of the hospital. With this information, and knowing that the institution
+ probably had a prestigious germ cell clinic, I guessed the name of the 
+hospital. I eventually confirmed that my suspicions were correct.</p>
+<p id="P0270" class="text">The point here is that if you take the time 
+to study raw data, you can spot systemic deficiencies or excesses in the
+ data, if they exist, and you may gain deep insights that would not be 
+obtained by mathematical techniques.</p>
+<p id="P0275" class="text">7. <strong>Plot some of the data.</strong> 
+Plotting data is quick, easy, and surprisingly productive. Within 
+minutes, the data analyst can assess long-term trends, short-term and 
+periodic trends, the general shape of data distribution, and general 
+notions of the kinds of functions that might represent the data (e.g., 
+linear, exponential, power series). Simply knowing that the data can be 
+expressed as a graph is immeasurably reassuring to the data analyst.</p>
+<p id="P0280" class="text">There are many excellent data visualization 
+tools that are widely available. Without making any recommendation, I 
+mention that graphs produced for this book were made with Matplotlib, a 
+plotting library for the Python programming language; and Gnuplot, a 
+graphing utility available for a variety of operating systems. Both 
+Matplotlib and Gnuplot are open source applications that can be 
+downloaded, at no cost, and are available at sourceforge.net (see <a href="https://www.safaribooksonline.com/library/view/principles-of-big/9780124045767/xhtml/GLS001.html#GE0425">Glossary item, Open source</a>).</p>
+<p id="P0285" class="text">Gnuplot is extremely easy to use, either as 
+stand-alone scripts containing Gnuplot commands, or from the system 
+command line, or from the command line editor provided with the 
+application software. Most types of plots can be created with a single 
+Gnuplot command line. Gnuplot can fit a mathematically expressed curve 
+to a set of data using the nonlinear least-squares Marquardt—Levenberg 
+algorithm.<sup><a href="#BB0465">92</a>,<a href="#BB0470">93</a></sup> Gnuplot can also provide a set of statistical descriptors (e.g., median, mean, standard deviation) for plotted sets of data.</p>
+<p id="P0290" class="text">Gnuplot operates from data held in 
+tab-delimited ASCII files. Typically, data extracted from a Big Data 
+resource is ported into a separate ASCII file, with column fields 
+separated with a tab character, and rows separated by a newline 
+character. In most cases, you will want to modify your raw data before 
+it is ready for plotting. Use your favorite programming language to 
+normalize, shift, transform, convert, filter, translate, or munge your 
+raw data as you see fit. Export the data as a tab-delimited file, named 
+with a .dat suffix.</p>
+<p id="P0295" class="text">It takes about a second to generate a plot for 10,000 data points (see <a href="#F0010">Figure 8.1</a>).</p>
+<div class="pageavoid">
+<p id="F0010" class="fig"><img src="Chapter%208.%20Simple%20but%20Powerful%20Big%20Data%20Techniques%20-%20Principles%20of%20Big%20Data_files/F000083f08-01-9780124045767.jpg" class="img" alt="image" data-mfp-src="/library/view/principles-of-big/9780124045767/images/F000083f08-01-9780124045767.jpg" width="514" height="233"></p>
+<p class="figleg"><span class="fignum">Figure 8.1</span> <a id="SP0010"></a>A plot of 10,000 random data points, in three coordinates.</p>
+</div>
+<p id="P0300" class="text">The data for <a href="#F0010">Figure 8.1</a> 
+was created with a seven-line script using the Perl programming 
+language, but any scripting language would have been sufficient.<sup><a href="#BB0100">19</a></sup> Ten thousand data points were created, with the <em>x</em>, <em>y</em>, and <em>z</em>
+ coordinates for each point produced by a random number generator. The 
+point coordinates were put into a file named xyz_rand.dat. One command 
+line in Gnuplot produced the graph shown in <a href="#F0010">Figure 8.1</a>:</p><a id="P0305"></a><pre>splot ’c:\ftp\xyz_rand.dat’</pre><p id="P0310" class="text">It
+ is often useful to compartmentalize data by value using a histogram. A 
+histogram contains bins that cover the range of data values available to
+ the data objects, usually in a single dimension. For this next example,
+ each data object will be a point in three-dimensional space and will be
+ described with three coordinates: <em>x</em>, <em>y</em>, and <em>z</em>.
+ We can easily write a script that generates 100,000 points, with each 
+coordinate assigned a random number between 0 and 1000. We can count the
+ number of produced points whose <em>x</em> coordinate is 0, 1, 2, 3, 
+and so on until 999. With 100,000 generated values, you would expect 
+that each integer between 0 and 1000 (i.e., the 1000 bins) would contain
+ about 100 points. Here are the histogram values for the first 20 bins.</p><div>
+<p class="unnumlist1" id="U0130"><a id="P0315"></a>107</p>
+<p class="unnumlist1" id="U0135"><a id="P0320"></a>97</p>
+<p class="unnumlist1" id="U0140"><a id="P0325"></a>101</p>
+<p class="unnumlist1" id="U0145"><a id="P0330"></a>87</p>
+<p class="unnumlist1" id="U0150"><a id="P0335"></a>105</p>
+<p class="unnumlist1" id="U0155"><a id="P0340"></a>107</p>
+<p class="unnumlist1" id="U0160"><a id="P0345"></a>85</p>
+<p class="unnumlist1" id="U0165"><a id="P0350"></a>113</p>
+<p class="unnumlist1" id="U0170"><a id="P0355"></a>100</p>
+<p class="unnumlist1" id="U0175"><a id="P0360"></a>106</p>
+<p class="unnumlist1" id="U0180"><a id="P0365"></a>110</p>
+<p class="unnumlist1" id="U0185"><a id="P0370"></a>104</p>
+<p class="unnumlist1" id="U0190"><a id="P0375"></a>108</p>
+<p class="unnumlist1" id="U0195"><a id="P0380"></a>98</p>
+<p class="unnumlist1" id="U0200"><a id="P0385"></a>103</p>
+<p class="unnumlist1" id="U0205"><a id="P0390"></a>68</p>
+<p class="unnumlist1" id="U0210"><a id="P0395"></a>93</p>
+<p class="unnumlist1" id="U0215"><a id="P0400"></a>93</p>
+<p class="unnumlist1" id="U0220"><a id="P0405"></a>111</p>
+<p class="unnumlist1" id="U0225"><a id="P0410"></a>107</p></div>
+<p class="text">We can create a histogram displaying all 1000 bins (see <a href="#F0015">Figure 8.2</a>).</p>
+<div class="pageavoid">
+<p id="F0015" class="fig"><img src="Chapter%208.%20Simple%20but%20Powerful%20Big%20Data%20Techniques%20-%20Principles%20of%20Big%20Data_files/F000083f08-02-9780124045767.jpg" class="img" alt="image" data-mfp-src="/library/view/principles-of-big/9780124045767/images/F000083f08-02-9780124045767.jpg" width="432" height="259"></p>
+<p class="figleg"><span class="fignum">Figure 8.2</span> <a id="SP0015"></a>Histogram consisting of 1000 bins, holding a total of 100,000 data points whose <em>x</em>, <em>y</em>, and <em>z</em> coordinates fall somewhere between 0 and 1000.</p>
+</div>
+<p id="P0420" class="text">Looking at <a href="#F0015">Figure 8.2</a>, 
+we might guess that most of the bins contain about 100 data points. Bins
+ with many fewer data points or many more data points would be hard to 
+find. With another short script, we can compute the distribution of the 
+numbers of bins containing all possible numbers of data points. Here is 
+the raw data distribution (held in file x_dist.dat):</p><a id="P0425"></a><pre>0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0</pre><a id="P0430"></a><pre>0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 3 1 3 0 3 2 7 4</pre><a id="P0435"></a><pre>6 6 10 8 17 11 11 19 20 28 26 24 28 41 29 37 31 30 38 40 36 36 34 38 39 43 27 25</pre><a id="P0440"></a><pre>34 22 21 24 25 21 18 7 15 11 4 6 4 5 2 8 2 3 2 0 0 0 2 1 1 1 0 0 0 0 0 0 0 0 0</pre><a id="P0445"></a><pre>0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0</pre>
+<p id="P0450" class="text">What does this data actually show?</p><div>
+<p class="unnumlist1" id="U0230"><a id="P0455"></a>Zero bins contained 0 data points</p>
+<p class="unnumlist1" id="U0235"><a id="P0460"></a>Zero bins contained 1 data points</p>
+<p class="unnumlist1" id="U0240"><a id="P0465"></a>Zero bins contained 2 data points</p>
+<p class="unnumlist1" id="U9245"><a id="P9470"></a>.</p>
+<p class="unnumlist1" id="U9250"><a id="P9475"></a>.</p>
+<p class="unnumlist1" id="U9255"><a id="P9480"></a>.</p>
+<p class="unnumlist1" id="U0245"><a id="P0470"></a>Three bins contained 74 data points</p>
+<p class="unnumlist1" id="U0250"><a id="P0475"></a>One bin contained 75 data points</p>
+<p class="unnumlist1" id="U0255"><a id="P0480"></a>Three bins contained 76 data points</p>
+<p class="unnumlist1" id="U0260"><a id="P0485"></a>Zero bins contained 77 data points</p>
+<p class="unnumlist1" id="U0265"><a id="P0490"></a>Three bins contained 78 data points</p>
+<p class="unnumlist1" id="U0270"><a id="P0495"></a>and so on</p></div>
+<p id="P0500" class="text">The distribution is most easily visualized with a simple graph. The Gnuplot command producing a graph from our data is</p><a id="P0505"></a><pre>plot ’x_dist.dat’ smooth bezier</pre><p id="P0510" class="text">This
+ simple command instructs Gnuplot to open our data file, “x_dist.dat,” 
+and plot the contents with a smooth lined graph. The output looks 
+somewhat like a Gaussian distribution (see <a href="#F0020">Figure 8.3</a>).</p>
+<div class="pageavoid">
+<p id="F0020" class="fig"><img src="Chapter%208.%20Simple%20but%20Powerful%20Big%20Data%20Techniques%20-%20Principles%20of%20Big%20Data_files/F000083f08-03-9780124045767.jpg" class="img" alt="image" data-mfp-src="/library/view/principles-of-big/9780124045767/images/F000083f08-03-9780124045767.jpg" width="432" height="266"></p>
+<p class="figleg"><span class="fignum">Figure 8.3</span> <a id="SP0020"></a>The distribution of data points per bin. The curve resembles a normal curve, peaking at 100.</p>
+</div>
+<p id="P0515" class="text">We could have also created a cumulative 
+distribution wherein the value of each point is the sum of the values of
+ all prior points (see <a href="#F0025">Figure 8.4</a>). A minor modification of the prior Gnuplot command line produces the cumulative curve:</p>
+<div class="pageavoid">
+<p id="F0025" class="fig"><img src="Chapter%208.%20Simple%20but%20Powerful%20Big%20Data%20Techniques%20-%20Principles%20of%20Big%20Data_files/F000083f08-04-9780124045767.jpg" class="img" alt="image" data-mfp-src="/library/view/principles-of-big/9780124045767/images/F000083f08-04-9780124045767.jpg" width="432" height="268"></p>
+<p class="figleg"><span class="fignum">Figure 8.4</span> <a id="SP0025"></a>A cumulative distribution having a typical appearance of cumulative distribution for a normal curve.</p>
+</div><a id="P0520"></a><pre>plot ’x_dist.dat’ smooth cumulative</pre><p id="P0525" class="text">It
+ is very easy to plot data, but one of the most common mistakes of the 
+data analyst is to assume that the available data actually represents 
+the full range of data that may occur. If the data under study does not 
+include the full range of the data, the data analyst will often reach a 
+completely erroneous explanation for the observed data distribution.</p>
+<p id="P0530" class="text">Data distributions will almost always appear to be linear at various segments of their range (see <a href="#F0030">Figure 8.5</a>).</p>
+<div class="pageavoid">
+<p id="F0030" class="fig"><img src="Chapter%208.%20Simple%20but%20Powerful%20Big%20Data%20Techniques%20-%20Principles%20of%20Big%20Data_files/F000083f08-05-9780124045767.jpg" class="img" alt="image" data-mfp-src="/library/view/principles-of-big/9780124045767/images/F000083f08-05-9780124045767.jpg" width="623" height="528"></p>
+<p class="figleg"><span class="fignum">Figure 8.5</span> <a id="SP0030"></a>An
+ oscillating wave reaching equilibrium. The top graph uses circle points
+ to emphasize a linear segment for a half-cycle oscillation. The bottom 
+graph of the same data emphasizes a linear segment occurring at 
+equilibrium.</p>
+</div>
+<p id="P0535" class="text">As demonstrated in <a href="#F0030">Figure 8.5</a>,
+ an oscillating curve that reaches equilibrium may look like a sine wave
+ early in its course and a flat line later on. In the larger 
+oscillations, it may appear linear along the length of a half-cycle. Any
+ of these segmental interpretations of the data will miss observations 
+that would lead to a full explanation of the data.</p>
+<p id="P0540" class="text">An adept data analyst can eyeball a data 
+distribution and guess the kind of function that might model the data. 
+For example, a symmetric bell-shaped curve is probably a normal or 
+Gaussian distribution. A curve with an early peak and a long, flat tail 
+is often a power law distribution. Curves that are simple exponential or
+ linear can also be assayed by visual inspection. Distributions that may
+ be described by a Fourier series or a power series, or that can be 
+segmented into several different distributions, can also be assessed 
+(see <a href="https://www.safaribooksonline.com/library/view/principles-of-big/9780124045767/xhtml/GLS001.html#GE0485">Glossary items Power law</a>, <a href="https://www.safaribooksonline.com/library/view/principles-of-big/9780124045767/xhtml/GLS001.html#GE0490">Power series</a>, <a href="https://www.safaribooksonline.com/library/view/principles-of-big/9780124045767/xhtml/GLS001.html#GE0210">Fourier series</a>, <a href="https://www.safaribooksonline.com/library/view/principles-of-big/9780124045767/xhtml/GLS001.html#GE0215">Fourier transform</a>).</p>
+<p id="P0545" class="text">8. <strong>Estimate the solution to your multimillion dollar data project on day 1.</strong>
+ This may seem difficult to accept, and there will certainly be 
+exceptions to the rule, but the solution to almost every multimillion 
+dollar analytic problem can usually be estimated in just a few hours, 
+sometimes minutes, at the outset of the project. If an estimate cannot 
+be attained fairly quickly, then there is a good chance that the project
+ will fail. If you do not have the data for a quick-and-dirty estimate, 
+then you will probably not have the data needed to make a precise 
+determination.</p>
+<p id="P0550" class="text">We have already seen one example of estimation when we examined word-counting algorithms (see <a href="https://www.safaribooksonline.com/library/view/principles-of-big/9780124045767/xhtml/CHP007.html">Chapter 7</a>).
+ Without bothering to acquire software that counts the words in a text 
+file, we can get an approximation by simply dividing the size of the 
+file (in bytes) by 6.5, the average number of characters contained in a 
+word plus its separator character (space). Another example comes from 
+the field of human epidemiology. The total number of humans on earth is 
+about 7 billion. The total number of human deaths each year is about 60 
+million, roughly 1% of the living population. Modelers can use the 1% 
+estimate for the percentage of people expected to die in a normal 
+population. The same 1% estimate can be applied to the number of deaths 
+from any cause compared to the number of deaths from all causes. In any 
+field, adept data analysts apply simple estimators to their problems at 
+hand.</p>
+<p id="P0555" class="text">The past several decades have witnessed a 
+profusion of advanced mathematical techniques for analyzing large data 
+sets. It is important that we have these methods, but in most cases, 
+newer methods serve to refine and incrementally improve older methods 
+that do not rely on powerful computational techniques or sophisticated 
+mathematical algorithms.</p>
+<p id="P0560" class="text">As someone who was raised prior to the age of
+ handheld calculators, personal computers, and smartphones, I was taught
+ quick-and-dirty estimation methods for adding, subtracting, 
+multiplying, and dividing lists of numbers. The purpose of the 
+estimation was to provide a good idea of the final answer before much 
+time was spent on a precise solution. If no mistake was introduced in 
+either the estimate or the long calculation, then the two numbers would 
+come close to one another. Conversely, mistakes in the long calculations
+ could be detected if the two calculations yielded different numbers.</p>
+<p id="P0565" class="text">If data analysts go straight to the complex 
+calculations, before they perform a simple estimation, they will find 
+themselves accepting wildly ridiculous calculations. For comparison 
+purposes, there is nothing quite like a simple and intuitive estimate to
+ pull an overly eager analyst back to reality. Often, the simple act of 
+looking at a stripped-down version of the problem opens a new approach 
+that can drastically reduce computation time.<sup><a href="#BB0475">94</a></sup></p>
+<p id="P0570" class="text">In some situations, analysts will find that a
+ point is reached when higher refinements in methods yield diminishing 
+returns. When everyone has used their most advanced algorithms to make 
+an accurate prediction, they may sometimes find that their best effort 
+offers little improvement over a simple estimator.</p>
+<p id="P0575" class="text">The next sections introduce some powerful estimation techniques that are often overlooked.</p>
+</div>
+<div id="S0020"><h2 class="h1hd" id="ST0030">Data Range</h2>
+<p id="P0580" class="textfl">Determine the highest and the lowest 
+observed values in your data collection. These two numbers are often the
+ most important numbers in any set of data—even more important than 
+determining the average or the standard deviation. There is always a 
+compelling reason, relating to the measurement of the data or to the 
+intrinsic properties of the data set, to explain where and why the data 
+begin and end.</p>
+<p id="P0585" class="text">Here is an example. You are looking at human 
+subject data that includes weights. The minimum weight is a pound (the 
+round-off weight of a viable but premature newborn infant). You find 
+that the maximum weight in the data set is 300 pounds, exactly. There 
+are many individuals in the data set who have a weight of 300 pounds, 
+but no individuals with a weight exceeding 300 pounds. You also find 
+that the number of individuals weighing 300 pounds is much greater than 
+the number of individuals weighing 290 pounds. What does this tell you? 
+Obviously, the people included in the data set have been weighed on a 
+scale that tops off at 300 pounds. Most of the people whose weight was 
+recorded as 300 will have a false weight measurement. Had we not looked 
+for the maximum value in the data set, we would have assumed, 
+incorrectly, that the weights were always accurate.</p>
+<p id="P0590" class="text">It would be useful to get some idea of how 
+weights are distributed in the population exceeding 300 pounds. One way 
+of estimating the error is to look at the number of people weighing 295 
+pounds, 290 pounds, 285 pounds, etc. By observing the trend, and knowing
+ the total number of individuals whose weight is 300 pounds or higher, 
+you can estimate the number of people falling into weight categories 
+exceeding 300 pounds.</p>
+<p id="P0595" class="text">Here is another example where knowing the 
+maxima for a data set measurement is useful. You are looking at a 
+collection of data on meteorites. The measurements include weights. You 
+notice that the largest meteorite in the large collection weighs 66 tons
+ (equivalent to about 60,000&nbsp;kg) and has a diameter of about 3 
+meters. Small meteorites are more numerous than large meteorites, but 
+almost every weight category is accounted for by one or more meteorites,
+ up to 66 tons. After that, nothing. Why do meteorites have a maximum 
+size of about 66 tons?</p>
+<p id="P0600" class="text">A little checking tells you that meteors in 
+space can come in just about any size, from a speck of dust to a 
+moon-sized rock. Collisions with earth have involved meteorites much 
+larger than 3 meters. You check the astronomical records and you find 
+that the meteor that may have caused the extinction of large dinosaurs 
+about 65 million years ago was estimated at 6 to 10&nbsp;km (at least 
+2000 times the diameter of the largest meteorite found on earth).</p>
+<p id="P0605" class="text">There is a very simple reason why the largest
+ meteorite found on earth weighs about 66 tons, while the largest 
+meteorites to impact the earth are known to be thousands of times 
+heavier. When meteorites exceed 66 tons, the impact energy can exceed 
+the energy produced by an atom bomb blast. Meteorites larger than 66 
+tons leave an impact crater, but the meteor itself disintegrates on 
+impact.</p>
+<p id="P0610" class="text">As it turns out, much is known about 
+meteorite impacts. The kinetic energy of the impact is determined by the
+ mass of the meteor and the square of the velocity. The minimum velocity
+ of a meteor at impact is about 11&nbsp;km/second (equivalent to the 
+minimum escape velocity for sending an object from earth into space). 
+The fastest impacts occur at about 70&nbsp;km per second. From this 
+data, the energy released by meteors, on impact with the earth, can be 
+easily calculated.</p>
+<p id="P0615" class="text">By observing the maximum weight of meteors 
+found on earth, we learn a great deal about meteoric impacts. When we 
+look at the distribution of weights, you can see that small meteorites 
+are more numerous than larger meteorites. If we develop a simple formula
+ that relates the size of a meteorite with its frequency of occurrence, 
+we can predict the likelihood of the arrival of a meteorite on earth, 
+for every weight of meteorite, including those weighing more than 66 
+tons, and for any interval of time.</p>
+<p id="P0620" class="text">Here is another profound example of the value
+ of knowing the maximum value in a data distribution. If you look at the
+ distance from the earth to various cosmic objects (e.g., stars, black 
+holes, nebulae), you will quickly find that there is a limit for the 
+distance of objects from earth. Of the many thousands of cataloged stars
+ and galaxies, none of them have a distance that is greater than 13 
+billion light years. Why? If astronomers could see a star that is 15 
+billion light years from earth, the light that is received here on earth
+ must have traveled 15 billion light years to reach us. The time 
+required for light to travel 15 billion light years is 15 billion years,
+ by definition. The universe was born in a big bang about 14 billion 
+years ago. This would imply that the light from the star located 15 
+billion miles from earth must have begun its journey about a billion 
+years before the universe came into existence. Impossible!</p>
+<p id="P0625" class="text">By looking at the distribution of distances 
+of observed stars and noting that the distances never exceed about 13 
+billion years, we can infer that the universe must be at least 13 
+billion years old. You can also infer that the universe does not have an
+ infinite age and size; otherwise, we would see stars at a greater 
+distance than 13 billion light years. If you assume that stars popped 
+into the universe not long after its creation, then you can infer that 
+the universe has an age of about 13 or 14 billion years. All of these 
+deductions, confirmed independently by theoreticians and cosmologists, 
+were made without statistical analysis by noting the maximum number in a
+ distribution of numbers.</p>
+<p id="P0630" class="text">Sometimes fundamental discoveries come from 
+simple observations on distribution boundaries. Penguins are widely 
+distributed throughout the Southern Hemisphere. Outside of zoos and a 
+few islands on the border of the Southern and Northern Hemispheres, 
+penguins have never ventured into the northern half of this planet. In 
+point of fact, penguins have never really ventured anywhere. Penguins 
+cannot fly; hence they cannot migrate via the sky like most other birds.
+ They swim well, but they rear their young on land and do not travel 
+great distances from their nests. It is hard to imagine how penguins 
+could have established homes in widely divergent climates (e.g., frigid 
+Antarctic and tropical Galapagos).</p>
+<p id="P0635" class="text">Penguins evolved from an ancestral species, 
+around 70 million years ago, that lived on southern land masses broken 
+from the Pangaean supercontinent, before the moving continents arrived 
+at their current locations. At this point, the coastal tips of South 
+America and Africa, the western coast of Australia, and the length of 
+Zealandia (from which New Zealand eventually emerged) were all quite 
+close to Antarctica.</p>
+<p id="P0640" class="text">By observing the distribution of penguins 
+throughout the world (knowing where they live and where they do not 
+live), it is possible to construct a marvelous hypothesis in which 
+penguins were slowly carried away when their ancient homeland split and 
+floated throughout the Southern Hemisphere. The breakup of Pangaea, 
+leading to the current arrangement of continents, might have been 
+understood by noting where penguins live, and where they do not.</p>
+<p id="P0645" class="text">On occasion, the maxima or minima of a set of data will be determined by an outlier value (see <a href="https://www.safaribooksonline.com/library/view/principles-of-big/9780124045767/xhtml/GLS001.html#GE0430">Glossary item, Outlier</a>).
+ If the outlier were simply eliminated from the data set, you would have
+ a maxima and minima with values that were somewhat close to other data 
+values (i.e., the second-highest data value and the second-lowest data 
+values would be close to the maxima and the minima, respectively). In 
+these cases, the data analyst must come to a decision—to drop or not to 
+drop the outlier. There is no simple guideline for dealing with 
+outliers, but it is sometimes helpful to know something about the 
+dynamic range of the measurements (see <a href="https://www.safaribooksonline.com/library/view/principles-of-big/9780124045767/xhtml/GLS001.html#GE0195">Glossary item, Dynamic range</a>).
+ If a thermometer can measure temperature from -&nbsp;20 to 140 degrees 
+Fahrenheit and your data outlier has a temperature of 390 degrees 
+Fahrenheit, then you know that the data must be an error; the 
+thermometer does not measure above 140 degrees. The data analyst can 
+drop the outlier, but it would be prudent to determine why the outlier 
+was generated.</p>
+</div>
+<div id="S0025"><h2 class="h1hd" id="ST0035">Denominator</h2>
+<p id="P0650" class="textfl"><strong>Denominators are the numbers that provide perspective to other numbers.</strong>
+ If you are informed that 10,000 persons die each year in the United 
+States from a particular disease, then you might want to know the total 
+number of deaths, from all causes. When you compare the death from a 
+particular disease with the total number of deaths from all causes (the 
+denominator), you learn something about the relative importance of your 
+original count (e.g., an incidence of 10,000 deaths/350 million 
+persons). Epidemiologists typically represent incidences as numbers per 
+100,000 population. An incidence of 10,000/350 million is equivalent to 
+an incidence of 2.9 per 100,000.</p>
+<p id="P0655" class="text">Likewise, if you are using Big Data collected
+ from multiple sources, your histograms will need to be represented as 
+fractional distributions for each source’s data, not as value counts. 
+The reason for this is that a histogram from one source will probably 
+not have the same total number of distributed values compared with a 
+histogram created from another source. To achieve comparability among 
+the histograms, you will need to transform values into fractions, by 
+dividing the binned values by the total number of values in the data 
+distribution, for each data source. Doing so renders the bin value as a 
+percentage of total rather than a sum of data values.</p>
+<p id="P0660" class="text">Denominators are not always easy to find. In 
+most cases, the denominator is computed by tallying every data object in
+ a Big Data resource. If you have a very large number of data objects, 
+the time required to reach a global tally may be quite long. In many 
+cases, a Big Data resource will permit data analysts to extract subsets 
+of data, but analysts will be forbidden to examine the entire resource. 
+As a consequence, the denominator will be computed for the subset of 
+extracted data and will not accurately represent all of the data objects
+ available to the resource.</p>
+<p id="P0665" class="text">Big Data managers should make an effort to 
+supply information that summarizes the total set of data available at 
+any moment in time. Here are some of the numbers that should be 
+available to analysts: the number of records in the resource, the number
+ of classes of data objects in the resource, the number of data objects 
+belonging to each class in the resource, the number of data values that 
+belong to data objects, and the size of the resource in bytes.</p>
+<p id="P0670" class="text">There are many examples wherein data analysts
+ manipulate the denominator to produce misleading results; one of the 
+most outrageous examples comes from the emotionally charged field of 
+crime reporting. When a crime is recorded at a police department, a 
+record is kept to determine whether the case comes to closure (i.e., is 
+either solved or is closed through an administrative decision). The 
+simple annual closure rate is the number of cases closed in a year 
+divided by the total number of cases occurring in the year. Analytic 
+confusion arises when a crime occurs in a certain year, but is not 
+solved until the following year. It is customary among some police 
+departments to include all closures, including closures of cases 
+occurring in preceding years, in the numerator.<sup><a href="#BB0480">95</a></sup>
+ The denominator is restricted to those cases that occurred in the given
+ year. The thought is that doing so ensures that every closed case is 
+counted and that the total number of cases is not counted more than 
+once.</p>
+<p id="P0675" class="text">As it happens, including closures from cases 
+occurring in prior years may be extraordinarily misleading when the 
+denominator is decreasing (i.e., when the incidence of crime decreases).
+ For example, imagine that in a certain year there are 100 homicides and
+ 30 closures (a simple closure rate of 30%). In the following year, the 
+murderers take a breather, producing a scant 40 homicides. Of those 40 
+homicides, only 10 are closed (a simple closure rate of 25%), but during
+ this period, 31 of the open homicide cases from the previous year are 
+closed. This produces a total number of current-year closures of 
+10&nbsp;+&nbsp;31, or 41; yielding an impossible closure rate of 41/40 
+or about 103%—not bad!</p>
+<p id="P0680" class="text">January is a particularly good month to find a
+ closure rate that bodes well for the remainder of the year. Let’s say 
+that the homicide incidence does not change from year to year; that the 
+homicide rate remains steady at 100 per year. Let’s say that in year 1, 
+30 homicide cases are closed, yielding a simple closure rate of 30%. In 
+the month of January in year 2, 9 homicides occur. This represents about
+ one-twelfth of the 100 homicides expected for the year. We expect that 
+January will be the month that receives the highest number of closures 
+from the prior year’s open-case pool. Let’s say that in January there 
+are 10 cases closed from prior year homicides, and that none of the 
+homicides occurring in January were closed (i.e., 0% simple closure rate
+ for January). We calculate the closure rate by taking the sum of 
+closures (10&nbsp;+&nbsp;0&nbsp;=&nbsp;10) and dividing by the number of
+ homicides that occurred in January 9 to yield a closure rate of 10/9 or
+ a 111% closure rate.</p>
+<p id="P0685" class="text">Aside from yielding impossible closure rates,
+ exceeding 100%, the calculation employed by many police departments 
+provides a highly misleading statistic. Is there a method whereby we can
+ compute a closure rate that does not violate the laws of time and 
+logic, and that provides a reasonable assessment of crime case closures?
+ Actually, there are many ways of approaching the problem. Here is a 
+simple method that does not involve reaching back into cases from prior 
+years or reaching forward in time to collect cases from the current year
+ that will be solved in the future.</p>
+<p id="P0690" class="text">Imagine the following set of data for 
+homicide cases occurring in 2012. There are 25 homicides in the data 
+set. Twenty of the cases were closed inside the year 2012. The remaining
+ cases are unclosed at the end of the calendar year. We know the date 
+that each case occurred and the number of days to closure for each of 
+the closed cases. For the 5 cases that were not closed, we know the 
+number of days that passed between the time that the case occurred and 
+the end of the year 2012, when all counting stopped.</p>
+<p id="P0695" class="text">Summary of 25 homicide cases</p><div>
+<p class="unnumlist1" id="U0275"><a id="P0700"></a>Days to closure: 001</p>
+<p class="unnumlist1" id="U0280"><a id="P0705"></a>Days to closure: 002</p>
+<p class="unnumlist1" id="U0285"><a id="P0710"></a>Days to closure: 002</p>
+<p class="unnumlist1" id="U0290"><a id="P0715"></a>Days to closure: 003</p>
+<p class="unnumlist1" id="U0295"><a id="P0720"></a>Days to closure: 005</p>
+<p class="unnumlist1" id="U0300"><a id="P0725"></a>Days to closure: 011</p>
+<p class="unnumlist1" id="U0305"><a id="P0730"></a>Days to closure: 023</p>
+<p class="unnumlist1" id="U0310"><a id="P0735"></a>Days to closure: 029</p>
+<p class="unnumlist1" id="U0315"><a id="P0740"></a>Days to closure: 039</p>
+<p class="unnumlist1" id="U0320"><a id="P0745"></a>Days to closure: 046</p>
+<p class="unnumlist1" id="U0325"><a id="P0750"></a>Days to closure: 071</p>
+<p class="unnumlist1" id="U0330"><a id="P0755"></a>Days to closure: 076</p>
+<p class="unnumlist1" id="U0335"><a id="P0760"></a>Days to closure: 083</p>
+<p class="unnumlist1" id="U0340"><a id="P0765"></a>Days to closure: 086</p>
+<p class="unnumlist1" id="U0345"><a id="P0770"></a>Days to closure: 100</p>
+<p class="unnumlist1" id="U0350"><a id="P0775"></a>Days to closure: 120</p>
+<p class="unnumlist1" id="U0355"><a id="P0780"></a>Days to closure: 148</p>
+<p class="unnumlist1" id="U0360"><a id="P0785"></a>Days to closure: 235</p>
+<p class="unnumlist1" id="U0365"><a id="P0790"></a>Days to closure: 276</p>
+<p class="unnumlist1" id="U0370"><a id="P0795"></a>Days to closure: 342</p>
+<p class="unnumlist1" id="U0375"><a id="P0800"></a>Unclosed at 10 days</p>
+<p class="unnumlist1" id="U0380"><a id="P0805"></a>Unclosed at 100 days</p>
+<p class="unnumlist1" id="U0385"><a id="P0810"></a>Unclosed at 250 days</p>
+<p class="unnumlist1" id="U0390"><a id="P0815"></a>Unclosed at 300 days</p>
+<p class="unnumlist1" id="U0395"><a id="P0820"></a>Unclosed at 320 days</p>
+</div>
+<p class="text">The simple closure date is 20/25 or 80%. Now, let us plot the time until closure for cases (see <a href="#F0035">Figure 8.6</a>).</p>
+<div class="pageavoid">
+<p id="F0035" class="fig"><img src="Chapter%208.%20Simple%20but%20Powerful%20Big%20Data%20Techniques%20-%20Principles%20of%20Big%20Data_files/F000083f08-06-9780124045767.jpg" class="img" alt="image" data-mfp-src="/library/view/principles-of-big/9780124045767/images/F000083f08-06-9780124045767.jpg" width="432" height="259"></p>
+<p class="figleg"><span class="fignum">Figure 8.6</span> <a id="SP0035"></a>Time to closure of cases in 2012 for an imaginary set of data (see text).</p>
+</div>
+<p id="P0830" class="text">We see that all but 3 of the solved cases 
+were solved within 150 days of the homicide occurrence. Of the 5 
+unclosed cases remaining at the end of 2012, 3 had not been solved in 
+250 days or more. These cases are highly unlikely to be solved. One had 
+gone unsolved for only 10 days. This time period is so short that the 
+likelihood that it will be solved is likely to be close to the simple 
+closure rate of 80%. One case had gone unsolved for 100 days. Only 5 of 
+the 20 solved cases were closed after 100 days, and this would represent
+ about one-quarter (5/20) of the simple 80% closure rate.</p>
+<p id="P0835" class="text">Can we assign likelihoods of eventual closure to the five cases that were unclosed at the end of 2012?</p><div>
+<p class="unnumlist1" id="U0400"><a id="P0840"></a>Unclosed at 10 days—likelihood of eventual closure 80%</p>
+<p class="unnumlist1" id="U0405"><a id="P0845"></a>Unclosed at 100 days—likelihood of eventual closure 0.25&nbsp;×&nbsp;0.80&nbsp;=&nbsp;20%</p>
+<p class="unnumlist1" id="U0410"><a id="P0850"></a>Unclosed at 250 days—likelihood of eventual closure 0%</p>
+<p class="unnumlist1" id="U0415"><a id="P0855"></a>Unclosed at 300 days—likelihood of eventual closure 0%</p>
+<p class="unnumlist1" id="U0420"><a id="P0860"></a>Unclosed at 320 days—likelihood of eventual closure 0%</p>
+</div>
+<p id="P0865" class="text">The expected number of eventual closures from
+ the 5 unclosed cases is 0.8&nbsp;+&nbsp;0.2&nbsp;=&nbsp;1. This means 
+that the predicted total closure rate for 2012 is 20 cases (the number 
+of cases that were actually closed)&nbsp;+&nbsp;1 cases (the number of 
+cases likely to be closed anytime in the future), or 21/25, or 84%. 
+Without going into the statistical formalities for predicting 
+likelihoods, we can summarize closure rates with two easily computed 
+numbers: the simple closure rate and the predicted closure rate.</p>
+<p id="P0870" class="text">There are elegant statistical approaches, including Kaplan—Meier estimators,<sup><a href="#BB0485">96</a></sup>
+ which could provide a more rigorous analysis of the Washington, DC, 
+homicide data. The point here is that reasonable estimations can be 
+performed by simply studying the data and thinking about the problem. 
+Big Data resources are in constant flux—growing into the past and the 
+future. Denominators that make sense in a world of static measurements 
+may not make sense in an information universe that is unconstrained by 
+space and time.</p>
+</div>
+<div id="S0030"><h2 class="h1hd" id="ST0040">Frequency Distributions</h2>
+<p id="P0875" class="textfl">There are two general types of data: 
+quantitative and categorical. Quantitative data refers to measurements. 
+Categorical data is simply a number that represents the number of items 
+that have a feature. For most purposes, the analysis of categorical data
+ reduces to counting and binning.</p>
+<p id="P0880" class="text">Categorical data typically conforms to Zipf 
+distributions. George Kingsley Zipf (1902—1950) was an American linguist
+ who demonstrated that, for most languages, a small number of words 
+account for the majority of occurrences of all the words found in prose.
+ Specifically, he found that the frequency of any word is inversely 
+proportional to its placement in a list of words, ordered by their 
+decreasing frequencies in text. The first word in the frequency list 
+will occur about twice as often as the second word in the list, three 
+times as often as the third word in the list, and so on. Many Big Data 
+collections follow a Zipf distribution (e.g., income distribution in a 
+population, energy consumption by country, and so on).</p>
+<p id="P0885" class="text">Zipf’s distribution applied to languages is a
+ special form of Pareto’s principle, or the 80/20 rule. Pareto’s 
+principle holds that a small number of causes may account for the vast 
+majority of observed instances. For example, a small number of rich 
+people account for the majority of wealth. This would apply to 
+localities (cities, states, countries) and to totalities (the planet). 
+Likewise, a small number of diseases account for the vast majority of 
+human illnesses. A small number of children account for the majority of 
+the behavioral problems encountered in a school. A small number of 
+states hold the majority of the population of the United States. A small
+ number of book titles, compared with the total number of publications, 
+account for the majority of book sales. Much of Big Data is categorical 
+and obeys the Pareto principle. Mathematicians often refer to Zipf 
+distributions as Power law distributions (see <a href="https://www.safaribooksonline.com/library/view/principles-of-big/9780124045767/xhtml/GLS001.html#GE0485">Glossary items, Power law</a>, <a href="https://www.safaribooksonline.com/library/view/principles-of-big/9780124045767/xhtml/GLS001.html#GE0455">Pareto’s principle</a>, <a href="https://www.safaribooksonline.com/library/view/principles-of-big/9780124045767/xhtml/GLS001.html#GE0730">Zipf distribution</a>).</p>
+<p id="P0890" class="text">Let’s take a look at the frequency 
+distribution of words appearing in a book. Here is the list of the 30 
+most frequent words in the book and the number of occurrence of each 
+word:</p><div>
+<p class="unnumlist1" id="U0425"><a id="P0895"></a>01 003977 the</p>
+<p class="unnumlist1" id="U0430"><a id="P0900"></a>02 001680 and</p>
+<p class="unnumlist1" id="U0435"><a id="P0905"></a>03 001091 class</p>
+<p class="unnumlist1" id="U0440"><a id="P0910"></a>04 000946 are</p>
+<p class="unnumlist1" id="U0445"><a id="P0915"></a>05 000925 chapter</p>
+<p class="unnumlist1" id="U0450"><a id="P0920"></a>06 000919 that</p>
+<p class="unnumlist1" id="U0455"><a id="P0925"></a>07 000884 species</p>
+<p class="unnumlist1" id="U0460"><a id="P0930"></a>08 000580 virus</p>
+<p class="unnumlist1" id="U0465"><a id="P0935"></a>09 000570 with</p>
+<p class="unnumlist1" id="U0470"><a id="P0940"></a>10 000503 disease</p>
+<p class="unnumlist1" id="U0475"><a id="P0945"></a>11 000434 for</p>
+<p class="unnumlist1" id="U0480"><a id="P0950"></a>12 000427 organisms</p>
+<p class="unnumlist1" id="U0485"><a id="P0955"></a>13 000414 from</p>
+<p class="unnumlist1" id="U0490"><a id="P0960"></a>14 000412 hierarchy</p>
+<p class="unnumlist1" id="U0495"><a id="P0965"></a>15 000335 not</p>
+<p class="unnumlist1" id="U0500"><a id="P0970"></a>16 000329 humans</p>
+<p class="unnumlist1" id="U0505"><a id="P0975"></a>17 000320 have</p>
+<p class="unnumlist1" id="U0510"><a id="P0980"></a>18 000319 proteobacteria</p>
+<p class="unnumlist1" id="U0515"><a id="P0985"></a>19 000309 human</p>
+<p class="unnumlist1" id="U0520"><a id="P0990"></a>20 000300 can</p>
+<p class="unnumlist1" id="U0525"><a id="P0995"></a>21 000264 fever</p>
+<p class="unnumlist1" id="U0530"><a id="P1000"></a>22 000263 group</p>
+<p class="unnumlist1" id="U0535"><a id="P1005"></a>23 000248 most</p>
+<p class="unnumlist1" id="U0540"><a id="P1010"></a>24 000225 infections</p>
+<p class="unnumlist1" id="U0545"><a id="P1015"></a>25 000219 viruses</p>
+<p class="unnumlist1" id="U0550"><a id="P1020"></a>26 000219 infectious</p>
+<p class="unnumlist1" id="U0555"><a id="P1025"></a>27 000216 organism</p>
+<p class="unnumlist1" id="U0560"><a id="P1030"></a>28 000216 host</p>
+<p class="unnumlist1" id="U0565"><a id="P1035"></a>29 000215 this</p>
+<p class="unnumlist1" id="U0570"><a id="P1040"></a>30 000211 all</p>
+</div>
+<p id="P1045" class="text">As Zipf would predict, the most frequent 
+word, “the,” occurs 3977 times, roughly twice as often as the second 
+most frequently occurring word, “and,” which occurs 1689 times. The 
+third most frequently occurring word, “class,” occurs 1091 times, or 
+very roughly one-third as frequently as the most frequently occurring 
+word.</p>
+<p id="P1050" class="text">What can we learn about the text from which these word frequencies were calculated? As discussed in <a href="https://www.safaribooksonline.com/library/view/principles-of-big/9780124045767/xhtml/CHP001.html">Chapter 1</a>,
+ “stop” words are high-frequency words that separate terms and tell us 
+little or nothing about the informational content of text. Let us look 
+at this same list with the “stop” words removed:</p><div>
+<p class="unnumlist1" id="U0575"><a id="P1055"></a>03 001091 class</p>
+<p class="unnumlist1" id="U0580"><a id="P1060"></a>05 000925 chapter</p>
+<p class="unnumlist1" id="U0585"><a id="P1065"></a>07 000884 species</p>
+<p class="unnumlist1" id="U0590"><a id="P1070"></a>08 000580 virus</p>
+<p class="unnumlist1" id="U0595"><a id="P1075"></a>10 000503 disease</p>
+<p class="unnumlist1" id="U0600"><a id="P1080"></a>12 000427 organisms</p>
+<p class="unnumlist1" id="U0605"><a id="P1085"></a>14 000412 hierarchy</p>
+<p class="unnumlist1" id="U0610"><a id="P1090"></a>16 000329 humans</p>
+<p class="unnumlist1" id="U0615"><a id="P1095"></a>18 000319 proteobacteria</p>
+<p class="unnumlist1" id="U0620"><a id="P1100"></a>19 000309 human</p>
+<p class="unnumlist1" id="U0625"><a id="P1105"></a>21 000264 fever</p>
+<p class="unnumlist1" id="U0630"><a id="P1110"></a>22 000263 group</p>
+<p class="unnumlist1" id="U0635"><a id="P1115"></a>24 000225 infections</p>
+<p class="unnumlist1" id="U0640"><a id="P1120"></a>25 000219 viruses</p>
+<p class="unnumlist1" id="U0645"><a id="P1125"></a>26 000219 infectious</p>
+<p class="unnumlist1" id="U0650"><a id="P1130"></a>27 000216 organism</p>
+<p class="unnumlist1" id="U0655"><a id="P1135"></a>28 000216 host</p>
+</div>
+<p id="P1140" class="text">What kind of text could have produced this 
+list? As it happens, these high-frequency words came from a book that I 
+previously wrote entitled “Taxonomic Guide to Infectious Diseases: 
+Understanding the Biologic Classes of Pathogenic Organisms.”<sup><a href="#BB0250">49</a></sup>
+ Could there be any doubt that the list of words and frequencies came 
+from a book whose subject is the classification of organisms causing 
+human disease? By glancing at a few words, from a large text file, we 
+gain a deep understanding of the subject matter of the text. The words 
+with the top occurrence frequencies told us the most about the book, 
+because these words are typically low frequency (e.g., hierarchy, 
+protebacteria, organism). They occurred in high frequency because the 
+text was focused on a narrow subject (i.e., infectious disease 
+taxonomy).</p>
+<p id="P1145" class="text">A clever analyst will always produce a Zipf 
+distribution for categorical data. A glance at the output always reveals
+ a great deal about the contents of the data.</p>
+<p id="P1150" class="text">Let us go one more step, to produce a 
+cumulative index for the occurrence of words in the text, arranging them
+ in order of descending frequency of occurrence:</p><div>
+<p class="unnumlist1" id="U0660"><a id="P1155"></a>01 003977 0.0559054232618291 the</p>
+<p class="unnumlist1" id="U0665"><a id="P1160"></a>02 001680 0.0795214934352948 and</p>
+<p class="unnumlist1" id="U0670"><a id="P1165"></a>03 001091 0.0948578818634204 class</p>
+<p class="unnumlist1" id="U0675"><a id="P1170"></a>04 000946 0.108155978520622 are</p>
+<p class="unnumlist1" id="U0680"><a id="P1175"></a>05 000925 0.121158874300655 chapter</p>
+<p class="unnumlist1" id="U0685"><a id="P1180"></a>06 000919 0.134077426972926 that</p>
+<p class="unnumlist1" id="U0690"><a id="P1185"></a>07 000884 0.146503978183249 species</p>
+<p class="unnumlist1" id="U0695"><a id="P1190"></a>08 000580 0.154657145266946 virus</p>
+<p class="unnumlist1" id="U0700"><a id="P1195"></a>09 000570 0.162669740504372 with</p>
+<p class="unnumlist1" id="U0705"><a id="P1200"></a>10 000503 0.169740504371784 disease</p>
+<p class="unnumlist1" id="U0710"><a id="P1205"></a>11 000434 0.175841322499930 for</p>
+<p class="unnumlist1" id="U0715"><a id="P1210"></a>12 000427 0.181843740335686 organisms</p>
+<p class="unnumlist1" id="U0720"><a id="P1215"></a>13 000414 0.187663414771290 from</p>
+<p class="unnumlist1" id="U0725"><a id="P1220"></a>14 000412 0.193454974837640 hierarchy</p>
+<p class="unnumlist1" id="U0730"><a id="P1225"></a>15 000335 0.198164131687706 not</p>
+<p class="unnumlist1" id="U0735"><a id="P1230"></a>16 000329 0.202788945430009 humans</p>
+<p class="unnumlist1" id="U0740"><a id="P1235"></a>17 000320 0.207287244510669 have</p>
+<p class="unnumlist1" id="U0745"><a id="P1240"></a>18 000319 0.211771486406702 proteobacteria</p>
+<p class="unnumlist1" id="U0750"><a id="P1245"></a>19 000309 0.216115156456465 human</p>
+<p class="unnumlist1" id="U0755"><a id="P1250"></a>20 000300 0.220332311844584 can</p>
+<p class="unnumlist1" id="U0760"><a id="P1255"></a>21 000264 0.224043408586128 fever</p>
+<p class="unnumlist1" id="U0765"><a id="P1260"></a>22 000263 0.227740448143046 group</p>
+<p class="unnumlist1" id="U0770"><a id="P1265"></a>23 000248 0.231226629930558 most</p>
+<p class="unnumlist1" id="U0775"><a id="P1270"></a>24 000225 0.234389496471647 infections</p>
+<p class="unnumlist1" id="U0780"><a id="P1275"></a>25 000219 0.237468019904973 viruses</p>
+<p class="unnumlist1" id="U0785"><a id="P1280"></a>26 000219 0.240546543338300 infectious</p>
+<p class="unnumlist1" id="U0790"><a id="P1285"></a>27 000216 0.243582895217746 organism</p>
+<p class="unnumlist1" id="U0795"><a id="P1290"></a>28 000216 0.246619247097191 host</p>
+<p class="unnumlist1" id="U0800"><a id="P1295"></a>29 000215 0.249641541792010 this</p>
+<p class="unnumlist1" id="U0805"><a id="P1300"></a>30 000211 0.252607607748320 all</p>
+<p class="unnumlist1" id="U8000"><a id="P8005"></a>.</p>
+<p class="unnumlist1" id="U8005"><a id="P8010"></a>.</p>
+<p class="unnumlist1" id="U8010"><a id="P8015"></a>.</p>
+<p class="unnumlist1" id="U8015"><a id="P8020"></a>.</p>
+<p class="unnumlist1" id="U8020"><a id="P8025"></a>.</p>
+<p class="unnumlist1" id="U0835"><a id="P1330"></a>8957 000001 0.999873485338356 acanthaemoeba</p>
+<p class="unnumlist1" id="U0840"><a id="P1335"></a>8958 000001 0.999887542522984 acalculous</p>
+<p class="unnumlist1" id="U0845"><a id="P1340"></a>8959 000001 0.999901599707611 academic</p>
+<p class="unnumlist1" id="U0850"><a id="P1345"></a>8960 000001 0.999915656892238 absurd</p>
+<p class="unnumlist1" id="U0855"><a id="P1350"></a>8961 000001 0.999929714076865 abstract</p>
+<p class="unnumlist1" id="U0860"><a id="P1355"></a>8962 000001 0.999943771261492 absorbing</p>
+<p class="unnumlist1" id="U0865"><a id="P1360"></a>8963 000001 0.999957828446119 absorbed</p>
+<p class="unnumlist1" id="U0870"><a id="P1365"></a>8964 000001 0.999971885630746 abrasion</p>
+<p class="unnumlist1" id="U0875"><a id="P1370"></a>8965 000001 0.999985942815373 abnormalities</p>
+<p class="unnumlist1" id="U0880"><a id="P1375"></a>8966 000001 1.000000000000000 abasence</p>
+</div>
+<p class="text">In this cumulative listing, the third column is the 
+fraction of the occurrences of the word along with the preceding words 
+in the list as a fraction of all the occurrences of every word in the 
+text.</p>
+<p id="P1385" class="text">The list is truncated after the 30th entry 
+and picks up again at entry number 8957. There are a total of 8966 
+different, sometimes called unique, words in the text. The total number 
+of words in the text happens to be 71,138. The last word on the list, 
+“abasence,” has a cumulative fraction of 1.0, as all of the preceding 
+words, plus the last word, account for 100% of word occurrences. The 
+cumulative frequency distribution for the different words in the text is
+ shown in <a href="#F0040">Figure 8.7</a>. As an aside, the tail of the 
+Zipf distribution, which typically contains items occurring once only in
+ a large data collection, is often “mistakes.” In the case of text 
+distributions, typographic errors can be found in the farthest and 
+thinnest part of the tail. In this case, the word “abasence” occurs just
+ once, as the last item in the distribution. It is a misspelling for the
+ word “absence.”</p>
+<div class="pageavoid">
+<p id="F0040" class="fig"><img src="Chapter%208.%20Simple%20but%20Powerful%20Big%20Data%20Techniques%20-%20Principles%20of%20Big%20Data_files/F000083f08-07-9780124045767.jpg" class="img" alt="image" data-mfp-src="/library/view/principles-of-big/9780124045767/images/F000083f08-07-9780124045767.jpg" width="432" height="260"></p>
+<p class="figleg"><span class="fignum">Figure 8.7</span> <a id="SP0040"></a>A
+ cumulative frequency distribution of word occurrences from a sample 
+text. Bottom coordinates indicate that the entire text is accounted for 
+by a list of about 9000 different words. The steep and early rise 
+indicates that a few words account for the bulk of word occurrences. 
+Graphs with this shape are sometimes referred to as Zipf distributions.</p>
+</div>
+<p id="P1390" class="text">Notice that though there are a total of 8957 
+unique words in the text, the first 30 words account for more than 25% 
+of all word occurrences. The final 10 words on the list occurred only 
+once in the text. When the cumulative data is plotted, we see a typical 
+cumulative Zipf distribution, characterized by a smooth curve with a 
+quick rise, followed by a long flattened tail converging to 1.0. Compare
+ this with the cumulative distribution for a normal curve (see <a href="#F0025">Figure 8.4</a>).
+ By comparing plots, we can usually tell, at a glance, whether a data 
+set behaves like a Zipf distribution or like a Gaussian distribution.</p>
+</div>
+<div id="S0035"><h2 class="h1hd" id="ST0045">Mean and Standard Deviation</h2>
+<p id="P1395" class="textfl">Statisticians have invented two numbers 
+that tell us most of what we need to know about data sets in the small 
+data realm: the mean and the standard deviation. The mean, also known as
+ the average, tells us the center of the bell-shaped curve, and the 
+standard deviation tells us something about the width of the bell.</p>
+<p id="P1400" class="text">The average is one of the simplest statistics
+ to compute: simply divide the sum total of data by the number of data 
+objects. Though the average is simple to compute, its computation may 
+not always be fast. Finding the exact average requires that the entire 
+data set be parsed; a significant time waste when the data set is 
+particularly large or when averages need to be recomputed frequently. 
+When the data can be randomly accessed, it may save considerable time to
+ select a subset of the data (e.g., 100 items), compute the average for 
+the subset, and assume that the average of the subset will approximate 
+the average for the full set of data.</p>
+<p id="P1405" class="text">In the Big Data realm, computing the mean and
+ the standard deviation is often a waste of time. Big Data is seldom 
+distributed as a normal curve. The mean and standard deviation have 
+limited value outside of normal distributions. The reason for the 
+non-normality of Big Data is that Big Data is observational, not 
+experimental.</p>
+<p id="P1410" class="text">In small data projects, an experiment is 
+undertaken. Typically, a uniform population may be split into two sets, 
+with one set subjected to a certain treatment and the other set serving 
+as a control. Each member of the treated population is nearly identical 
+to every other member, and any measurements on the population would be 
+expected to be identical. Differences among a population of nearly 
+identical objects are distributed in a bell-shaped curve around a 
+central average. The same is true for the control population. 
+Statisticians use the magnitude of data points and their mean location 
+to find differences between the treated group and the control group.</p>
+<p id="P1415" class="text">None of this necessarily applies to Big Data 
+collections. In many instances, Big Data is non-numeric categorical data
+ (e.g., presence or absence of a feature, true of false, yes or no, 0 or
+ 1). Because categorical values come from many different objects, there 
+is no special reason to think that the output will be distributed as a 
+normal curve, as you might expect to see when a quantified measurement 
+is produced for a population of identical objects.</p>
+<p id="P1420" class="text">In the prior section, we saw an example of a 
+Zipf distribution, in which a few objects or classes of objects account 
+for most of the data in the distribution. The remaining data values 
+trail out in a very long tail (<a href="#F0040">Figure 8.7</a>). For 
+such a distribution, the average and the standard deviation can be 
+computed, but the numbers may not provide useful information. When there
+ is no bell-shaped curve, the average does not designate the center of a
+ distribution, and the standard deviation does not indicate the spread 
+of the distribution around its average value.</p>
+<p id="P1425" class="text">Big Data distributions are sometimes 
+multimodal, with several peaks and troughs. Multimodality always says 
+something about the data under study. It tells us that the population is
+ somehow nonhomogeneous. Hodgkin lymphoma is an example of a cancer with
+ a bimodal age distribution (see <a href="#F0045">Figure 8.8</a>). There
+ is a peak in occurrences at a young age, and another peak of 
+occurrences at a more advanced age. This two-peak phenomenon can be 
+found whenever Hodgkin lymphoma is studied in large populations.<sup><a href="#BB0100">19</a></sup></p>
+<div class="pageavoid">
+<p id="F0045" class="fig"><img src="Chapter%208.%20Simple%20but%20Powerful%20Big%20Data%20Techniques%20-%20Principles%20of%20Big%20Data_files/F000083f08-08-9780124045767.jpg" class="img" alt="image" data-mfp-src="/library/view/principles-of-big/9780124045767/images/F000083f08-08-9780124045767.jpg" width="428" height="522"></p>
+<p class="figleg"><span class="fignum">Figure 8.8</span> <a id="SP0045"></a>Number
+ of occurrences of Hodgkin lymphoma in persons of different ages. There 
+are two peaks, one at about 35 years of age and another at about 75 
+years of age. The distribution appears to be bimodal. <span class="figcredit">Source of graph: The National Cancer Institute’s Surveillance Epidemiology End Results, available from <a href="http://seer.cancer.gov/">http://seer.cancer.gov/</a>.<sup><a href="#BB0490">97</a></sup></span></p>
+</div>
+<p id="P1430" class="text">In the case of Hodgkin lymphoma, lymphomas 
+occurring in the young may share diagnostic features with the lymphomas 
+occurring in the older population, but the occurrence of lymphomas in 
+two separable populations may indicate that some important distinction 
+may have been overlooked: a different environmental cause, different 
+genetic alterations of lymphomas in the two age sets, two different 
+types of lymphomas that were mistakenly classified under one name, or 
+there may be something wrong with the data (i.e., misdiagnoses, mix-ups 
+during data collection). Big Data, by providing a large number of cases,
+ makes it easy to detect data incongruities (such as multimodality) when
+ they are present. Explaining the causes for data incongruities is 
+always a scientific challenge.</p>
+<p id="P1435" class="text">The importance of inspecting data for 
+multimodality also applies to black holes. Most black holes have mass 
+equivalents under 33 solar masses. Another set of black holes are 
+supermassive, with mass equivalents of 10 or 20 billion solar masses. 
+When there are objects of the same type, whose masses differ by a factor
+ of a billion, scientists infer that there is something fundamentally 
+different in the origin or development of these two variant forms of the
+ same object. Black hole formation is an active area of interest, but 
+current theory suggests that lower mass black holes arise from 
+preexisting heavy stars. The supermassive black holes presumably grow 
+from large quantities of matter available at the center of galaxies. The
+ observation of bimodality inspired astronomers to search for black 
+holes whose masses are intermediate between black holes with near-solar 
+masses and the supermassive black holes. Intermediates have been found 
+and, not surprisingly, they come with a set of fascinating properties 
+that distinguish them from other types of black holes. Fundamental 
+advances in our understanding of the universe may sometimes follow from 
+simple observations of multimodal data distributions.</p>
+<p id="P1440" class="text">The average behavior of a collection of 
+objects can be applied toward calculations that would exceed 
+computational feasibility if applied to individual objects. Here is an 
+example. Years ago, I worked on a project that involved simulating cell 
+colony growth using a Monte Carlo method (see <a href="https://www.safaribooksonline.com/library/view/principles-of-big/9780124045767/xhtml/GLS001.html#GE0350">Glossary item, Monte Carlo simulation</a>).<sup><a href="#BB0495">98</a></sup>
+ Each simulation began with a single cell that divided, producing two 
+cells, unless the cell happened to die prior to cell division. Each 
+simulation applied a certain chance of cell death, somewhere around 0.5,
+ for each cell, at each cell division. When you simulate colony growth, 
+beginning with a single cell, the chance that the first cell will die on
+ the first cell division would be about 0.5; hence there is about a 50% 
+chance that the colony will die out on the first cell division. If the 
+cell survives the first cell division, the cell might go through several
+ additional cell divisions before it dies, by chance. By that time, 
+there are other progeny that are dividing, and these progeny cells might
+ successfully divide, thus enlarging the size of the colony. A Monte 
+Carlo simulation randomly assigned death or life at each cell division, 
+for each cell in the colony (see <a href="https://www.safaribooksonline.com/library/view/principles-of-big/9780124045767/xhtml/GLS001.html#GE0350">Glossary item, Monte Carlo simulation</a>).
+ When the colony manages to reach a large size (e.g., 10 million cells),
+ the simulation slows down, as the Monte Carlo algorithm must parse 
+through 10 million cells, calculating whether each cell will live or 
+die, assigning two offspring cells for each simulated division, and 
+removing cells that were assigned a simulated “death.” When the computer
+ simulation slows to a crawl, I found that the whole population 
+displayed an “average” behavior. There was no longer any need to perform
+ a Monte Carlo simulation on every cell in the population. I could 
+simply multiply the total number of cells by the cell death probability 
+(for the entire population), and this would tell me the total number of 
+cells that survived the cycle. For a large colony of cells, with a death
+ probability of 0.5 for each cell, half the cells will die at each cell 
+cycle and the other half will live and divide, producing two progeny 
+cells; hence the population of the colony will remain stable. When 
+dealing with large numbers, it becomes possible to dispense with the 
+Monte Carlo simulation and to predict each generational outcome with a 
+pencil and paper.</p>
+<p id="P1445" class="text">Substituting the average behavior for a 
+population of objects, rather than calculating the behavior of every 
+single object, is called mean-field approximation (see <a href="https://www.safaribooksonline.com/library/view/principles-of-big/9780124045767/xhtml/GLS001.html#GE0320">Glossary item, Mean-field approximation</a>).
+ It uses a physical law telling us that large collections of objects can
+ be characterized by their average behavior. Mean-field approximation 
+has been used with great success to understand the behavior of gases, 
+epidemics, crystals, viruses, and all manner of large population 
+problems.</p>
+</div>
+<div id="S0040"><h2 class="h1hd" id="ST0050">Estimation-Only Analyses</h2>
+<p id="P1450" class="textfl">The sun is about 93 million miles from the 
+earth. At this enormous distance, light hitting the earth arrives as 
+near-parallel rays, and the shadow produced by the earth is nearly 
+cylindrical. This means that the shadow of the earth is approximately 
+the same size as the earth itself. If the earth’s circular shadow during
+ a lunar eclipse has a diameter about 2.5 times the diameter of the moon
+ itself, then the moon must have a diameter approximately 1/2.5 times 
+that of the earth. The diameter of the earth is about 8000 miles, so the
+ diameter of the moon must be about 8000/2.5 or about 3000 miles.</p>
+<p id="P1455" class="text">The true diameter of the moon is smaller, 
+about 2160 miles. Our estimate is inaccurate because the earth’s shadow 
+is actually conical, not cylindrical. If we wanted to use a bit more 
+trigonometry, we’d arrive at a closer approximation. Still, we arrived 
+at a fair approximation of the moon’s size from one simple division 
+based on a casual observation made during a lunar eclipse. The distance 
+was not measured; it was estimated from a simple observation. Credit for
+ the first astronomer to use this estimation goes to the Greek 
+astronomer Aristarchus of Samos (310 BCE-230 BCE). In this particular 
+case, a direct measurement of the moon’s distance was impossible. 
+Aristarchus’ only option was the rough estimate. His predicament was not
+ unique. Sometimes estimation is the only recourse for data analysts.</p>
+<p id="P1460" class="text">A modern-day example wherein measurements 
+failed to help the data analyst is the calculation of deaths caused by 
+heat waves. People suffer during heat waves, and municipalities need to 
+determine whether people are dying from heat-related conditions. If 
+deaths occur, then the municipality can justifiably budget for 
+supportive services such as municipal cooling stations, the free 
+delivery of ice, increased staffing for emergency personnel, and so on. 
+If the number of heat-related deaths is high, the governor may 
+justifiably call a state of emergency.</p>
+<p id="P1465" class="text">Medical examiners perform autopsies to 
+determine causes of death. During a heat wave, the number of deceased 
+individuals with a heat-related cause of death seldom rises as much as 
+anyone would expect.<sup><a href="#BB0500">99</a></sup> The reason for 
+this is that stresses produced by heat cause death by exacerbating 
+preexisting nonheat-related conditions. The cause of death can seldom be
+ pinned on heat. The paucity of autopsy-proven heat deaths can be 
+relieved, somewhat, by permitting pathologists to declare a heat-related
+ death when the environmental conditions at the site of death are 
+consistent with hyperthermia (e.g., a high temperature at the site of 
+death and a high body temperature of the deceased measured shortly after
+ death). Adjusting the criteria for declaring heat-related deaths is a 
+poor remedy. In many cases, the body is not discovered anytime near the 
+time of death, invalidating the use of body temperature. More 
+importantly, different regions may develop their own criteria for 
+heat-related deaths (e.g., different temperature threshold measures, 
+different ways of factoring night-time temperatures and humidity 
+measurements). Basically, there is no accurate, reliable, or standard 
+way to determine heat-related deaths at autopsy.<sup><a href="#BB0500">99</a></sup></p>
+<p id="P1470" class="text">How would you, a data estimator, handle this 
+problem? It’s simple. You take the total number of deaths that occurred 
+during the heat wave. Then you go back over your records of deaths 
+occurring in the same period, in the same geographic region, over a 
+series of years in which a heat wave did not occur. You average that 
+number, giving you the expected number of deaths in a normal (i.e., 
+without heat wave) period. You subtract that number from the number of 
+deaths that occurred during the heat wave and that gives you an estimate
+ of the number of people who died from heat-related mortality. This 
+strategy, applied to the 1995 Chicago heat wave, estimated that the 
+number of heat-related deaths rose from 485 to 739.<sup><a href="#BB0505">100</a></sup></p>
+</div>
+<div id="S0045"><h2 class="h1hd" id="ST0055">Use Case: Watching Data Trends with Google Ngrams</h2>
+<p id="P1475" class="textfl">Ngrams are ordered word sequences.</p>
+<p id="P1480" class="text">Ngrams for the prior sentence are:</p><div>
+<p class="unnumlist1" id="U0885"><a id="P1485"></a>Ngrams (1-gram)</p>
+<p class="unnumlist1" id="U0890"><a id="P1490"></a>are (1-gram)</p>
+<p class="unnumlist1" id="U0895"><a id="P1495"></a>ordered (1-gram)</p>
+<p class="unnumlist1" id="U0900"><a id="P1500"></a>word (1-gram)</p>
+<p class="unnumlist1" id="U0905"><a id="P1505"></a>sequences (1-gram)</p>
+<p class="unnumlist1" id="U0910"><a id="P1510"></a>Ngrams are (2-gram)</p>
+<p class="unnumlist1" id="U0915"><a id="P1515"></a>are ordered (2-gram)</p>
+<p class="unnumlist1" id="U0920"><a id="P1520"></a>ordered word (2-gram)</p>
+<p class="unnumlist1" id="U0925"><a id="P1525"></a>word sequences (2-gram)</p>
+<p class="unnumlist1" id="U0930"><a id="P1530"></a>Ngrams are ordered (3-gram)</p>
+<p class="unnumlist1" id="U0935"><a id="P1535"></a>are ordered word (3-gram)</p>
+<p class="unnumlist1" id="U0940"><a id="P1540"></a>ordered word sequences (3-gram)</p>
+<p class="unnumlist1" id="U0945"><a id="P1545"></a>Ngrams are ordered word (4-gram)</p>
+<p class="unnumlist1" id="U0950"><a id="P1550"></a>are ordered word sequences (4-gram)</p>
+<p class="unnumlist1" id="U0955"><a id="P1555"></a>Ngrams are ordered word sequences (5-gram)</p>
+</div>
+<p id="P1560" class="text">Google has undertaken a Big Data effort to 
+enumerate the ngrams collected from the scanned literature dating back 
+to 1500. The public can enter their own ngrams into Google’s Ngram 
+Viewer and view a graph of the occurrences of the phrase, in published 
+literature, over time. <a href="#F0050">Figure 8.9</a> is the Google result for a search on the 2-gram “yellow fever.”</p>
+<div class="pageavoid">
+<p id="F0050" class="fig"><img src="Chapter%208.%20Simple%20but%20Powerful%20Big%20Data%20Techniques%20-%20Principles%20of%20Big%20Data_files/F000083f08-09-9780124045767.jpg" class="img" alt="image" data-mfp-src="/library/view/principles-of-big/9780124045767/images/F000083f08-09-9780124045767.jpg" width="623" height="326"></p>
+<p class="figleg"><span class="fignum">Figure 8.9</span> <a id="SP0050"></a>The
+ frequency of occurrences of the phrase “yellow fever” in a large 
+collection of literature from the years 1700 to 2000. The graph was 
+automatically rendered by the Google Ngram Viewer.</p>
+</div>
+<p id="P1565" class="text">We see that the term “yellow fever” (a 
+mosquito-transmitted hepatitis) appeared in the literature beginning 
+about 1800 (shortly after an outbreak in Philadelphia), with several 
+subsequent peaks (around 1915 and 1945). The dates of the peaks 
+correspond roughly to outbreaks of yellow fever in Philadelphia 
+(epidemic of 1793), New Orleans (epidemic of 1853), with U.S. 
+construction efforts in the Panama Canal (1904—1914), and World War II 
+Pacific outbreaks (about 1942). Following the 1942 epidemic, an 
+effective vaccine was available, and the incidence of yellow fever, as 
+well as the occurrences of the “yellow fever” 2-gram, dropped 
+precipitously. In this case, a simple review of ngram frequencies 
+provides an accurate chart of historic yellow fever outbreaks.</p>
+<p id="P1570" class="text">Sleeping sickness is a disease caused by a 
+protozoan parasite transmitted by the tsetse fly, and endemic to Africa.
+ The 2-gram search on the term “sleeping sickness” demonstrates a sharp 
+increase in the frequency of occurrence of the term at the turn of the 
+20th century (see <a href="#F0055">Figure 8.10</a>). The first, and 
+largest, peak, about the year 1900, coincided with a historic epidemic 
+of sleeping sickness. At that time, a plague decimated the population of
+ rinderpest, the preferred animal reservoir of the tsetse fly, resulting
+ in an increase in human bites; hence an increase in sleeping sickness. 
+Once again, the ngram data set has given us insight into a human 
+epidemic.</p>
+<div class="pageavoid">
+<p id="F0055" class="fig"><img src="Chapter%208.%20Simple%20but%20Powerful%20Big%20Data%20Techniques%20-%20Principles%20of%20Big%20Data_files/F000083f08-10-9780124045767.jpg" class="img" alt="image" data-mfp-src="/library/view/principles-of-big/9780124045767/images/F000083f08-10-9780124045767.jpg" width="623" height="330"></p>
+<p class="figleg"><span class="fignum">Figure 8.10</span> <a id="SP0055"></a>The
+ frequency of occurrences of the term “sleeping sickness” in literature 
+from the years 1700 to 2000. The graph was automatically rendered by the
+ Google Ngram Viewer, available at <a href="http://books.google.com/ngrams">http://books.google.com/ngrams</a>.</p>
+</div>
+<p id="P1575" class="text">Following the epidemic near the year 1900, 
+the frequency of literary occurrences of “sleeping sickness” had a 
+generally downwards trend, punctuated by a second, smaller peak about 
+the time of World War II and a steady decline thereafter.</p>
+<p id="P1580" class="text">The Google Ngram Viewer supports simple 
+lookups of term frequencies. For advanced analyses, such as finding 
+co-occurrences of all ngrams against all other ngrams, data analysts 
+would need to download the ngram data files, available at no cost from 
+Google, and write their own programs suited to their tasks.</p>
+</div>
+<div id="S0050"><h2 class="h1hd" id="ST0060">Use Case: Estimating Movie Preferences</h2>
+<p id="P1585" class="textfl">Imagine you have all the preference data 
+for every user of a large movie subscriber service, such as Netflix. You
+ want to develop a system whereby the preference of any subscriber, for 
+any movie, can be predicted. Here are some analytic options, listed in 
+order of increasing complexity, omitting methods that require advanced 
+mathematical skills.</p>
+<p id="P1590" class="text">1. <strong>Ignore your data and use experts.</strong>
+ Movie reviewers are fairly good predictors of a movie’s appeal. If they
+ were not good predictors, they would have been replaced by people with 
+better predictive skills. For any movie, go to the newspapers and 
+magazines and collect about 10 movie reviews. Average the review scores 
+and use the average as the predictor for all of your subscribers. This 
+method assumes that there is not a large divergence in preferences, from
+ subscriber to subscriber, for most movies.</p>
+<p id="P1595" class="text">You can refine this method a bit by looking 
+at the average subscriber scores, after the movie has been released. You
+ can compare the scores of the individual experts to the average score 
+of the subscribers. Scores from experts that closely matched the scores 
+from the subscribers can be weighted a bit more heavily than experts 
+whose scores were nothing like the average subscriber score.</p>
+<p id="P1600" class="text">2. <strong>Use all of your data, as it comes in, to produce an average subscriber score.</strong>
+ Skip the experts—go straight to your own data. In most instances, you 
+would expect that a particular user’s preference will come close to the 
+average preference of the entire population in the data set, for any 
+given movie.</p>
+<p id="P1605" class="text">3. <strong>Lump people into preference groups based on shared favorites.</strong>
+ If Ann’s personal list of top-favored movies is the same as Fred’s 
+top-favored list, then it’s likely that their preferences will coincide.
+ For movies that Ann has seen but Fred has not, use Ann’s score as a 
+predictor.</p>
+<p id="P1610" class="text">In a large data set, find an individual’s top
+ 10 movie choices and add the individual to a group of individuals who 
+share the same top 10 list. Use the average score for members of the 
+group, for any particular movie, as that movie’s predictor for each of 
+the members of the group.</p>
+<p id="P1615" class="text">As a refinement, find a group of people who 
+share the top 10 and the bottom 10 scoring movies. Everyone in this 
+group shares a love of the same top movies and a loathing for the same 
+bottom movies.</p>
+<p id="P1620" class="text">4. <strong>Focus your refined predictions.</strong>
+ For many movies, there really isn’t much of a spread in ratings. If 
+just about everyone loves “Star Wars,” “Raiders of the Lost Ark,” and 
+“It’s a Wonderful Life,” then there really is no need to provide an 
+individual prediction for such movies. Likewise, if a movie is 
+universally loathed or universally accepted as an “average” flick, then 
+why would you want to use computationally intensive models for these 
+movies?</p>
+<p id="P1625" class="text">Most data sets contain easy and difficult 
+data objects. There is seldom any good reason to develop predictors for 
+the easy data. In the case of movie predictors, if there is very little 
+spread in a movie’s score, you can safely use the average rating as the 
+predicted rating for all individuals. By removing all of the “easy” 
+movies from your group-specific calculations, you reduce the total 
+number of calculations for the data collection.</p>
+<p id="P1630" class="text">This method of eliminating the obvious has 
+application in many different fields. As a program director at the 
+National Cancer Institute, I was peripherally involved in efforts to 
+predict cancer treatment options for patients diagnosed in different 
+stages of disease. Traditionally, large numbers of patients, at every 
+stage of disease, were included in a prediction model that employed a 
+list of measurable clinical and pathological parameters (e.g., age and 
+gender of patient, size of tumor, the presence of local or distant 
+metastases). It turned out that early models produced predictions where 
+none were necessary. If a patient had a tumor that was small, confined 
+to its primary site of growth, and minimally invasive at its origin, 
+then the treatment was always limited to surgical excision; there were 
+no other options for treatment, and hence no reason to predict the best 
+option for treatment. If a tumor was widely metastatic to distant organs
+ at the time of diagnosis, then there were no available treatments that 
+were known to cure the patient. By focusing their analyses on the subset
+ of patients who could benefit from treatment, and for whom the best 
+treatment option was not predetermined, the data analysts reduced the 
+size and complexity of the data and simplified the problem.</p>
+</div>
+<div id="BI0010"><h2 class="reftitle" id="ST0065">References</h2>
+<p class="reflist1" id="BB0100">19. Berman JJ. <em>Methods in medical informatics: fundamentals of healthcare programming in Perl, Python, and Ruby</em>. Boca Raton, FL: Chapman and Hall; 2010.</p>
+<p class="reflist1" id="BB0250">49. Berman JJ. <em>Taxonomic guide to infectious diseases: understanding the biologic classes of pathogenic organisms</em>. Waltham: Academic Press; 2012.</p>
+<p class="reflist1" id="BB0460">91. Gatty H. <em>Finding your way without map or compass</em>. Mineola: Dover; 1958.</p>
+<p class="reflist1" id="BB0465">92. Levenberg K. A method for the solution of certain non-linear problems in least squares. <em>Q App Math</em>. 1944;2:164–168.</p>
+<p class="reflist1" id="BB0470">93. Marquardt DW. An algorithm for the least-squares estimation of nonlinear parameters. <em>SIAM J Appl Math</em>. 1963;11:431–441.</p>
+<p class="reflist1" id="BB0475">94. Lee J, Pham M, Lee J, et al. Processing SPARQL queries with regular expressions in RDF databases. <em>BMC Bioinform</em>. 2011;12(Suppl. 2):S6.</p>
+<p class="reflist1" id="BB0480">95. Thompson CW. The trick to D.C police force’s 94% closure rate for 2011 homicides. <em>The Washington Post</em> February 19, 2012.</p>
+<p class="reflist1" id="BB0485">96. Kaplan EL, Meier P. Nonparametric estimation from incomplete observations. <em>J Am Statist Assn</em>. 1958;53:457–481.</p>
+<p class="reflist1" id="BB0490">97. SEER. <em>Surveillance epidemiology end results</em>. National Cancer Institute April 22, 2013; Available from: <em><a href="http://seer.cancer.gov/">http://seer.cancer.gov/</a></em>; April 22, 2013; viewed.</p>
+<p class="reflist1" id="BB0495">98. Berman JJ, Moore GW. The role of cell death in the growth of preneoplastic lesions: a Monte Carlo simulation model. <em>Cell Prolif</em>. 1992;25:549–557.</p>
+<p class="reflist1" id="BB0500">99. Perez-Pena R. New York’s tally of heat deaths draws scrutiny. <em>The New York Times</em> August 18, 2006.</p>
+<p class="reflist2" id="BB0505">100. Chiang S. <em>Heat waves, the “other” natural disaster: perspectives on an often ignored epidemic</em>. Global Pulse American Medical Student Association 2006.</p>
+</div>
+<div class="ftnote"><hr>
+<p class="ftnote1" id="FN0010"><sup><img src="Chapter%208.%20Simple%20but%20Powerful%20Big%20Data%20Techniques%20-%20Principles%20of%20Big%20Data_files/star_9734.jpg" alt="ent" data-mfp-src="/library/view/principles-of-big/9780124045767/images/star_9734.jpg" width="10" height="8"></sup><a id="NP0010"></a>“To view the full reference list for the book, click <a href="https://www.safaribooksonline.com/library/view/principles-of-big/9780124045767/xhtml/BIB001.html#BIB001">here</a>”</p>
+</div></div>
+<div class="annotator-outer annotator-viewer viewer annotator-hide">
+  <ul class="annotator-widget annotator-listing"></ul>
+</div><div class="annotator-modal-wrapper annotator-editor-modal annotator-editor annotator-hide">
+	<div class="annotator-outer editor">
+		<h2 class="title">Highlight</h2>
+		<form class="annotator-widget">
+			<ul class="annotator-listing">
+			<li class="annotator-item"><textarea id="annotator-field-0" placeholder="Add a note using markdown (optional)" class="js-editor" maxlength="750"></textarea></li></ul>
+			<div class="annotator-controls">
+				<a class="link-to-markdown" href="https://daringfireball.net/projects/markdown/basics" target="_blank">?</a>
+				<ul>
+					<li class="delete annotator-hide"><a href="#delete" class="annotator-delete-note button positive">Delete Note</a></li>
+					<li class="save"><a href="#save" class="annotator-save annotator-focus button positive">Save Note</a></li>
+					<li class="cancel"><a href="#cancel" class="annotator-cancel button">Cancel</a></li>
+				</ul>
+			</div>
+		</form>
+	</div>
+</div><div class="annotator-modal-wrapper annotator-delete-confirm-modal" style="display: none;">
+  <div class="annotator-outer">
+    <h2 class="title">Highlight</h2>
+      <a class="js-close-delete-confirm annotator-cancel close" href="#close">Close</a>
+      <div class="annotator-widget">
+         <div class="delete-confirm">
+            Are you sure you want to permanently delete this note?
+         </div>
+         <div class="annotator-controls">
+            <a href="#cancel" class="annotator-cancel button js-cancel-delete-confirm">No, I changed my mind</a>
+            <a href="#delete" class="annotator-delete button positive js-delete-confirm">Yes, delete it</a>
+         </div>
+       </div>
+   </div>
+</div><div class="annotator-adder" style="display: none;">
+	<ul class="adders ">
+		
+		<li class="copy"><a href="#">Copy</a></li>
+		
+		<li class="add-highlight"><a href="#">Add Highlight</a></li>
+		<li class="add-note"><a href="#">
+			
+				Add Note
+			
+		</a></li>
+		
+	</ul>
+</div></div></div>
+
+
+
+  <div class="t-sbo-prev sbo-prev sbo-nav-bottom">
+  
+    
+      
+        <a href="https://www.safaribooksonline.com/library/view/principles-of-big/9780124045767/xhtml/CHP007.html" class="prev nav-link">
+      
+          <span aria-hidden="true" class="pagination-label t-prev-label">Prev</span>
+          <span class="visuallyhidden">Previous Chapter</span>
+          <div class="pagination-title t-prev-title">Chapter 7. Measurement</div>
+        </a>
+    
+  
+  </div>
+
+  <div class="t-sbo-next sbo-next sbo-nav-bottom">
+  
+    
+      
+        <a href="https://www.safaribooksonline.com/library/view/principles-of-big/9780124045767/xhtml/CHP009.html" class="next nav-link">
+      
+          <span aria-hidden="true" class="pagination-label t-next-label">Next</span>
+          <span class="visuallyhidden">Next Chapter</span>
+          <div class="pagination-title t-next-title">Chapter 9. Analysis</div>
+        </a>
+    
+  
+  </div>
+
+
+        
+    </section>
+  </div>
+<section class="sbo-saved-archives"></section>
+
+
+
+          
+          
+  
+
+
+
+
+    
+    
+      <div id="js-subscribe-nag" class="subscribe-nag clearfix trial-panel t-subscribe-nag collapsed slideUp">
+        
+        
+          
+          
+            <p class="usage-data">Find answers on the fly, or master something new. Subscribe today. <a href="https://www.safaribooksonline.com/subscribe/" class="ga-active-trial-subscribe-nag">See pricing options.</a></p>
+          
+
+          
+        
+        
+
+      </div>
+
+    
+    
+
+
+
+        
+      </div>
+      
+
+
+
+
+  <footer class="pagefoot t-pagefoot" style="padding-bottom: 69px;">
+    <a href="#" class="icon-up" style="display: block;"><div class="visuallyhidden">Back to top</div></a>
+    <ul class="js-footer-nav">
+      
+        <li><a class="t-recommendations-footer" href="https://www.safaribooksonline.com/r/">Recommended</a></li>
+      
+      <li>
+      
+      <a class="t-queue-footer" href="https://www.safaribooksonline.com/c/">Playlists</a>
+      
+      </li>
+      
+        <li><a class="t-recent-footer" href="https://www.safaribooksonline.com/history/">History</a></li>
+        <li><a class="t-topics-footer" href="https://www.safaribooksonline.com/topics?q=*&amp;limit=21">Topics</a></li>
+      
+      
+        <li><a class="t-tutorials-footer" href="https://www.safaribooksonline.com/tutorials/">Tutorials</a></li>
+      
+      <li><a class="t-settings-footer js-settings" href="https://www.safaribooksonline.com/u/">Settings</a></li>
+      <li class="full-support"><a href="https://www.safaribooksonline.com/public/support">Support</a></li>
+      <li><a href="https://www.safaribooksonline.com/apps/">Get the App</a></li>
+      <li><a href="https://www.safaribooksonline.com/accounts/logout/">Sign Out</a></li>
+    </ul>
+    <span class="copyright">© 2018 <a href="https://www.safaribooksonline.com/" target="_blank">Safari</a>.</span>
+    <a href="https://www.safaribooksonline.com/terms/">Terms of Service</a> /
+    <a href="https://www.safaribooksonline.com/privacy/">Privacy Policy</a>
+  </footer>
+
+
+
+
+    
+
+    <script src="Chapter%208.%20Simple%20but%20Powerful%20Big%20Data%20Techniques%20-%20Principles%20of%20Big%20Data_files/a_002" charset="utf-8"></script>
+    <script src="Chapter%208.%20Simple%20but%20Powerful%20Big%20Data%20Techniques%20-%20Principles%20of%20Big%20Data_files/a" charset="utf-8"></script>
+  
+
+<div class="annotator-notice"></div><div class="font-flyout" style="top: 201px; left: 1280px;"><div class="font-controls-panel">
+	<div class="nightmodes">
+		<ul>
+			<li class="day"><a href="#" id="day-mode" title="Day Mode">
+				<i class="fa fa-sun-o"></i>
+				<span>Day Mode</span></a></li>
+			<li class="cloudy"><a href="#" id="cloudy-mode" title="Cloudy Mode">
+				<i class="fa fa-cloud"></i>
+				<span>Cloud Mode</span>
+			</a></li>
+			<li class="night"><a href="#" id="night-mode" title="Night Mode">
+				<i class="fa fa-moon-o"></i>
+				<span>Night Mode</span>
+			</a></li>
+		</ul>
+	</div>
+
+	<div class="font-resizer resizer">
+		<div class="draggable-containment-wrapper">
+			<i class="fa fa-font left"></i>
+			<span class="filler" style="width: 50%;"></span>
+			<div id="js-font-size-draggable" class="draggable ui-widget-content ui-draggable ui-draggable-handle" style="position: relative; left: 80px;"></div>
+			<i class="fa fa-font right"></i>
+		</div>
+	</div>
+
+	<div class="column-resizer resizer">
+		<div class="draggable-containment-wrapper">
+			<i class="fa fa-compress left"></i>
+			<span class="filler" style="width: 50%;"></span>
+			<div id="js-column-size-draggable" class="draggable ui-widget-content ui-draggable ui-draggable-handle" style="position: relative; left: 80px;"></div>
+			<i class="fa fa-expand right"></i>
+		</div>
+	</div>
+
+	<a id="reset" class="button" href="#">Reset</a>
+</div>
+</div></body></html>
